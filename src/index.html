@@ -10,43 +10,47 @@
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.fullpage.min.js"></script>
 </head>
-<body >
-<div id="fullpage">
-    <div class="section" id="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4  ">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="img/logo58.gif" alt="">
-                        </a>
-                    </div>
+<body>
+<div id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-4 ">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo58.gif" alt="">
+                    </a>
                 </div>
-                <div class="col-md-8  ">
-                    <div class="nav">
-                        <ul>
-                            <li>导航1</li>
-                            <li>导航2</li>
-                            <li>导航3</li>
-                            <li>导航4</li>
-                            <li>导航5</li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="col-md-8 col-sm-8 col-xs-8">
+                <div class="nav">
+                    <ul>
+                        <li data-menuanchor="page1"><a href="#page1">导航1</a></li>
+                        <li data-menuanchor="page2"><a href="#page2">导航2</a></li>
+                        <li data-menuanchor="page3"><a href="#page3">导航3</a></li>
+                        <li data-menuanchor="page4"><a href="#page4">导航4</a></li>
+                        <li data-menuanchor="page5"><a href="#page5">导航5</a></li>
+                        <li data-menuanchor="page6"><a href="#page6">导航6</a></li>
+                        <li data-menuanchor="page7"><a href="#page7">导航7</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div class="section" id="banner"></div>
+</div>
+<div id="fullpage" class="main">
+    <div class="section banner">
+        <div class="slide"></div>
+        <div class="slide"></div>
+    </div>
+    <div class="section"></div>
     <div class="section"></div>
     <div class="section"></div>
     <div class="section"></div>
     <div class="section"></div>
     <div class="section"></div>
 </div>
-<script>
-    $('#fullpage').fullpage({
+<script src="js/main.js">
 
-    });
 </script>
 </body>
 </html>
