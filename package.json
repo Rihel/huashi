@@ -1,0 +1,20 @@
+{
+  "name": "huashi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"browser-sync start --server  \"src\" --files \"src\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rihel/huashi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rihel/huashi/issues"
+  },
+  "homepage": "https://github.com/Rihel/huashi#readme"
+}
