@@ -5,34 +5,48 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/reset.css" >
     <link rel="stylesheet" href="css/index.css" >
+    <link rel="stylesheet" href="css/jquery.fullpage.min.css" >
     <link rel="stylesheet" href="css/bootstrap.min.css" >
     <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.fullpage.min.js"></script>
 </head>
-<body>
-<div id="header">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-xs-3 col-sm-3">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="img/logo58.gif" alt="">
-                    </a>
+<body >
+<div id="fullpage">
+    <div class="section" id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4  ">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/logo58.gif" alt="">
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-9 col-sm-9 col-xs-9">
-                <div class="nav">
-                    <ul>
-                        <li>导航1</li>
-                        <li>导航2</li>
-                        <li>导航3</li>
-                        <li>导航4</li>
-                        <li>导航5</li>
-                    </ul>
+                <div class="col-md-8  ">
+                    <div class="nav">
+                        <ul>
+                            <li>导航1</li>
+                            <li>导航2</li>
+                            <li>导航3</li>
+                            <li>导航4</li>
+                            <li>导航5</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="section" id="banner"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
 </div>
-<div id="banner"></div>
+<script>
+    $('#fullpage').fullpage({
+
+    });
+</script>
 </body>
 </html>
