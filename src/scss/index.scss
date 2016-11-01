@@ -1,0 +1,166 @@
+@import "mixin";
+.ahover{
+  @include transition(all 0.4s);
+  &:hover{
+    text-decoration: none;
+    color: red;
+  }
+}
+
+#header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @include boxShadow(2px 2px 5px #525252);
+  @include gradient(to top,#f3f3f3,#f9f9f9);
+  .share-bar{
+    width: 390px;
+    .share-icon{
+      width: 50%;
+      float: right;
+      margin-right: 36px;
+      padding-top: 30px;
+      text-indent: 10px;
+      @include clearfix;
+      .huashi-icon{
+        color: #9a9a9a;
+        font-size: 30px;
+        @extend .ahover;
+      }
+    }
+    .btns{
+      width: 100%;
+      float: left;
+      list-style: none;
+      @include clearfix;
+      padding-top: 20px;
+      li{
+        float: left;
+        a{
+          color: #222;
+          margin-right: 20px;
+          @extend .ahover;
+        }
+      }
+    }
+  }
+  .nav{
+    height: 44px;
+    @include gradient(to top,#666,#545454,#4e4e4e,#393939,#212121);
+    .mainnav{
+      height: 44px;
+      li{
+        float: left;
+        @include lineheight(44px);
+      }
+    }
+  }
+}
+.main{
+  .banner{
+    .slide{
+      background: {
+        repeat: no-repeat;
+        size: cover;
+        position: center;
+      };
+     @for $i from 1 through 2{
+       &:nth-of-type(#{$i}){
+         background-image: url("../img/banner#{$i}.jpg");
+       }
+     }
+    }
+  }
+  .youhui{
+    .title{
+      @include transition(all 0.4s);
+      @include translate(-1000px);
+      opacity: 0;
+      @include active;
+      padding: 100px;
+    }
+    .items{
+      opacity: 0;
+      @include transition(all 0.4s);
+
+      @for $i from 1 through 6{
+        @if $i<=3{
+          &:nth-of-type(#{$i}){
+            @include translate($i*-100px);
+            @include active;
+            transition-delay: $i*0.4s;
+          }
+        }@else{
+            &:nth-of-type(#{$i}){
+              @include translate($i*100px);
+              @include active;
+              transition-delay: $i*0.4s;
+            }
+        }
+      }
+      //@for $i from 4 through 6{
+      //  &:nth-of-type(#{$i}){
+      //    @include translate($i*100px);
+      //    @include active;
+      //    transition-delay: $i*0.4s;
+      //  }
+      //}
+      padding: 0;
+      .thumbnail{
+        border: none;
+        padding: 0;
+        .caption {
+          padding: 0;
+          p{
+            font-size: 12px;
+            color: #acacac;
+          }
+        }
+      }
+    }
+    .uijiuye{
+      .sec{
+        width: 50%;
+        text-align: center;
+        font-size: 18px;
+        @include blockCenter;
+        padding: 30px;
+      }
+    }
+    .joy{
+
+      .thumbnail{
+        border: none;
+
+        @include borderRadius(0);
+        @include transition(all 0.4s);
+        &.active{
+          background-color: #ff263a;
+        }
+        background-color: #eeeeee;
+        .icons{
+          @include blockCenter;
+          @include square(84px);
+          background:{
+            repeat: no-repeat;
+            image: url("../img/icons.png");
+            position-y: 0;
+          };
+          @include transition(all 0.4s);
+          &.active{
+            -ms-background-position-y: -88px;
+            background-position-y: -88px;;
+          }
+        }
+      }
+    }
+    @for $i from 1 through 4{
+        .joy#{$i}{
+          .icons{
+            background-position-x:-$i*84px+82px;
+          }
+      }
+    }
+  }
+}
