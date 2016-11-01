@@ -119,7 +119,29 @@ $legacy-support-for-ie:true;
   @include square($radius);
   @include borderRadius($radius);
 }
+@mixin gradient($gradieng...){
 
+    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+      background: #{$prefix}linear-gradient($gradieng);
+    }
+}
+
+@mixin transform($type){
+  -webkit-transform: $type;
+  -moz-transform: $type;
+  -ms-transform: $type;
+  -o-transform: $type;
+  transform: $type;
+}
+@mixin translate($num){
+  @include transform(translate($num));
+}
+@mixin active{
+  &.active{
+    @include translate(0);
+    opacity: 1;
+  }
+}
 
 
 
