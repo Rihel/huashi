@@ -1,5 +1,25 @@
 @import "mixin";
 $sectionBg:#f4f4f4;
+$titleColor:#ef5452;
+$iclssbg:(1:#ef5553, 2:#f3983f, 3:#b082d4, 4:#46a76d, 5:#718cd1, 6:#c27089, 7:#47b2c6,8:#718cd1);
+
+$animateName:(
+        left:left,
+        right:right,
+        top:top,
+        scale:scale,
+        bottom:bottom
+);
+@each $key,$value in $animateName{
+  .items-#{$key}{
+    @include animateTransition($value,1s);
+  }
+}
+
+
+.title-color{
+  color: $titleColor;
+}
 .ahover{
   @include transition(all 0.4s);
   &:hover{
@@ -7,23 +27,48 @@ $sectionBg:#f4f4f4;
     color: red;
   }
 }
-$iclssbg:(
-        1:#ef5553,
-        2:#f3983f,
-        3:#b082d4,
-        4:#46a76d,
-        5:#718cd1,
-        6:#c27089,
-        7:#47b2c6,
-        8:#718cd1);
+.container{
+  padding: 0;
+}
+.jumbotron{
+  background-color: transparent;
+  h2{
+    font-size: 45px;
+    @include animateTransition(right,1s);
+  }
+  h4{
+    font-size: 18px;
+    color: #aaa;
+    @include animateTransition(bottom,1s);
+  }
+  ul{
+    li{
+      line-height: 50px;
+      font-size: 18px;
+      color: #000;
+      @include transition(all 0.4s);
+      @include translate(-1000px);
+      @for $i from 1 through 4{
+        &:nth-of-type(#{$i}){
+          transition-delay: $i*0.4-1*0.4s;
+        }
+      }
+      &.active{
+        @include translate(0)
+      }
+    }
+  }
+}
 .section{
-  overflow: hidden;
+  //overflow: hidden;
+  position: relative;
 }
 #header{
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 122px;
   @include boxShadow(2px 2px 5px #525252);
   @include gradient(to top,#f3f3f3,#f9f9f9);
   .share-bar{
@@ -58,22 +103,31 @@ $iclssbg:(
       }
     }
   }
-  .nav{
+
+}
+.nav{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 44px;
+  width: 100%;
+  @include gradient(to top,#666,#545454,#4e4e4e,#393939,#212121);
+  .mainnav{
     height: 44px;
-    @include gradient(to top,#666,#545454,#4e4e4e,#393939,#212121);
-    .mainnav{
-      height: 44px;
-      li{
-        float: left;
-        width: 11.11%;
-        @include lineheight(44px);
-      }
+    li{
+      float: left;
+      width: 11.11%;
+      @include lineheight(44px);
     }
   }
 }
 .main{
   font-family: "Microsoft YaHei UI", Helvetica, Arial, sans-serif;
   .banner{
+    padding:{
+      top: 122px;
+      bottom: 44px;
+    };
     .slide{
       background: {
         repeat: no-repeat;
@@ -88,6 +142,7 @@ $iclssbg:(
     }
   }
   .youhui{
+    margin-bottom: 40px;
     .title{
       @include transition(all 0.4s);
       @include translate(-1000px);
@@ -135,9 +190,74 @@ $iclssbg:(
         }
       }
     }
+    .youhui-icon{
+      border-bottom: 1px solid $sectionBg;
+      padding-bottom: 50px;
+    }
+    .project-item{
+      margin-top: 20px;
+
+      .row{
+        .icles{
+          margin-top: 30px;
+          img{
+            width: auto;
+            height: 76px;
+            @include blockCenter;
+            display: block;
+          }
+          .link{
+            display: block;
+            width: 40%;
+            @include lineheight(30px);
+            @include blockCenter;
+            text-align: center;
+            background-color: #ffec5b;
+            color: #000;
+            font-weight:700;
+            @include borderRadius(10px);
+            @include transition(all 0.3s);
+
+            &:hover{
+              text-decoration: none;
+              background-color: #000;
+              color: #ffec5b;
+              letter-spacing: 6px;
+            }
+          }
+          h3{
+            padding: 10px;
+            text-align: center;
+          }
+          .caption{
+            padding-top: 10px;
+
+            padding-bottom: 10px;
+            color: #ffffff;
+            @include transition(all 0.4s);
+          }
+          @each $key,$value in $iclssbg{
+            &:nth-of-type(#{$key}){
+              .caption{
+                background-color: $value;
+                &:hover{
+                  @include boxShadow(0 0 10px $value);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+  .trade{
+    height: auto!important;
+    @include clearfix;
     .uijiuye{
+      padding: 30px 0;
       .sec{
-        width: 40%;
+        width: 60%;
         text-align: center;
         font-size: 18px;
         @include blockCenter;
@@ -146,8 +266,6 @@ $iclssbg:(
     }
     .youhui-item{
       background-color: $sectionBg;
-      margin-top: 20px;
-      padding-bottom: 200px;
       .joy{
         .thumbnail{
           border: none;
@@ -155,7 +273,7 @@ $iclssbg:(
           @include borderRadius(0);
           @include transition(all 0.4s);
           &.active{
-            background-color: #ff263a;
+            background-color: #cf1a3b;
             @include boxShadow(0 0 15px rgba(0,0,0,.5));
           }
           background-color: #eeeeee;
@@ -183,42 +301,172 @@ $iclssbg:(
         }
       }
     }
+    .container{
+      .row{
+        .col-md-3{
+          .thumbnail{
+            .ios-icons{
+              @include square(144px);
+              background: {
+                repeat: no-repeat;
+                position-y: 0;
+                image: url("../img/ios_icons.png");
+              };
+              @include blockCenter;
+
+            }
+            border:none;
+            @include boxShadow(none);
+          }
+          &:nth-of-type(1){
+            .ios-icons{
+              background-position-x: 0;
+            }
+          }
+          &:nth-of-type(2){
+            .ios-icons{
+              background-position-x:-222px;
+            }
+          }
+          &:nth-of-type(3){
+            .ios-icons{
+              background-position-x:-446px;
+            }
+          }
+          &:nth-of-type(4){
+            .ios-icons{
+              background-position-x:-669px;
+            }
+          }
+        }
+
+
+      }
+    }
 
   }
   .project{
-    .icles{
-
-      img{
-        width: 72px;
-        @include blockCenter;
-        display: block;
+    background-color: $sectionBg;
+    .img-responsive{
+      @include animateTransition(bottom,0.5s);
+      transition-delay: 1.5s;
+      @include blockCenter;
+    }
+  }
+  .salary{
+    height:auto!important;
+    .salary-title{
+      h3{
+        font-size: 36px;
+        color: #010101;
+        line-height: 40px;
+        margin-bottom: 20px;
+        font-weight: normal;
+        @include animateTransition(left,1s);
       }
-      .link{
-        display: block;
-        width: 40%;
-        @include lineheight(30px);
-        @include blockCenter;
+      p{
+        font-size: 16px;
+        color: #666;
+        line-height: 32px;
+        //@include animateTransition(right,1s);
+        //transition-delay: 1.4s;
+      }
+    }
+    .salary-item{
+      width: 100%;
+      @include clearfix;
+      li{
+        width: 21%;
+        float: left;
         text-align: center;
-        background-color: #ffec5b;
-        color: #000;
-        font-weight:700;
-        @include borderRadius(10px);
-        @include transition(all 0.3s);
-        &:hover{
-          text-decoration: none;
-          background-color: #000;
-          color: #ffec5b;
-          letter-spacing: 6px;
+        position: relative;
+        cursor: pointer;
+        margin: 0 2%;
+        @include animateTransition(bottom,1s);
+
+        @for $i from 1 through 4{
+          &:nth-of-type(#{$i}){
+            transition-delay: $i*0.5s;
+          }
         }
-      }
-      @each $key,$value in $iclssbg{
-        &:nth-of-type(#{$key}){
-          .caption{
-            background-color: $value;
+        span{
+          position: absolute;
+          width: 100%;
+          font-size: 28px;
+          line-height: 38px;
+          text-align: center;
+          left: 0;
+          top: 24px;
+        }
+        h5{
+          font-size: 24px;
+          line-height: 38px;
+          margin-top: 5px;
+          font-weight: normal;
+        }
+        img{
+          @include square(138px);
+          @include blockCenter;
+          @include transition(all 1s);
+        }
+        &:hover{
+           .xz_circ{
+            @include transform(rotate(360deg));
           }
         }
       }
     }
+    .content{
+      background: #e5e5e5;
+      padding: 67px 0 52px 0;
+      text-align: center;
+      h3{
+        font-size: 36px;
+        color: #010101;
+        line-height: 40px;
+        margin-bottom: 20px;
+        font-weight: normal;
+        span{
+          color: #ed1b24;
+          margin-right: 17px;
+        }
+      }
+      p{
+        font-size: 16px;
+        color: #666;
+        line-height: 32px;
+      }
+      a{
+        height: 43px;
+        color: #333;
+        margin: 0 auto;
+        position: relative;
+        border: 1px solid #333;
+        border-radius: 8px;
+        margin-top: 18px;
+        width: 198px;
+        line-height: 43px;
+        text-align: center;
+        display: block;
+        font-size: 18px;
+        cursor:pointer;
 
+      }
+      .u_content_con{
+        text-align: center;
+        margin-top: 45px;
+        img{
+          vertical-align: middle;
+          border: none;
+        }
+      }
+    }
+  }
+  .employ{
+
+    background: {
+      image: url("../img/employ_bg.png");
+      repeat: repeat;
+    };
   }
 }

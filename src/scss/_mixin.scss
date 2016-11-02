@@ -133,7 +133,7 @@ $legacy-support-for-ie:true;
   -o-transform: $type;
   transform: $type;
 }
-@mixin translate($num){
+@mixin translate($num...){
   @include transform(translate($num));
 }
 @mixin active{
@@ -141,6 +141,50 @@ $legacy-support-for-ie:true;
     @include translate(0);
     opacity: 1;
   }
+}
+@mixin animateTransition($type,$time){
+  @if $type==top{
+    @include transition(all $time);
+    @include translate(0,-300px);
+    opacity: 0;
+    &.active{
+      @include translate(0,0);
+      opacity: 1;
+    }
+  }@else if $type==left{
+    @include transition(all $time);
+    @include translate(-1000px,0);
+    opacity: 0;
+    &.active{
+      @include translate(0,0);
+      opacity: 1;
+    }
+  }@else if $type==right{
+    @include transition(all $time);
+    @include translate(1000px,0);
+    opacity: 0;
+    &.active{
+      @include translate(0,0);
+      opacity:1;
+    }
+  }@else if $type==bottom{
+    @include transition(all $time);
+    @include translate(0,300px);
+    opacity: 0;
+    &.active{
+      @include translate(0,0);
+      opacity:1;
+    }
+  }@else if $type==scale{
+    @include transition(all $time);
+    @include scale(0.2);
+    &.active{
+      @include scale(1);
+    }
+  }
+}
+@mixin scale($num){
+  @include transform(scale($num))
 }
 
 

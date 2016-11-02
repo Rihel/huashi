@@ -6,10 +6,10 @@ $('#fullpage').fullpage({
 	//每一页的内容是否垂直居中
 	verticalCentered:false,
 	//字体是否随着窗口缩放而缩放
-	resieze:false,
+	resieze:true,
 
 	//滚动速度，单位为毫秒，默认为700
-	scrollingSpeed:400,
+	scrollingSpeed:800,
 	//定义锚连接，默认为空，可以快速定位到某一个页面
 	anchors:['page1','page2','page3','page4','page5','page6','page7','page8'],
 	//是否使用CSS3属性来实现滚动效果
@@ -21,13 +21,12 @@ $('#fullpage').fullpage({
 	loopBottom:true,
 	//横向slider幻灯片是否循环滚动
 	loopHorizontal:true,
-
-
 	//固定的元素，页面滚动的时候 元素固定不东
-	fixedElements:'#header',
-	paddingTop:'150px',
+	//fixedElements:'#header',
+	// paddingTop:'122px',
+	// paddingBottom:'44px',
 	//绑定菜单
-	menu:'#header',
+	//menu:'#header',
 
 	navigation:true,
 	navigationPosition:'right',
@@ -41,9 +40,11 @@ $('#fullpage').fullpage({
 		$('.section').eq(index).find('.items').toggleClass('active');
 	}
 });
+$.fn.fullpage.destroy();
 
-items($('.youhui'),'img');
-items($('.project'),'img');
+items($('.youhui-icon'),'img');
+items($('.project-item'),'img');
+items($('.iossec .row'),'div');
 items($('.youhui'),'a');
 
 
@@ -64,11 +65,57 @@ function items(par,tag,animName){
 		}
 	});
 }
-$('.youhui').delegate('div.joy','mouseover',function(){
+$('.trade').delegate('div.joy','mouseover',function(){
 	$(this).find('.thumbnail').addClass('active');
 	$(this).find('.icons').addClass('active');
 });
-$('.youhui').delegate('div.joy','mouseout',function(){
+$('.trade').delegate('div.joy','mouseout',function(){
 	$(this).find('.thumbnail').removeClass('active');
 	$(this).find('.icons').removeClass('active');
 });
+	
+
+((function($,win,doc,underfine){
+	var meath={
+		isSee:function(obj){
+			var imgh=$(obj).offset().top,
+				scrolh=$(win).scrollTop(),
+				winh=$(win).height();
+			return scrolh+winh>imgh;
+		},
+		init:function(opt){
+			var items=opt.ele;
+			$(win).scroll(function(){
+				$(items).each(function(i,ele){
+					if(meath.isSee($(ele))&&!$(ele).hasClass('active')){
+						$(ele).addClass('active');
+					}
+				})
+			})
+		}
+	}
+	$.fn.scrollactive=function(options){
+		var def={
+			ele:$('#fullpage').find('.items')
+		};
+		this.settings=$.extend(def,options);
+		return meath.init(this.settings);
+	}
+})(jQuery,window,document));
+$('#fullpage').scrollactive();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
