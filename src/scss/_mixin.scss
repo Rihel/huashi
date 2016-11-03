@@ -1,9 +1,32 @@
 $legacy-support-for-ie:true;
+$keylist:-webkit-,-moz-,-ms-,-o-,"";
 @mixin blockCenter{
   margin: {
     left: auto;
     right: auto;
   };
+}
+@mixin animate($num...){
+  @each $key in $keylist{
+    #{$key}animation:$num;
+  }
+}
+@mixin keyframs($name){
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-webkit-keyframes #{$name} {
+    @content
+  }
+  @-ms-keyframes #{$name} {
+    @content
+  }
+  @-o-keyframes #{$name} {
+    @content
+  }
+  @keyframes #{$name} {
+    @content
+  }
 }
 @mixin ceshi{
   border: 1px solid black;

@@ -10,13 +10,36 @@ $animateName:(
         scale:scale,
         bottom:bottom
 );
+html,body{
+  overflow-x: hidden;
+}
+.height{
+  height:auto!important;
+}
 @each $key,$value in $animateName{
   .items-#{$key}{
     @include animateTransition($value,1s);
   }
 }
-
-
+@include keyframs(round){
+  0%{
+    @include transform(rotate(0deg));
+  }
+  //50%{
+  //  @include transform(rotate(180deg));
+  //}
+  100%{
+    @include transform(rotate(359deg));
+  }
+}
+.btnshover{
+  @include transition(all 0.4s);
+  &:hover{
+    text-decoration: none;
+    letter-spacing: 3px;
+    background-color: $titleColor;
+  }
+}
 .title-color{
   color: $titleColor;
 }
@@ -63,6 +86,7 @@ $animateName:(
   //overflow: hidden;
   position: relative;
 }
+
 #header{
   position: absolute;
   top: 0;
@@ -129,6 +153,8 @@ $animateName:(
       bottom: 44px;
     };
     .slide{
+      height: 100%;
+      width: 100%;
       background: {
         repeat: no-repeat;
         size: cover;
@@ -148,8 +174,6 @@ $animateName:(
       @include translate(-1000px);
       opacity: 0;
       @include active;
-      padding: 100px;
-      margin: 30px;
     }
     .items{
       opacity: 0;
@@ -192,11 +216,19 @@ $animateName:(
     }
     .youhui-icon{
       border-bottom: 1px solid $sectionBg;
-      padding-bottom: 50px;
+      padding-bottom: 100px;
+      .youhuititle{
+        h2{
+          padding-top: 112px;
+        }
+        p{
+          padding-bottom: 32px;
+        }
+      }
     }
     .project-item{
       margin-top: 20px;
-
+      margin-bottom: 55px;
       .row{
         .icles{
           margin-top: 30px;
@@ -226,13 +258,20 @@ $animateName:(
             }
           }
           h3{
-            padding: 10px;
+            padding: 0;
             text-align: center;
           }
+          p{
+            margin: 0;
+            padding: 14px 0;
+          }
           .caption{
-            padding-top: 10px;
-
-            padding-bottom: 10px;
+            padding:{
+              left: 12px;
+              top: 22px;
+              right: 12px;
+              bottom: 10px;
+            };
             color: #ffffff;
             @include transition(all 0.4s);
           }
@@ -255,7 +294,7 @@ $animateName:(
     height: auto!important;
     @include clearfix;
     .uijiuye{
-      padding: 30px 0;
+      padding: 80px 0;
       .sec{
         width: 60%;
         text-align: center;
@@ -266,6 +305,7 @@ $animateName:(
     }
     .youhui-item{
       background-color: $sectionBg;
+      padding-bottom: 120px;
       .joy{
         .thumbnail{
           border: none;
@@ -463,10 +503,156 @@ $animateName:(
     }
   }
   .employ{
-
+    height: 1335px!important;
+    overflow: hidden!important;
     background: {
       image: url("../img/employ_bg.png");
       repeat: repeat;
     };
+    padding-top: 80px;
+    width: 100%;
+    .container{
+      position: relative;
+      overflow: hidden;
+      .employ_round{
+        background: url("../img/employ_round.png") no-repeat;
+        height: 1253px;
+        margin: 0 auto;
+        @include animate(round 30s linear infinite)
+      }
+      .employ_content{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        .employ_title{
+          padding-top: 144px;
+          padding-bottom: 50px;
+          h3{
+            color: #fff;
+            font-size: 30px;
+          }
+          p{
+            color: #04737b;
+            font-size: 20px;
+          }
+        }
+        .row{
+          .employ-item{
+            margin-top: 10px;
+            .thumbnail{
+              border: none;
+              background-color: transparent;
+              padding: 0;
+              @include borderRadius(0);
+              .employ-icon{
+                @include ball(100px);
+                background-color: #0a343b;
+                overflow: hidden;
+                @include blockCenter;
+                .employ-icons-od{
+                  @include ball(80px);
+                  @include blockCenter;
+                  color: #ffffff;
+                  text-align: center;
+                  background-color: #04737b;
+                  margin-top: 10px;
+                  line-height: 80px;
+                  font-size: 20px;
+                }
+              }
+              .caption{
+                padding: 0;
+                h5{
+                  color: #ffffff;
+                  font-size: 22px;
+                }
+                p{
+                  color: #eeeeee;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .creator{
+    height: auto!important;
+    .base_tp{
+      text-align: center;
+      h3{
+        font-size: 36px;
+        color: #010101;
+        line-height: 40px;
+        margin-bottom: 20px;
+        font-weight: normal;
+        span{
+          color: #ed1b24;
+          margin-right: 17px;
+        }
+      }
+      p{
+        font-size: 16px;
+        color: #666;
+        line-height: 32px;
+      }
+      a{
+        height: 43px;
+        color: #333;
+        margin: 0 auto;
+        position: relative;
+        border: 1px solid #333;
+        border-radius: 8px;
+        margin-top: 18px;
+        width: 198px;
+        line-height: 43px;
+        text-align: center;
+        display: block;
+        font-size: 18px;
+      }
+    }
+    .con1_con{
+      text-align: center;
+      color: #404040;
+      font-size: 22px;
+      line-height: 32px;
+      margin-top: 72px;
+      img{
+        vertical-align: middle;
+        border: none;
+      }
+      p{
+        margin-top: 25px;
+        padding-bottom: 76px;
+      }
+    }
+    .teachers{
+      background-color: #e7e8ea;
+      padding-bottom: 26px;
+      .row{
+        h2{
+          padding-top: 20px;
+        }
+        .teacher{
+          margin-top: 62px;
+          .teacher-photo{
+            width: 40%;
+            img{
+              @include img;
+            }
+          }
+          .teacher-intr{
+            width: 60%;
+            .teacher-name{
+              padding-top: 48px;
+              font-size: 22px;
+              color: red;
+            }
+          }
+        }
+      }
+    }
   }
 }

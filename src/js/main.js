@@ -41,12 +41,18 @@ $('#fullpage').fullpage({
 	}
 });
 $.fn.fullpage.destroy();
-
-items($('.youhui-icon'),'img');
-items($('.project-item'),'img');
-items($('.iossec .row'),'div');
-items($('.youhui'),'a');
-
+var a=$('.huashiwenp').html();
+var str='';
+for(var i in a){
+	str+='<span class="items items-right text-right" style="display:inline-block;transition-delay: '+(0.2*i).toFixed(1)+'s;">'+a[i]+'</span>'
+}
+$('.huashiwenp').html(str);
+$('#fullpage').find('.section').not('.banner').addClass('height')
+// items($('.youhui-icon'),'img');
+// items($('.project-item'),'img');
+// items($('.iossec .row'),'div');
+// items($('.youhui'),'a');
+items($('#fullpage'),'*');
 
 function items(par,tag,animName){
 	var animates=['bounce','pulse','swing','rubberBand','shake','tada','wobble','jello'];
@@ -83,8 +89,8 @@ $('.trade').delegate('div.joy','mouseout',function(){
 				winh=$(win).height();
 			return scrolh+winh>imgh;
 		},
-		init:function(opt){
-			var items=opt.ele;
+		init:function(self,opt){
+			var items=self.find('.items');
 			$(win).scroll(function(){
 				$(items).each(function(i,ele){
 					if(meath.isSee($(ele))&&!$(ele).hasClass('active')){
@@ -96,10 +102,9 @@ $('.trade').delegate('div.joy','mouseout',function(){
 	}
 	$.fn.scrollactive=function(options){
 		var def={
-			ele:$('#fullpage').find('.items')
 		};
 		this.settings=$.extend(def,options);
-		return meath.init(this.settings);
+		return meath.init(this,this.settings);
 	}
 })(jQuery,window,document));
 $('#fullpage').scrollactive();
