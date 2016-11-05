@@ -510,23 +510,54 @@ html, body {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 44px;
+  height: 43px;
   width: 100%;
-  background: -webkit-linear-gradient(to top, #666, #545454, #4e4e4e, #393939, #212121);
-  background: -moz-linear-gradient(to top, #666, #545454, #4e4e4e, #393939, #212121);
-  background: -ms-linear-gradient(to top, #666, #545454, #4e4e4e, #393939, #212121);
-  background: -o-linear-gradient(to top, #666, #545454, #4e4e4e, #393939, #212121);
-  background: linear-gradient(to top, #666, #545454, #4e4e4e, #393939, #212121); }
+  background: url("../img/navbg.jpg") 0 0 repeat-x; }
   .nav .mainnav {
-    height: 44px; }
+    height: 43px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden; }
     .nav .mainnav li {
+      margin: 0;
+      padding: 0;
       float: left;
-      width: 11.11%;
+      position: absolute;
       height: 44px;
       line-height: 44px;
-      text-align: center; }
+      text-align: center;
+      width: 100px;
+      top: 0;
+      height: 86px;
+      overflow: hidden; }
+      .nav .mainnav li.nav1 {
+        left: 74px; }
+      .nav .mainnav li.nav2 {
+        left: 174px; }
+      .nav .mainnav li.nav3 {
+        left: 274px; }
+      .nav .mainnav li.nav4 {
+        left: 374px; }
+      .nav .mainnav li.nav5 {
+        left: 474px; }
+      .nav .mainnav li.nav6 {
+        left: 574px; }
+      .nav .mainnav li.nav7 {
+        left: 674px; }
+      .nav .mainnav li.nav8 {
+        left: 774px; }
+      .nav .mainnav li.index {
+        width: 75px;
+        left: 0; }
       .nav .mainnav li a {
+        margin: 0;
+        padding: 0;
         color: #fff; }
+        .nav .mainnav li a img {
+          display: block;
+          height: 43px; }
 
 .main {
   font-family: "Microsoft YaHei UI", Helvetica, Arial, sans-serif; }
@@ -534,15 +565,24 @@ html, body {
     padding-top: 122px;
     padding-bottom: 44px; }
     .main .banner .slide {
-      height: 100%;
-      width: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center; }
-      .main .banner .slide:nth-of-type(1) {
-        background-image: url("../img/banner1.jpg"); }
-      .main .banner .slide:nth-of-type(2) {
-        background-image: url("../img/banner2.jpg"); }
+      height: 500px; }
+      .main .banner .slide .item {
+        height: 500px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%; }
+        .main .banner .slide .item:nth-of-type(1) {
+          background-image: url("../img/banner3.png"); }
+        .main .banner .slide .item:nth-of-type(2) {
+          background-image: url("../img/banner1.jpg"); }
+        .main .banner .slide .item:nth-of-type(3) {
+          background-image: url("../img/banner2.jpg"); }
+      .main .banner .slide .carousel-control {
+        background-image: none;
+        height: 500px;
+        line-height: 500px; }
+        .main .banner .slide .carousel-control .fa {
+          font-size: 40px; }
   .main .youhui {
     margin-bottom: 40px; }
     .main .youhui .title {
@@ -1299,146 +1339,147 @@ html, body {
       background-color: #ffcb4d;
       height: 52px;
       line-height: 52px; }
-  .main .footer {
-    background: #333;
-    width: 100%;
-    padding-top: 35px;
-    overflow: hidden; }
-    .main .footer .container .map_wra {
+
+#footer {
+  background: #333;
+  width: 100%;
+  padding-top: 35px;
+  overflow: hidden; }
+  #footer .container .map_wra {
+    float: left;
+    margin-bottom: 10px; }
+    #footer .container .map_wra .logo {
+      width: 318px; }
+      #footer .container .map_wra .logo img {
+        width: 100%;
+        height: auto;
+        display: block; }
+    #footer .container .map_wra .map {
+      width: 317px;
       float: left;
-      margin-bottom: 10px; }
-      .main .footer .container .map_wra .logo {
-        width: 318px; }
-        .main .footer .container .map_wra .logo img {
-          width: 100%;
-          height: auto;
-          display: block; }
-      .main .footer .container .map_wra .map {
-        width: 317px;
+      height: 249px;
+      background: url(../img/map.png) no-repeat;
+      position: relative;
+      margin-top: 20px; }
+      #footer .container .map_wra .map span {
+        font-size: 14px;
+        left: 0px;
+        top: 0px;
+        width: 100px;
+        color: #c5c5c5; }
+      #footer .container .map_wra .map a {
+        font-size: 12px;
+        display: block;
+        color: #777;
+        line-height: 16px;
+        position: absolute; }
+        #footer .container .map_wra .map a.map_a1 {
+          left: 226px;
+          top: 78px; }
+        #footer .container .map_wra .map a.map_a2 {
+          left: 183px;
+          top: 105px; }
+        #footer .container .map_wra .map a.map_a3 {
+          left: 153px;
+          top: 126px; }
+        #footer .container .map_wra .map a.map_a4 {
+          left: 220px;
+          top: 102px; }
+        #footer .container .map_wra .map a.map_a5 {
+          left: 242px;
+          top: 118px; }
+        #footer .container .map_wra .map a.map_a6 {
+          left: 215px;
+          top: 130px; }
+        #footer .container .map_wra .map a.map_a7 {
+          left: 250px;
+          top: 143px; }
+        #footer .container .map_wra .map a.map_a8 {
+          left: 200px;
+          top: 147px; }
+        #footer .container .map_wra .map a.map_a9 {
+          left: 218px;
+          top: 160px; }
+        #footer .container .map_wra .map a.map_a10 {
+          left: 224px;
+          top: 180px; }
+        #footer .container .map_wra .map a.map_a11 {
+          left: 190px;
+          top: 188px; }
+        #footer .container .map_wra .map a.map_a12 {
+          left: 172px;
+          top: 168px; }
+        #footer .container .map_wra .map a.map_a13 {
+          left: 158px;
+          top: 200px; }
+        #footer .container .map_wra .map a.map_a14 {
+          left: 115px;
+          top: 201px; }
+        #footer .container .map_wra .map a.map_a15 {
+          left: 120px;
+          top: 160px; }
+        #footer .container .map_wra .map a.map_a16 {
+          left: 203px;
+          top: 213px; }
+  #footer .container .wrapper {
+    overflow: hidden; }
+    #footer .container .wrapper * {
+      margin: 0;
+      padding: 0; }
+    #footer .container .wrapper .wrapper_top {
+      float: left; }
+      #footer .container .wrapper .wrapper_top .link_wra {
         float: left;
-        height: 249px;
-        background: url(../img/map.png) no-repeat;
-        position: relative;
-        margin-top: 20px; }
-        .main .footer .container .map_wra .map span {
-          font-size: 14px;
-          left: 0px;
-          top: 0px;
-          width: 100px;
-          color: #c5c5c5; }
-        .main .footer .container .map_wra .map a {
-          font-size: 12px;
-          display: block;
-          color: #777;
-          line-height: 16px;
-          position: absolute; }
-          .main .footer .container .map_wra .map a.map_a1 {
-            left: 226px;
-            top: 78px; }
-          .main .footer .container .map_wra .map a.map_a2 {
-            left: 183px;
-            top: 105px; }
-          .main .footer .container .map_wra .map a.map_a3 {
-            left: 153px;
-            top: 126px; }
-          .main .footer .container .map_wra .map a.map_a4 {
-            left: 220px;
-            top: 102px; }
-          .main .footer .container .map_wra .map a.map_a5 {
-            left: 242px;
-            top: 118px; }
-          .main .footer .container .map_wra .map a.map_a6 {
-            left: 215px;
-            top: 130px; }
-          .main .footer .container .map_wra .map a.map_a7 {
-            left: 250px;
-            top: 143px; }
-          .main .footer .container .map_wra .map a.map_a8 {
-            left: 200px;
-            top: 147px; }
-          .main .footer .container .map_wra .map a.map_a9 {
-            left: 218px;
-            top: 160px; }
-          .main .footer .container .map_wra .map a.map_a10 {
-            left: 224px;
-            top: 180px; }
-          .main .footer .container .map_wra .map a.map_a11 {
-            left: 190px;
-            top: 188px; }
-          .main .footer .container .map_wra .map a.map_a12 {
-            left: 172px;
-            top: 168px; }
-          .main .footer .container .map_wra .map a.map_a13 {
-            left: 158px;
-            top: 200px; }
-          .main .footer .container .map_wra .map a.map_a14 {
-            left: 115px;
-            top: 201px; }
-          .main .footer .container .map_wra .map a.map_a15 {
-            left: 120px;
-            top: 160px; }
-          .main .footer .container .map_wra .map a.map_a16 {
-            left: 203px;
-            top: 213px; }
-    .main .footer .container .wrapper {
-      overflow: hidden; }
-      .main .footer .container .wrapper * {
-        margin: 0;
-        padding: 0; }
-      .main .footer .container .wrapper .wrapper_top {
-        float: left; }
-        .main .footer .container .wrapper .wrapper_top .link_wra {
+        padding: 40px 0 0 20px; }
+        #footer .container .wrapper .wrapper_top .link_wra .link {
           float: left;
-          padding: 40px 0 0 20px; }
-          .main .footer .container .wrapper .wrapper_top .link_wra .link {
-            float: left;
-            margin-right: 12px; }
-            .main .footer .container .wrapper .wrapper_top .link_wra .link h3 {
-              font-size: 16px;
-              color: #CCC;
-              margin-bottom: 15px;
-              text-align: center;
-              cursor: default; }
-            .main .footer .container .wrapper .wrapper_top .link_wra .link ul {
-              list-style-type: none; }
-              .main .footer .container .wrapper .wrapper_top .link_wra .link ul li {
-                text-align: center; }
-                .main .footer .container .wrapper .wrapper_top .link_wra .link ul li a {
-                  font-size: 14px;
-                  line-height: 30px;
-                  text-align: center;
-                  color: #666;
-                  text-decoration: none;
-                  outline: none; }
-        .main .footer .container .wrapper .wrapper_top .contact {
-          float: right;
-          width: 220px; }
-          .main .footer .container .wrapper .wrapper_top .contact .zixun {
-            background: #d00e31;
-            border-width: 1px;
-            border-style: solid;
-            border-radius: 30px;
-            border-top-left-radius: 30px;
-            border-bottom-left-radius: 30px;
-            border-bottom-right-radius: 30px;
+          margin-right: 12px; }
+          #footer .container .wrapper .wrapper_top .link_wra .link h3 {
             font-size: 16px;
-            color: #FFF;
-            width: 120px;
+            color: #CCC;
+            margin-bottom: 15px;
             text-align: center;
-            padding: 5px 0;
-            float: right; }
-          .main .footer .container .wrapper .wrapper_top .contact .tel {
-            font-size: 22px;
-            color: #FFF;
-            float: right;
-            margin-top: 6px; }
-          .main .footer .container .wrapper .wrapper_top .contact .weixin {
-            color: #FFF;
-            font-size: 16px;
-            text-align: center;
-            float: right; }
-      .main .footer .container .wrapper .wrapper_bottom {
+            cursor: default; }
+          #footer .container .wrapper .wrapper_top .link_wra .link ul {
+            list-style-type: none; }
+            #footer .container .wrapper .wrapper_top .link_wra .link ul li {
+              text-align: center; }
+              #footer .container .wrapper .wrapper_top .link_wra .link ul li a {
+                font-size: 14px;
+                line-height: 30px;
+                text-align: center;
+                color: #666;
+                text-decoration: none;
+                outline: none; }
+      #footer .container .wrapper .wrapper_top .contact {
         float: right;
-        text-align: right; }
+        width: 220px; }
+        #footer .container .wrapper .wrapper_top .contact .zixun {
+          background: #d00e31;
+          border-width: 1px;
+          border-style: solid;
+          border-radius: 30px;
+          border-top-left-radius: 30px;
+          border-bottom-left-radius: 30px;
+          border-bottom-right-radius: 30px;
+          font-size: 16px;
+          color: #FFF;
+          width: 120px;
+          text-align: center;
+          padding: 5px 0;
+          float: right; }
+        #footer .container .wrapper .wrapper_top .contact .tel {
+          font-size: 22px;
+          color: #FFF;
+          float: right;
+          margin-top: 6px; }
+        #footer .container .wrapper .wrapper_top .contact .weixin {
+          color: #FFF;
+          font-size: 16px;
+          text-align: center;
+          float: right; }
+    #footer .container .wrapper .wrapper_bottom {
+      float: right;
+      text-align: right; }
 
 /*# sourceMappingURL=index.css.map */
