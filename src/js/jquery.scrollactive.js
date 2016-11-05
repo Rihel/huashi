@@ -50,10 +50,8 @@
 		isltIE:function(browers){
 			var a=parseInt(browers[browers.length-1]);
 			if(isNaN(a)){
-				alert('这不是ie')
 				return false;
 			}else if(a<=10){
-				alert('这是ie')
 				return true;
 			}
 		},
