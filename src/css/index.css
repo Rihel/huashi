@@ -454,7 +454,8 @@ html, body {
       transform: translate(0); }
 
 .section {
-  position: relative; }
+  position: relative;
+}
 
 #header {
   position: absolute;
