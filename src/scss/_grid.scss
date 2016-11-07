@@ -1,0 +1,23 @@
+$grid_length:10;
+
+$grid_margin:20px;
+$grid_width:60px;
+
+.row{
+  min-height: 1px;
+  margin-left:-$grid_margin;
+}
+
+.row [class*="grid"]{
+  float: left;
+  min-height: 1px;
+  margin-left: $grid_margin;
+}
+
+@mixin grid ($length){
+  @for $index from 1 through $length{
+    .row .grid#{$index}{
+      width: $index*$grid_width+$grid_margin*($index-1);
+    }
+  }
+}

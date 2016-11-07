@@ -12,8 +12,6 @@ $animateName:(
 );
 body{
   *{
-    margin: 0;
-    padding: 0;
     font-family: 'Microsoft YaHei UI';
   }
 }
@@ -135,11 +133,9 @@ html,body{
 }
 
 #header{
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 122px;
+  z-index: 999;
   @include boxShadow(2px 2px 5px #525252);
   @include gradient(to top,#f3f3f3,#f9f9f9);
   .share-bar{
@@ -337,11 +333,15 @@ $bannerHeight:1000px;
     .project-item{
       margin-top: 20px;
       margin-bottom: 55px;
+      *{
+        margin: 0;
+        padding: 0;
+      }
       .row{
         .icles{
           margin-top: 19px;
           margin-right: 19px;
-          width: 288px;
+          width: 280px;
           height: 252px;
           padding:{
             left: 12px;
