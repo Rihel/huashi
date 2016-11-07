@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <!–[if lte IE 8]>
+    <meta http-equiv=”x-ua-compatible” content=”ie=7″ />
+    <![endif]–>
+    <!–[if IE 9]>
+    <meta http-equiv=”x-ua-compatible” content=”ie=9″ />
+    <![endif]–>
     <link rel="stylesheet" href="css/jquery.fullpage.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!--<link rel="stylesheet" href="css/reset.css">-->
+    <link rel="stylesheet" href="css/commom.css">
     <link rel="stylesheet" href="css/index.css">
-    <script src="js/jquery-3.1.1.min.js"></script>
+    <!--<script src="js/jquery-3.1.1.min.js"></script>-->
+    <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
     <!--[if lt IE 9]>
         <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -43,113 +53,115 @@
         </div>
     </div>
 </div>
-<div id="fullpage" class="main">
-    <div class="section banner">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
+<div class="section banner">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item item1 active">
 
-                </div>
-                <div class="item"></div>
-                <div class="item"></div>
             </div>
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class=" fa fa-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class=" fa fa-chevron-right"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="item item2"></div>
+            <div class="item item3"></div>
+            <div class="item item4"></div>
         </div>
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class=" fa fa-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class=" fa fa-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="nav">
+        <div class="container">
+            <ul class="list-unstyled mainnav">
+                <li class="index">
+                    <a href="#">
+                        <img src="img/daohang/shouye2.jpg" alt="">
+                        <img src="img/daohang/shouye1.jpg" alt="">
+                    </a>
+                </li>
+                <!--校园环境-->
+                <li class="nav1">
+                    <a href="http://www.hssjpx.com.cn/xyhj.htm">
+                        <img src="img/daohang/xyhj1.jpg" alt="">
+                        <img src="img/daohang/xyhj2.jpg" alt="">
+                    </a>
+                </li>
+                <!--专业设置-->
+                <li class="nav2">
+                    <a href="http://www.hssjpx.com.cn/zysz.htm">
+                        <img src="img/daohang/zysz1.jpg" alt="">
+                        <img src="img/daohang/zysz2.jpg" alt="">
+                    </a>
+                </li>
+                <!--师资介绍-->
+                <li class="nav3">
+                    <a href="http://www.hssjpx.com.cn/szjs.htm">
+                        <img src="img/daohang/szjs1.jpg" alt="">
+                        <img src="img/daohang/szjs2.jpg" alt="">
+                    </a>
+                </li>
+                <!--学生作品-->
+                <li class="nav4">
+                    <a href="http://www.hssjpx.com.cn/szjs.htm">
+                        <img src="img/daohang/xxzp1.jpg" alt="">
+                        <img src="img/daohang/zysz2.jpg" alt="">
+                    </a>
+                </li>
+                <!--就业之星-->
+                <li class="nav5">
+                    <a href="http://www.hssjpx.com.cn/szjs.htm">
+                        <img src="img/daohang/jyzx1.jpg" alt="">
+                        <img src="img/daohang/jyzx2.jpg" alt="">
+                    </a>
+                </li>
+                <!--食宿安排-->
+                <li class="nav6">
+                    <a href="http://www.hssjpx.com.cn/ssap.htm">
+                        <img src="img/daohang/ssap1.jpg" alt="">
+                        <img src="img/daohang/ssap2.jpg" alt="">
+                    </a>
+                </li>
 
-        <div class="nav">
-            <div class="container">
-                <ul class="list-unstyled mainnav">
-                    <li class="index">
-                        <a href="#">
-                            <img src="img/daohang/shouye2.jpg" alt="">
-                            <img src="img/daohang/shouye1.jpg" alt="">
-                        </a>
-                    </li>
-                    <!--校园环境-->
-                    <li class="nav1">
-                        <a href="http://www.hssjpx.com.cn/xyhj.htm">
-                            <img src="img/daohang/xyhj1.jpg" alt="">
-                            <img src="img/daohang/xyhj2.jpg" alt="">
-                        </a>
-                    </li>
-                    <!--专业设置-->
-                    <li class="nav2">
-                        <a href="http://www.hssjpx.com.cn/zysz.htm">
-                            <img src="img/daohang/zysz1.jpg" alt="">
-                            <img src="img/daohang/zysz2.jpg" alt="">
-                        </a>
-                    </li>
-                    <!--师资介绍-->
-                    <li class="nav3">
-                        <a href="http://www.hssjpx.com.cn/szjs.htm">
-                            <img src="img/daohang/szjs1.jpg" alt="">
-                            <img src="img/daohang/szjs2.jpg" alt="">
-                        </a>
-                    </li>
-                    <!--学生作品-->
-                    <li class="nav4">
-                        <a href="http://www.hssjpx.com.cn/szjs.htm">
-                            <img src="img/daohang/xxzp1.jpg" alt="">
-                            <img src="img/daohang/zysz2.jpg" alt="">
-                        </a>
-                    </li>
-                    <!--就业之星-->
-                    <li class="nav5">
-                        <a href="http://www.hssjpx.com.cn/szjs.htm">
-                            <img src="img/daohang/jyzx1.jpg" alt="">
-                            <img src="img/daohang/jyzx2.jpg" alt="">
-                        </a>
-                    </li>
-                    <!--食宿安排-->
-                    <li class="nav6">
-                        <a href="http://www.hssjpx.com.cn/ssap.htm">
-                            <img src="img/daohang/ssap1.jpg" alt="">
-                            <img src="img/daohang/ssap2.jpg" alt="">
-                        </a>
-                    </li>
+                <!--乘车路线-->
 
-                    <!--乘车路线-->
-
-                    <li class="nav7">
-                        <a href="http://www.hssjpx.com.cn/cclx.htm">
-                            <img src="img/daohang/cclx1.jpg" alt="">
-                            <img src="img/daohang/cclx2.jpg" alt="">
-                        </a>
-                    </li>
-                    <!--联系我们-->
-                    <li class="nav8">
-                        <a href="http://www.hssjpx.com.cn/lxwm.htm">
-                            <img src="img/daohang/lxwm1.jpg " alt="">
-                            <img src="img/daohang/lxwm2.jpg " alt="">
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                <li class="nav7">
+                    <a href="http://www.hssjpx.com.cn/cclx.htm">
+                        <img src="img/daohang/cclx1.jpg" alt="">
+                        <img src="img/daohang/cclx2.jpg" alt="">
+                    </a>
+                </li>
+                <!--联系我们-->
+                <li class="nav8">
+                    <a href="http://www.hssjpx.com.cn/lxwm.htm">
+                        <img src="img/daohang/lxwm1.jpg " alt="">
+                        <img src="img/daohang/lxwm2.jpg " alt="">
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
+</div>
+<div id="fullpage" class="main">
+
     <div class="section youhui">
         <div class="container-fluid youhui-icon">
             <div class="container ">
                 <div class="row">
                     <div class="text-center youhuititle">
-                        <h2 class="title items">广东电视台特约采访</h2>
-                        <p class="text-center items items-right">中国平面设计第一品牌七大优势</p>
+                        <h2 class="title  ">广东电视台特约采访</h2>
+                        <p class="text-center  ">中国平面设计第一品牌七大优势</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2 col-xs-2 col-sm-3 items">
+                    <div class="col-md-2 col-xs-2 col-sm-3 items-left items">
                         <div class="thumbnail">
                             <img src="img/box1conimg6.png" class="animated" lt="">
                             <div class="caption">
@@ -162,7 +174,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 col-xs-2 col-sm-3 items">
+                    <div class="col-md-2 col-xs-2 col-sm-3 items items-left">
                         <div class="thumbnail">
                             <img src="img/box1conimg5.png" class="animated" lt="">
                             <div class="caption">
@@ -175,7 +187,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 col-xs-2 col-sm-3 items">
+                    <div class="col-md-2 col-xs-2 col-sm-3 items items-left">
                         <div class="thumbnail">
                             <img src="img/box1conimg1.png" class="animated" lt="">
                             <div class="caption">
@@ -188,7 +200,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 col-xs-2 col-sm-3 items">
+                    <div class="col-md-2 col-xs-2 col-sm-3 items items-right">
                         <div class="thumbnail">
                             <img src="img/box1conimg2.png" class="animated" lt="">
                             <div class="caption">
@@ -201,7 +213,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 col-xs-2 col-sm-3 items">
+                    <div class="col-md-2 col-xs-2 col-sm-3 items items-right">
                         <div class="thumbnail">
                             <img src="img/box1conimg3.png" class="animated" lt="">
                             <div class="caption">
@@ -214,7 +226,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 col-xs-2 col-sm-3 items">
+                    <div class="col-md-2 col-xs-2 col-sm-3 items items-right">
                         <div class="thumbnail">
                             <img src="img/box1conimg4.png" class="animated" alt="">
                             <div class="caption">
@@ -232,68 +244,64 @@
         </div>
         <div class="container project-item">
             <div class="row">
-                <div class="col-md-3 icles">
-                    <div class="caption">
-                        <h3>三个月平面设计实战班</h3>
-                        <img src="img/lesson1.png" alt="" class="animated">
-                        <p class="text-center">
-                            设计师研修基地与院校开展人才联合培养项目满足社会对复合型人才的要求
-                        </p>
-                        <a href="#" class="link">点击了解</a>
-                    </div>
+                <div class="col-md-3 icles1 icles">
+                    <h3>三个月平面设计实战班</h3>
+                    <img src="img/lesson1.png" alt="" class="animated">
+                    <p class="text-center">
+                        设计师研修基地与院校开展人才联合培养项目满足社会对复合型人才的要求
+                    </p>
+                    <a href="http://www.hssjpx.com.cn/4gy.htm" class="link">点击了解</a>
                 </div>
-                <div class="col-md-3 icles">
-                    <div class="caption">
+                <div class="col-md-3 icles2 icles">
                         <h3>半年制平面设精英班</h3>
                         <img src="img/lesson2.png" alt="" class="animated">
                         <p class="text-center">
                             联合IT知名企业，确定合作企业的人才需求计划，学员结业后即可入职用人企业
                         </p>
-                        <a href="#" class="link">点击了解</a>
-                    </div>
+                        <a href="http://www.hssjpx.com.cn/6gy.htm" class="link">点击了解</a>
                 </div>
-                <div class="col-md-3 icles">
-                    <div class="caption">
+                <div class="col-md-3 icles3 icles">
+
                         <h3>一年制平面设计研修班</h3>
                         <img src="img/lesson3.png" alt="" class="animated">
                         <p class="text-center">
                             有针对性的筛选知名企业资深职业经理人帮助学生完成实践性的岗前技能前置培训
                         </p>
-                        <a href="#" class="link">点击了解</a>
-                    </div>
+                        <a href="http://www.hssjpx.com.cn/12gy.htm" class="link">点击了解</a>
+
                 </div>
-                <div class="col-md-3 icles">
-                    <div class="caption">
+                <div class="col-md-3 icles4 icles">
+
                         <h3>平面作品集</h3>
                         <img src="img/lesson4.png" alt="" class="animated">
                         <p class="text-center">
                             <!--这里是文字-->
                         </p>
-                        <a href="#" class="link">点击了解</a>
-                    </div>
+                        <a href="http://www.hssjpx.com.cn/xszp.htm" class="link">点击了解</a>
+
                 </div>
-                <div class="col-md-3 icles">
-                    <div class="caption">
+                <div class="col-md-3 icles5 icles">
+
                         <h3>四个月UI界面设计班</h3>
                         <img src="img/lesson5.png" alt="" class="animated">
                         <p class="text-center">
                             在实训基地开展实训项目授课和实训提高学员项目实战和工作能力
                         </p>
                         <a href="#" class="link">点击了解</a>
-                    </div>
+
                 </div>
-                <div class="col-md-3 icles">
-                    <div class="caption">
+                <div class="col-md-3 icles6 icles">
+
                         <h3>两年制平面设计大专班</h3>
                         <img src="img/lesson6.png" alt="" class="animated">
                         <p class="text-center">
                             联合各大第三方专业资格认证机构，为院校专业教师与学生提供高技能资格认证服务
                         </p>
                         <a href="#" class="link">点击了解</a>
-                    </div>
+
                 </div>
-                <div class="col-md-3 icles">
-                    <div class="caption">
+                <div class="col-md-3 icles7 icles">
+
                         <h3>专业共建</h3>
                         <img src="img/lesson7.png" alt="" class="animated">
                         <p class="text-center">
@@ -301,17 +309,17 @@
                             引申新建符合社会用人需求的专业新方向
                         </p>
                         <a href="#" class="link">点击了解</a>
-                    </div>
+
                 </div>
-                <div class="col-md-3 icles">
-                    <div class="caption">
+                <div class="col-md-3 icles8 icles">
+
                         <h3>UI作品集</h3>
                         <img src="img/lesson7.png" alt="" class="animated">
                         <p class="text-center">
                             <!--这里是文字-->
                             </p>
-                        <a href="#" class="link">点击了解</a>
-                    </div>
+                        <a href="http://www.hssjpx.com.cn/xszp.htm" class="link">点击了解</a>
+
                 </div>
             </div>
 
@@ -380,7 +388,7 @@
                     <p class="huashiwenp text-right" style="color: red;font-size: 25px;padding-right: 30px;">
                         还可以拿华南师范大学文凭</p>
                     <div class="col-md-8 items items-left">
-                        <h2>行业前景</h2>
+                        <h2 class="trade－title">行业前景：</h2>
                         <p>
                             提到苹果，人们往往最开始想到的就是iPhone手机、iPad平板电脑，其实苹果带给世界的不单单是这些高端的科技产品，更重要是它的热潮带给了数以万计ios开发人员高薪从业的机会，在技术领域，只要你有过硬的技术就能拿到高薪，成就自我。</p>
                     </div>
@@ -437,7 +445,7 @@
                         <img src="img/ios_2.jpg" class="img-responsive" alt="">
                     </div>
                     <div class="col-md-8 items items-right">
-                        <h2>就业方向：</h2>
+                        <h2 class="trade－title">就业方向：</h2>
                         <p>
                             通过本专业全面系统的学习，你可以从事IOS产品开发、C/Objective-C语言开发、IOS客户端核心模块代码编写和维护、IOS产品升级与维护、产品设计文档的编写、研发计划的制定与把控、产品测试、IOS新技术调研、App
                             Store产品上架等工作。</p>
@@ -449,16 +457,24 @@
     <div class="section project">
         <div class="container">
             <div class="row">
+                <div class="col-md-4 project-title">
+                    <h2 class="items items-left">项目背景</h2>
+                    <h4 class="items items-right">PROJECT BACKGROUND</h4>
+                </div>
+                <div class="col-md-8">
+                    <img src="img/project-bg.png" class="img-responsive items items-top" alt="">
+                </div>
+            </div>
+            <div class="row">
                 <div class="jumbotron">
-                    <h2 class="items">项目背景</h2>
-                    <h4 class="items">PROJECT BACKGROUND</h4>
+
                     <ul class="list-unstyled">
-                        <li class="items">1. 校企合作、理论+实训模式是实现高等教育与职业教育有效结合的人才培养模式，是实现大学生IT职业技能培养目标的有效途径</li>
-                        <li class="items">2. 华信智原通过整合政府、院校和IT企业的力量，共同搭建IT行业人才共建平台，构建政府、高校和IT企业的沟通桥梁</li>
-                        <li class="items">3. 大量优秀IT企业通过华信智原IT行业人才共建平台将企业的人才需求、技能要求引入高校人才培训计划，培养更优秀的人才为企业所用</li>
-                        <li class="items">4. 高校通过华信智原IT行业人才共建平台为IT相关专业学生提供优势教育资源和就业途径</li>
+                        <li class="items items-left">1. 校企合作、理论+实训模式是实现高等教育与职业教育有效结合的人才培养模式，是实现大学生IT职业技能培养目标的有效途径</li>
+                        <li class="items items-left">2. 华信智原通过整合政府、院校和IT企业的力量，共同搭建IT行业人才共建平台，构建政府、高校和IT企业的沟通桥梁</li>
+                        <li class="items items-left">3. 大量优秀IT企业通过华信智原IT行业人才共建平台将企业的人才需求、技能要求引入高校人才培训计划，培养更优秀的人才为企业所用</li>
+                        <li class="items items-left">4. 高校通过华信智原IT行业人才共建平台为IT相关专业学生提供优势教育资源和就业途径</li>
                     </ul>
-                    <img src="img/pic10.jpg" class="img-responsive items" alt="">
+                    <img src="img/pic10.png" class="img-responsive items items-bottom" alt="" style="padding-top: 40px;">
                 </div>
             </div>
         </div>
@@ -466,8 +482,8 @@
     <div class="section salary">
         <div class="container">
             <div class="row salary-title">
-                <h3 class="text-center items title-color">先就业后付款</h3>
-                <p class="text-center items">四个月零基础学员正常毕业后立即可获8000-12000月薪，学的好的可达15000-18000，</p>
+                <h3 class="text-center items title-color items-left">先就业后付款</h3>
+                <p class="text-center items items-left">四个月零基础学员正常毕业后立即可获8000-12000月薪，学的好的可达15000-18000，</p>
                 <p class="text-center">
                     就业后到公司一个项目期结束后拿实际项目经验跳槽月薪翻倍，1年内月薪20-40K很普遍
                 </p></div>
@@ -529,7 +545,7 @@
         <div class="container">
             <div class="employ_round"></div>
             <div class="employ_content items items-scale">
-                <div class="row text-center employ_title">
+                <div class="row text-center employ_title" style="padding-left: 0;">
                     <h3>详细课程（综合设计训练）</h3>
                     <p>800余个真实项目案例在就业课程体系中逐一落地，掌握</p>
                     <p> 互联网时代综合设计师所有技能，轻松驾驭职场上的各种项目需求！</p>
@@ -538,9 +554,7 @@
                     <div class="col-md-2 col-md-offset-2 employ-item">
                         <div class="thumbnail">
                             <div class="employ-icon animated">
-                                <div class="employ-icons-od fa fa-close">
-
-                                </div>
+                                <img src="img/employ_pic1.png" alt="">
                             </div>
                             <div class="caption">
                                 <h5 class="text-center">绘画线条练习
@@ -554,48 +568,42 @@
                     <div class="col-md-2  employ-item">
                         <div class="thumbnail">
                             <div class="employ-icon animated">
-                                <div class="employ-icons-od fa fa-close">
-
-                                </div>
+                                <img src="img/employ_pic2.png" alt="">
                             </div>
                             <div class="caption">
-                                <h5 class="text-center">绘画线条练习
+                                <h5 class="text-center">绘画构图与透视
                                 </h5>
-                                <p class="text-center">了解素描是造型艺术的基础 <br>
-                                    理解几何形体的机构 <br>
-                                    掌握形体的重组与空间表现</p>
+                                <p class="text-center">实例解析矩形构图、三角形构图、 <br>
+                                    S型构图及斜线构图和平行透视、 <br>
+                                    成角透视两种绘图透视</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-2  employ-item">
                         <div class="thumbnail">
                             <div class="employ-icon animated">
-                                <div class="employ-icons-od fa fa-close">
-
-                                </div>
+                                <img src="img/employ_pic3.png" alt="">
                             </div>
                             <div class="caption">
-                                <h5 class="text-center">绘画线条练习
+                                <h5 class="text-center">设计素描
                                 </h5>
-                                <p class="text-center">了解素描是造型艺术的基础 <br>
-                                    理解几何形体的机构 <br>
-                                    掌握形体的重组与空间表现</p>
+                                <p class="text-center">实例解析双重意向、虚拟想象、矛 <br>
+                                    盾联想在设计素描中的运用 <br>
+
                             </div>
                         </div>
                     </div>
                     <div class="col-md-2  employ-item">
                         <div class="thumbnail">
                             <div class="employ-icon animated">
-                                <div class="employ-icons-od fa fa-close">
-
-                                </div>
+                                <img src="img/employ_pic4.png" alt="">
                             </div>
                             <div class="caption">
-                                <h5 class="text-center">绘画线条练习
+                                <h5 class="text-center">商业美术
                                 </h5>
-                                <p class="text-center">了解素描是造型艺术的基础 <br>
-                                    理解几何形体的机构 <br>
-                                    掌握形体的重组与空间表现</p>
+                                <p class="text-center">了解创意在设计中的具体运用; <br>
+                                    理解创意思维的形态置换原理; <br>
+                                    掌握将创意思维转化为图像形式的能力</p>
                             </div>
                         </div>
                     </div>
@@ -604,98 +612,89 @@
                     <div class="col-md-2 col-md-offset-2 employ-item">
                         <div class="thumbnail">
                             <div class="employ-icon animated">
-                                <div class="employ-icons-od fa fa-close">
-
-                                </div>
+                                <img src="img/employ_pic5.png" alt="">
                             </div>
                             <div class="caption">
-                                <h5 class="text-center">绘画线条练习
+                                <h5 class="text-center">实训项目
                                 </h5>
-                                <p class="text-center">了解素描是造型艺术的基础 <br>
-                                    理解几何形体的机构 <br>
-                                    掌握形体的重组与空间表现</p>
+                                <p class="text-center">中小型企业项目 <br>
+                                    掌握Web界面设计模块的设计 <br>
+                                    </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-2  employ-item">
                         <div class="thumbnail">
                             <div class="employ-icon animated">
-                                <div class="employ-icons-od fa fa-close">
-
-                                </div>
+                                <img src="img/employ_pic6.png" alt="">
                             </div>
                             <div class="caption">
-                                <h5 class="text-center">绘画线条练习
+
+
+                                <h5 class="text-center">Dreamweaver
                                 </h5>
-                                <p class="text-center">了解素描是造型艺术的基础 <br>
-                                    理解几何形体的机构 <br>
-                                    掌握形体的重组与空间表现</p>
+                                <p class="text-center">了解Web界面设计常用软件工具、功能的使用 <br>
+                                    理解企业及客户的基本需求 <br>
+                                    </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-2  employ-item">
                         <div class="thumbnail">
                             <div class="employ-icon animated">
-                                <div class="employ-icons-od fa fa-close">
-
-                                </div>
+                                <img src="img/employ_pic7.png" alt="">
                             </div>
                             <div class="caption">
-                                <h5 class="text-center">绘画线条练习
+                                <h5 class="text-center">Web界面设计
                                 </h5>
-                                <p class="text-center">了解素描是造型艺术的基础 <br>
-                                    理解几何形体的机构 <br>
-                                    掌握形体的重组与空间表现</p>
+                                <p class="text-center">Web界面的分类、企业网站界面、 <br>
+                                    经典Web商业广告中的Flash技术与实现 <br>
+                                   </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-2  employ-item">
                         <div class="thumbnail">
                             <div class="employ-icon animated">
-                                <div class="employ-icons-od fa fa-close">
-
-                                </div>
+                                <img src="img/employ_pic8.png" alt="">
                             </div>
                             <div class="caption">
-                                <h5 class="text-center">绘画线条练习
+                                <h5 class="text-center">PC客户端软件界面设计
                                 </h5>
-                                <p class="text-center">了解素描是造型艺术的基础 <br>
-                                    理解几何形体的机构 <br>
-                                    掌握形体的重组与空间表现</p>
+                                <p class="text-center">PC客户端软件界面的类型 <br>
+                                    企业ERP办公软件 <br>
+                                    电子商务系统界面的分析与设计</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2 col-md-offset-4 employ-item">
+                    <div class="col-md-2 col-md-offset-4 employ-item" style="margin-left: 266px;">
                         <div class="thumbnail">
                             <div class="employ-icon animated">
-                                <div class="employ-icons-od fa fa-close">
-
-                                </div>
+                                <img src="img/employ_pic9.png" alt="">
                             </div>
                             <div class="caption">
-                                <h5 class="text-center">绘画线条练习
+
+                                <h5 class="text-center">移动界面设计
                                 </h5>
-                                <p class="text-center">了解素描是造型艺术的基础 <br>
-                                    理解几何形体的机构 <br>
-                                    掌握形体的重组与空间表现</p>
+                                <p class="text-center">本课程你将学习到iPhone应用 <br>
+                                    iPad应用 <br>
+                                    Windows Phone交互界面设计实例</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-2  employ-item">
                         <div class="thumbnail">
                             <div class="employ-icon animated">
-                                <div class="employ-icons-od fa fa-close">
-
-                                </div>
+                                <img src="img/employ_pic10.png" alt="">
                             </div>
                             <div class="caption">
-                                <h5 class="text-center">绘画线条练习
+                                <h5 class="text-center">企业型产品项目设计
                                 </h5>
-                                <p class="text-center">了解素描是造型艺术的基础 <br>
-                                    理解几何形体的机构 <br>
-                                    掌握形体的重组与空间表现</p>
+                                <p class="text-center">让学生开阔视野 <br>
+                                    更好地认识产品设计在企业整个商业运作中的角色 <br>
+                                    从而更好地驾驭设计</p>
                             </div>
                         </div>
                     </div>
@@ -706,24 +705,23 @@
 
     </div>
     <div class="section creator">
-        <div class="container">
+        <div class="container creator-title">
             <div class="row">
                 <div class="base_tp ">
-                    <h3 class="items items-left"><span>UI设计师</span> 高密度授课 绝不拖泥带水</h3>
+                    <h3 class="items items-left">UI设计师、平面设计师、网页设计师、一网打尽！</h3>
                     <p class="items items-right">UI设计师简称UID(User Interface Designer)，指从事对软件的人机交互、操作逻辑、界面美观的整体设计工作。<br>UI设计师的涉及范围包括高级网页设计、移动应用界面设计及部分包装设计，是目前中国信息产业中最为抢手的人才之一。
                     </p>
                     <a href="#" target="_blank" class="items items-top btnshover">马上咨询</a>
                 </div>
                 <div class="con1_con  ">
                     <img src="img/con1_kc.png" class="items items-scale" alt="">
-                    <p class="items items-right">全方位掌握UI交互及各种相关设计的商业应用，<span>技高一筹，薪高一等</span></p>
                 </div>
             </div>
         </div>
         <div class="container-fluid teachers">
             <div class="container">
                 <div class="row">
-                    <h2 class="text-center">UI讲师</h2>
+                    <h2 class="text-center">平面设计 UI方向高级讲师</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-6 teacher">
@@ -819,7 +817,7 @@
         <div class="container">
             <div class="row" style="padding-top: 40px;position: relative;">
                 <h2 class="text-center">让我们的学习，除了苦逼还到处有精彩</h2>
-                <a href="#" class="huashi-btn">查看更多精彩画面</a>
+                <a href="http://www.hssjpx.com.cn/ssfc.htm" class="huashi-btn">查看更多精彩画面</a>
             </div>
             <div class="row" style="margin-top: 42px;">
                 <div class="col-md-6">
@@ -881,8 +879,10 @@
                             </ol>
                         </td>
                         <td rowspan="4" align="center">
-                            <p>提高审美能力</p>
-                            <p>让学员快速到美感</p>
+                            <p><img src="img/1.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/2.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/3.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/4.jpg" class="img-responsive" alt=""></p>
                         </td>
                     </tr>
                     <tr>
@@ -921,10 +921,13 @@
                             道的使用技巧；文字和路径功能的使用；滤镜特效制作技巧；动作功能的使用<br>
                             等<span lang="zh-cn" xml:lang="zh-cn">，</span>达到能够独立从事展览展示写真喷绘及影像处理的工作能力。
                         </td>
-                        <td rowspan="7" align="center"><p>熟练应用软件设计</p>
-                            <p>软件是设计师的表<br>
-                                达工具<br>
-                            </p></td>
+                        <td rowspan="7" align="center">
+                            <p><img src="img/5.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/6.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/7.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/07.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/08.jpg" class="img-responsive" alt=""></p>
+                        </td>
                     </tr>
                     <tr>
                         <td align="center">CorelDRAW</td>
@@ -968,9 +971,19 @@
                         <td class="wb"><p align="left">&nbsp;</p>
                             <p align="left">&nbsp;&nbsp;&nbsp;网站设计基本流程与设计规范的概念性讲解，重点了解Web界面设计规范。通过<br>
                                 相关企业网站案例训练，掌握web端网页UI界面设计的流程和规范。</p></td>
-                        <td rowspan="15" align="center"><p>精通设计相关<br>
-                            专业知识，让设计</p>
-                            <p>更具专业性</p></td>
+                        <td rowspan="15" align="center">
+                            <p><img src="img/009.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/011.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/12.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/13.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/14.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/15.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/015.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/16.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/17.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/21.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/22.jpg" class="img-responsive" alt=""></p>
+                        </td>
                     </tr>
                     <tr>
                         <td class="wb">&nbsp;&nbsp;讲解色彩与构图的基本概念，并结合不同风格&amp;类型的网页进行案例分析。通过相<br>
@@ -1053,7 +1066,11 @@
                             </p></td>
                         <td align="center">交互原型设计基础</td>
                         <td class="wb">运用交互软件让学员更多以及更便捷的理解交互原理。</td>
-                        <td rowspan="5" align="center">专业理论</td>
+                        <td rowspan="5" align="center">
+                            <p><img src="img/23%20(1).png" class="img-responsive" alt=""></p>
+                            <p><img src="img/023.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/24.jpg" class="img-responsive" alt=""></p>
+                        </td>
                     </tr>
                     <tr>
                         <td align="center">交互原型图</td>
@@ -1087,7 +1104,11 @@
                             &nbsp; 计技能，重点了解各种风格的设计方法通过各种风格设计方法训练，快速掌握不同图<br>
                             标设计特征和效果实现。
                         </td>
-                        <td rowspan="6" align="center">&nbsp;</td>
+                        <td rowspan="6" align="center">&nbsp;
+                            <p><img src="img/25.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/26.jpg" class="img-responsive" alt=""></p>
+                            <p><img src="img/27.jpg" class="img-responsive" alt=""></p>
+                        </td>
                     </tr>
                     <tr>
                         <td align="center">剪影图标实训</td>
@@ -1111,7 +1132,7 @@
                         <td align="center">实例讲解Android相关设计规范，并结合办公类、休闲类项目对应用产品进行全案实训<br>
                             。掌握Android平台APP整套全流程：包括拓扑图、原型图、界面设计图与GUI等。
                         </td>
-                        <td rowspan="4" align="center">&nbsp;</td>
+                        <td rowspan="4" align="center"> <p><img src="img/26.jpg" alt=""></p></td>
                     </tr>
                     <tr>
                         <td align="center">1、针对Android平台办公类APP应用产品的全案实训一</td>
@@ -1127,7 +1148,9 @@
                         <td align="center">实例讲解iPhone相关设计规范，并结合效率类、理财类项目对应用产品进行全案实训<br>
                             。掌握iPhone平台APP设计整套全流程：包括拓扑图、原型图、界面设计图与GUI等。
                         </td>
-                        <td rowspan="4" align="center">&nbsp;</td>
+                        <td rowspan="4" align="center">&nbsp;
+                            <p><img src="img/27.jpg" alt=""></p>
+                        </td>
                     </tr>
                     <tr>
                         <td align="center">实例讲解iPad等IOS相关设计规范，掌握iPad平台APP设计整套全流程：包括拓扑图<br>
@@ -1279,10 +1302,10 @@
             <div class="wrapper_top">
                 <div class="contact">
                     <div class="zixun">咨询热线</div>
-                    <div class="tel">020-85217122<br>020-85217133</div>
+                    <div class="tel">020-85217122<br>020-85217133<br/>(微信同号)</div>
                     <div class=" weixin">
                         <img src="img/erweima.png" alt="广州市华师科教培训中心">
-                        <p>官方微信</p>
+
                     </div>
                 </div>
                 <div class="wrapper_bottom">

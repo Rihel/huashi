@@ -1,299 +1,28 @@
 @import "mixin";
-$sectionBg: #e7e8ea;
-$titleColor:#ef5452;
-$iclssbg:(1:#ef5553, 2:#f3983f, 3:#b082d4, 4:#46a76d, 5:#718cd1, 6:#c27089, 7:#47b2c6,8:#718cd1);
 
-$animateName:(
-        left:left,
-        right:right,
-        top:top,
-        scale:scale,
-        bottom:bottom
-);
-body{
-  *{
-    font-family: 'Microsoft YaHei UI';
-  }
-}
-html,body{
-  overflow-x: hidden;
-}
-.height{
-  height:auto!important;
-}
-.huashi-btn{
-  @include blockCenter;
-  width: 228px;
-  @include lineheight(50px);
-  text-align: center;
-  background-color: red;
-  color: #FFFFFF;
-  display: block;
-  margin-bottom: 50px;
-  @include borderRadius(3px);
-  font-size: 18px;
-  @include transition(all 0.4s);
-  position: absolute;
-  right: 30px;
-  top: 54px;
-  &:hover{
-    letter-spacing: 5px;
-    color: #000;
-    background-color: #ff4850;
-    @include boxShadow(0 0 10px #841929);
-    text-decoration: none;
-  }
-}
-@each $key,$value in $animateName{
-  .items-#{$key}{
-    @include animateTransition($value,1s);
-  }
-}
-@include keyframs(round){
-  0%{
-    @include transform(rotate(0deg));
-  }
-  //50%{
-  //  @include transform(rotate(180deg));
-  //}
-  100%{
-    @include transform(rotate(359deg));
-  }
-}
-@include keyframs(yaobao){
-  0%{
-    @include transform(rotate(-25deg));
-  }
-  25%{
-    @include transform(rotate(0deg))
-  }
-  50%{
-    @include transform(rotate(25deg))
-  }
-  75%{
-    @include transform(rotate(0deg))
-  }
-  100%{
-    @include transform(rotate(-25deg));
-  }
-}
-.btnshover{
-  @include transition(all 0.4s);
-  &:hover{
-    text-decoration: none;
-    letter-spacing: 3px;
-    background-color: $titleColor;
-  }
-}
-.title-color{
-  color: $titleColor;
-}
-.ahover{
-  @include transition(all 0.4s);
-  &:hover{
-    text-decoration: none;
-    color: red;
-  }
-}
-.container{
-  padding: 0;
-}
-.jumbotron{
-  background-color: transparent;
-  h2{
-    font-size: 45px;
-    @include animateTransition(right,1s);
-  }
-  h4{
-    font-size: 18px;
-    color: #aaa;
-    @include animateTransition(bottom,1s);
-  }
-  ul{
-    li{
-      line-height: 50px;
-      font-size: 18px;
-      color: #000;
-      @include transition(all 0.4s);
-      @include translate(-1000px);
-      @for $i from 1 through 4{
-        &:nth-of-type(#{$i}){
-          transition-delay: $i*0.4-1*0.4s;
-        }
-      }
-      &.active{
-        @include translate(0)
-      }
-    }
-  }
-}
-.section{
-  //overflow: hidden;
-  position: relative;
-}
 
-#header{
-  width: 100%;
-  height: 122px;
-  z-index: 999;
-  @include boxShadow(2px 2px 5px #525252);
-  @include gradient(to top,#f3f3f3,#f9f9f9);
-  .share-bar{
-    width: 500px;
-    .share-icon{
 
-      float: right;
-      margin-right: 36px;
-      padding-top: 30px;
-      text-indent: 10px;
-      @include clearfix;
-      position: relative;
-
-      .huashi-icon{
-        display: block;
-        float: left;
-        color: #9a9a9a;
-        font-size: 30px;
-        @extend .ahover;
-        width: 50px;
-        text-align: center;
-        margin-right: 10px;
-        img{
-          @include img;
-        }
-      }
-      .huashierwema{
-        position: absolute;
-        right: -100px;
-        top: 10px;
-        width: 100px;
-      }
-    }
-    .btns{
-      width: 100%;
-      float: right;
-      list-style: none;
-      @include clearfix;
-      padding-top: 20px;
-      margin-right: 30px;
-      li{
-        float: right;
-
-        a{
-          color: #222;
-          margin-right: 20px;
-          @extend .ahover;
-        }
-      }
-    }
-  }
-
-}
-.nav{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 43px;
-  width: 100%;
-  background: url("../img/navbg.jpg") 0 0 repeat-x;
-  .mainnav{
-    height: 43px;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    li{
-      margin: 0;
-      padding: 0;
-      float: left;
-      position: absolute;
-      @include lineheight(44px);
-      text-align: center;
-      width: 100px;
-      top: 0;
-      height: 43*2px;
-      overflow: hidden;
-      @for $i from 1 through 8{
-        &.nav#{$i}{
-          left: $i*100-26px;
-        }
-      }
-      &.index{
-        width: 75px;
-        left: 0;
-      }
-      a{
-        margin: 0;
-        padding: 0;
-        color: #fff;
-        img{
-          display: block;
-          height: 43px;
-        }
-      }
-    }
-  }
-}
-$bannerHeight:1000px;
 .main{
   font-family: "Microsoft YaHei UI", Helvetica, Arial, sans-serif;
-  .banner{
-    padding:{
-      top: 122px;
-      bottom: 44px;
-    };
-    .slide{
-      height:$bannerHeight;
-      .item{
-        height: $bannerHeight;
-        background: {
-          repeat: no-repeat;
-          position: center;
-        };
-        &:nth-of-type(1){
-          background-image: url("../img/banner3.png");
-        }
-        &:nth-of-type(2){
-          background-image: url("../img/banner1.jpg");
-        }
-        &:nth-of-type(3){
-          background-image: url("../img/banner2.jpg");
-        }
-      }
-      .carousel-control{
-        background-image: none;
-        @include lineheight($bannerHeight);
-        .fa{
-          font-size: 40px;
-        }
-      }
-    }
-  }
+
   .youhui{
     margin-bottom: 40px;
     .title{
-      @include transition(all 0.4s);
-      @include translate(-1000px);
-      opacity: 0;
-      @include active;
+
       font-size: 40px;
     }
     .items{
-      opacity: 0;
+      //opacity: 0;
       @include transition(all 0.4s);
 
       @for $i from 1 through 6{
         @if $i<=3{
           &:nth-of-type(#{$i}){
-            @include translate($i*-100px);
-            @include active;
+
             transition-delay: $i*0.4s;
           }
         }@else{
             &:nth-of-type(#{$i}){
-              @include translate($i*100px);
-              @include active;
               transition-delay: $i*0.4s;
             }
         }
@@ -320,18 +49,28 @@ $bannerHeight:1000px;
     }
     .youhui-icon{
       border-bottom: 1px solid $sectionBg;
-      padding-bottom: 100px;
+      padding-bottom: 66px;
       .youhuititle{
         h2{
-          padding-top: 112px;
+          font-size: 50px;
+          font-weight:900;
+          padding-top: 99px;
+          padding-bottom: 30px;
+          background: {
+            image: url("../img/tvicon.png");
+            repeat: no-repeat;
+            position-x: 25%;
+            position-y: 90px;
+          };
         }
         p{
           padding-bottom: 32px;
+          font-size: 20px;
         }
       }
     }
     .project-item{
-      margin-top: 20px;
+      margin-top: 58px;
       margin-bottom: 55px;
       *{
         margin: 0;
@@ -339,19 +78,23 @@ $bannerHeight:1000px;
       }
       .row{
         .icles{
-          margin-top: 19px;
-          margin-right: 19px;
-          width: 280px;
+          margin-top: 14px;
+          margin-right: 14px;
+          width: 288px;
           height: 252px;
+          color: #FFFFFF;
           padding:{
-            left: 12px;
-            top: 22px;
-            right: 12px;
-            bottom: 10px;
+            left: 20px;
+            top: 35px;
+            right: 20px;
+            bottom: 15px;
           };
+          position: relative;
           img{
             width: auto;
-            height: 76px;
+            height: 60px;
+            margin-top: 16px;
+            margin-bottom: 16px;
             @include blockCenter;
             display: block;
           }
@@ -366,7 +109,7 @@ $bannerHeight:1000px;
             font-weight:700;
             @include borderRadius(10px);
             @include transition(all 0.3s);
-
+            margin-top: 11px;
             &:hover{
               text-decoration: none;
               background-color: #000;
@@ -377,25 +120,23 @@ $bannerHeight:1000px;
           h3{
             padding: 0;
             text-align: center;
+            font-size: 22px;
           }
           p{
-            margin: 0;
-            padding: 14px 0;
+            font-size: 13px;
+            height: 40px;
           }
-          .caption{
-
-            color: #ffffff;
-            @include transition(all 0.4s);
-          }
+          @include transition(all 0.4s);
           @each $key,$value in $iclssbg{
-            &:nth-of-type(#{$key}){
+            &.icles#{$key}{
               background-color: $value;
-              .caption{
-                background-color: $value;
+            @if $key%4==0{
+              margin-right: 0;
+            }
                 &:hover{
                   @include boxShadow(0 0 10px $value);
                 }
-              }
+
             }
           }
         }
@@ -407,27 +148,47 @@ $bannerHeight:1000px;
     height: auto!important;
     @include clearfix;
     .uijiuye{
-      padding: 80px 0;
+      padding: 76px 0 104px 0;
+      @extend .juchi;
+      h2{
+        font-size: 50px;
+        padding: 0;
+        margin: 0;
+      }
       .sec{
-        width: 60%;
+        width: 694px;
         text-align: center;
-        font-size: 18px;
+        font-size: 14px;
         @include blockCenter;
-        padding: 30px;
+        padding-top: 52px;
+        font-family: "Microsoft YaHei UI", Helvetica, Arial, sans-serif;
+
       }
     }
     .youhui-item{
       background-color: $sectionBg;
       padding-bottom: 120px;
       .joy{
+        width: 19%;
+        padding: 0;
+
+        margin-right: 5px;
+        &:nth-last-of-type(1){
+          margin: 0;
+        }
         .thumbnail{
           border: none;
-
+          height: 200px;
           @include borderRadius(0);
           @include transition(all 0.4s);
           &.active{
             background-color: #cf1a3b;
             @include boxShadow(0 0 15px rgba(0,0,0,.5));
+            .caption{
+              *{
+                color: #FFFFFF;
+              }
+            }
           }
           background-color: #eeeeee;
           .icons{
@@ -455,6 +216,21 @@ $bannerHeight:1000px;
       }
     }
     .container{
+      .page-header{
+        .items{
+
+            .trade－title{
+              font-size: 30px;
+              padding-left: 180px;
+            }
+            p{
+              font-size: 20px;
+              color: #6d6d6d;
+              padding-left: 180px;
+            }
+
+        }
+      }
       .row{
         .col-md-3{
           .thumbnail{
@@ -499,10 +275,13 @@ $bannerHeight:1000px;
 
   }
   .project{
+    padding-top: 105px;
     background-color: #f2f2f2;
+    .project-title{
+      padding:0 60px;
+    }
     .img-responsive{
-      @include animateTransition(bottom,0.5s);
-      transition-delay: 1.5s;
+      //transition-delay: 1.5s;
       @include blockCenter;
     }
   }
@@ -515,7 +294,7 @@ $bannerHeight:1000px;
         line-height: 40px;
         margin-bottom: 20px;
         font-weight: normal;
-        @include animateTransition(left,1s);
+       // @include animateTransition(left,1s);
       }
       p{
         font-size: 16px;
@@ -652,28 +431,21 @@ $bannerHeight:1000px;
           }
         }
         .row{
+          padding-left: 110px;
           .employ-item{
             margin-top: 10px;
+            margin-left: 25px;
+            margin-right: 25px;
             .thumbnail{
               border: none;
               background-color: transparent;
               padding: 0;
+              width: 216px;
               @include borderRadius(0);
               .employ-icon{
-                @include ball(100px);
-                background-color: #0a343b;
-                overflow: hidden;
+                @include square(95px);
                 @include blockCenter;
-                .employ-icons-od{
-                  @include ball(80px);
-                  @include blockCenter;
-                  color: #ffffff;
-                  text-align: center;
-                  background-color: #04737b;
-                  margin-top: 10px;
-                  line-height: 80px;
-                  font-size: 20px;
-                }
+                overflow: hidden;
               }
               .caption{
                 padding: 0;
@@ -682,7 +454,8 @@ $bannerHeight:1000px;
                   font-size: 22px;
                 }
                 p{
-                  color: #eeeeee;
+                  color: #999;
+                  font-size: 14px;
                 }
               }
             }
@@ -693,6 +466,9 @@ $bannerHeight:1000px;
   }
   .creator{
     height: auto!important;
+    .creator-title{
+      margin-bottom: 28px;
+    }
     .base_tp{
       text-align: center;
       h3{
@@ -940,191 +716,4 @@ $bannerHeight:1000px;
     }
   }
 
-}
-#footer{
-  background: #333;
-  width: 100%;
-  padding-top: 35px;
-  overflow: hidden;
-  .container{
-    .map_wra{
-      float: left;
-      margin-bottom: 10px;
-      .logo{
-        width: 318px;
-        img{
-          @include img;
-        }
-      }
-      .map{
-        width: 317px;
-        float: left;
-        height: 249px;
-        background: url(../img/map.png) no-repeat;
-        position: relative;
-        margin-top: 20px;
-        span{
-          font-size: 14px;
-          left: 0px;
-          top: 0px;
-          width: 100px;
-          color: #c5c5c5;
-        }
-        a{
-          font-size: 12px;
-          display: block;
-          color: #777;
-          line-height: 16px;
-          position: absolute;
-          &.map_a1{
-            left: 226px;
-            top: 78px;
-          }
-          &.map_a2{
-            left: 183px;
-            top: 105px;
-          }
-          &.map_a3{
-            left: 153px;
-            top: 126px;
-          }
-          &.map_a4{
-            left: 220px;
-            top: 102px;
-          }
-          &.map_a5{
-            left: 242px;
-            top: 118px;
-          }
-          &.map_a6{
-            left: 215px;
-            top: 130px;
-          }
-          &.map_a7{
-            left: 250px;
-            top: 143px;
-          }
-          &.map_a8{
-            left: 200px;
-            top: 147px;
-          }
-          &.map_a9{
-            left: 218px;
-            top: 160px;
-          }
-          &.map_a10{
-            left: 224px;
-            top: 180px;
-          }
-          &.map_a11{
-            left: 190px;
-            top: 188px;
-          }
-          &.map_a12{
-            left: 172px;
-            top: 168px;
-          }
-          &.map_a13{
-            left: 158px;
-            top: 200px;
-          }
-          &.map_a14{
-            left: 115px;
-            top: 201px;
-          }
-          &.map_a15{
-            left: 120px;
-            top: 160px;
-          }
-          &.map_a16{
-            left: 203px;
-            top: 213px;
-          }
-        }
-      }
-    }
-    .wrapper{
-      overflow: hidden;
-      *{
-        margin: 0;
-        padding: 0;
-      }
-      .wrapper_top{
-        float: left;
-        .wrapper_bottom{
-          float: left;
-          text-align: left;
-          width: 500px;
-          height: 40px;
-          color: #606554;
-          margin-bottom: 40px;
-        }
-        .link_wra{
-          float: left;
-          .link{
-            float: left;
-            margin-right: 12px;
-            h3{
-              font-size: 16px;
-              color: #CCC;
-              margin-bottom: 15px;
-              text-align: center;
-              cursor: default;
-            }
-            ul{
-              list-style-type: none;
-              li{
-                text-align: center;
-                a{
-                  font-size: 14px;
-                  line-height: 30px;
-                  text-align: center;
-                  color: #666;
-                  text-decoration: none;
-                  outline: none;
-                }
-              }
-            }
-          }
-        }
-        .contact{
-          float: left;
-          width: 220px;
-          margin-right: 40px;
-          .zixun{
-            background: #d00e31;
-            border-width: 1px;
-            border-style: solid;
-            border-radius: 30px;
-            border-top-left-radius: 30px;
-            border-bottom-left-radius: 30px;
-            border-bottom-right-radius: 30px;
-            font-size: 16px;
-            color: #FFF;
-            width: 120px;
-            text-align: center;
-            padding: 5px 0;
-            float: right;
-          }
-          .tel{
-            font-size: 22px;
-            color: #FFF;
-            float: right;
-            margin-top: 6px;
-          }
-          .weixin{
-            color: #FFF;
-            font-size: 16px;
-            text-align: center;
-            float: right;
-            width: 100%;
-            img{
-              @include img;
-            }
-          }
-        }
-      }
-
-    }
-  }
 }

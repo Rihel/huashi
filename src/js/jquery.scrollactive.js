@@ -11,10 +11,11 @@
 			$(items).attr('anim',false);
 			var browers=meath.browserV();
 			if(meath.isltIE(browers)){
-				meath.IEinit(items,opt);
-
-				meath.IEanimation(items,opt);
+				meath.IEinit(items,opt,function(){
+					$('.marks').hide();
+				});
 			}else {
+
 				$(win).scroll(function(){
 					$(items).each(function(i,ele){
 						if(meath.isSee($(ele))&&!$(ele).hasClass('active')){
@@ -22,6 +23,7 @@
 						}
 					})
 				});
+				//meath.IEanimation(items,opt);
 			}
 
 		},
@@ -48,36 +50,46 @@
 		},
 		//判断是ie10以下版本
 		isltIE:function(browers){
-			var a=parseInt(browers[browers.length-1]);
-			if(isNaN(a)){
+			if(/IE/g.test(browers)){
+				console.log(browers.indexOf('IE'))
+				var a=browers.split('IE');
+				var b=parseInt(a[1]);
+				if(b<=9){
+					return true
+				}else {
+					return false;
+				}
+			}else {
+				console.log('noie');
 				return false;
-			}else if(a<=10){
-				return true;
 			}
 		},
 		//如果是ie10那么进行样式初始化
-		IEinit:function(items,opt){
+		IEinit:function(items,opt,callback){
 			var len=items.length;
 			for(var i=0;i<len;i++){
 				var item=items[i];
-				var css=meath.dirpanduan(item,opt,'start');
-				if(css!==underfine){
-					$(item).css(css);
+				var clas=meath.dirpanduan(item,opt,'start');
+				if(clas!==underfine){
+					$(item).removeClass(clas).css('opacity',1);
 				}
 			}
+			callback()
 		},
 		//动画方向判断
 		dirpanduan:function(item,opt,type){
 			var opt=opt.css;
 			if(type=='start'){
 				if($(item).hasClass('items-left')){
-					return opt.startleft
+					return 'items-left'
 				}else if($(item).hasClass('items-right')){
-					return opt.startright
+					return 'items-right'
 				}else if($(item).hasClass('items-top')){
-					return opt.starttop
+					return 'items-top'
 				}else if($(item).hasClass('items-bottom')){
-					return opt.startbottom
+					return 'items-bottom'
+				}if($(item).hasClass('items-scale')){
+					return 'items-scale'
 				}
 			}else if(type=='end'){
 				if($(item).hasClass('items-left')){
@@ -128,13 +140,13 @@
 	$.fn.scrollactive=function(options){
 		var def={
 			css:{
-					startleft:{marginLeft:'-1000px'},
+					startleft:{marginLeft:'0'},
 					endleft:{marginLeft:0,opacity:1},
-					starttop:{mariginTop:'-300px'},
+					starttop:{mariginTop:'0'},
 					endtop:{mariginTop:0,opacity:1},
-					startbottom:{marginBottom:'300px'},
+					startbottom:{marginBottom:'0'},
 					endbottom:{marginBottom:0,opacity:1},
-					startright:{marginRight:'1000px'},
+					startright:{marginRight:'0'},
 					endright:{marginRight:0,opacity:1},
 
 				}

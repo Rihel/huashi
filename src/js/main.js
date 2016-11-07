@@ -1,4 +1,5 @@
-// $('#fullpage').fullpage({
+$(function(){
+	// $('#fullpage').fullpage({
 // 	//section背景颜色
 // 	//sectionsColor:['green','orange','gray','red'],
 // 	//是否使用箭头控释slide幻灯片
@@ -41,68 +42,75 @@
 // 	}
 // });
 // $.fn.fullpage.destroy('all');
-var a=$('.huashiwenp').html();
-var str='';
-for(var i in a){
-	str+='<span class="items items-right text-right" style="display:inline-block;transition-delay: '+(0.2*i).toFixed(1)+'s;">'+a[i]+'</span>'
-}
-$('.huashiwenp').html(str);
-$('#fullpage').find('.section').not('.banner').addClass('height')
-items($('#fullpage'),'*');
-
-function items(par,tag,animName){
-	var animates=['bounce','pulse','swing','rubberBand','shake','tada','wobble','jello'];
-	var num=Math.floor(Math.random()*animates.length);
-	par.delegate(tag,'mouseover',function(even){
-
-		if($(this).hasClass('animated')){
-			$(this).addClass(animates[num])
-		}
-	});
-	par.delegate(tag,'mouseout',function(even){
-		if($(this).hasClass('animated')){
-			$(this).removeClass(animates[num])
-		}
-	});
-}
-$('.trade').delegate('div.joy','mouseover',function(){
-	$(this).find('.thumbnail').addClass('active');
-	$(this).find('.icons').addClass('active');
-});
-$('.trade').delegate('div.joy','mouseout',function(){
-	$(this).find('.thumbnail').removeClass('active');
-	$(this).find('.icons').removeClass('active');
-});
-$('#fullpage').scrollactive();
-$('.student-carusel').caro({
-	auto:true,
-	time:2000
-});
-$('.nav li').hover(function(){
-	$(this).stop().animate({
-		top:'-43px'
+	$('.marks').css({
+		width:$(window).width(),
+		height:$(window).height(),
 	})
-},function(){
-	$(this).stop().animate({
-		top:'0'
+	$('#fullpage').scrollactive();
+	var a=$('.huashiwenp').html();
+	var str='';
+	for(var i in a){
+		str+='<span class="items items-right text-right" style="display:inline-block;transition-delay: '+(0.02*i).toFixed(1)+'s;">'+a[i]+'</span>'
+	}
+	$('.huashiwenp').html(str);
+	$('#fullpage').find('.section').not('.banner').addClass('height')
+	items($('#fullpage'),'*');
+
+	function items(par,tag,animName){
+		var animates=['bounce','pulse','swing','rubberBand','shake','tada','wobble','jello'];
+		var num=Math.floor(Math.random()*animates.length);
+		par.delegate(tag,'mouseover',function(even){
+
+			if($(this).hasClass('animated')){
+				$(this).addClass(animates[num])
+			}
+		});
+		par.delegate(tag,'mouseout',function(even){
+			if($(this).hasClass('animated')){
+				$(this).removeClass(animates[num])
+			}
+		});
+	}
+	$('.trade').delegate('div.joy','mouseover',function(){
+		$(this).find('.thumbnail').addClass('active');
+		$(this).find('.icons').addClass('active');
+	});
+	$('.trade').delegate('div.joy','mouseout',function(){
+		$(this).find('.thumbnail').removeClass('active');
+		$(this).find('.icons').removeClass('active');
+	});
+
+	$('.student-carusel').caro({
+		auto:true,
+		time:2000
+	});
+	$('.nav li').hover(function(){
+		$(this).stop().animate({
+			top:'-43px'
+		})
+	},function(){
+		$(this).stop().animate({
+			top:'0'
+		})
 	})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

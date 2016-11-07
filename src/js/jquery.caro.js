@@ -30,7 +30,7 @@
 				}
 			},opt.time)
 		},
-		controlInit:function(control,view){
+		controlInit:function(control,view,opt){
 			var size=menth.imgSize(view);
 			var str='';
 			for(var i=0;i<size;i++){
@@ -38,7 +38,7 @@
 			};
 			control.html(str);
 			control.find('li').eq(0).addClass('active');
-			menth.hover(control,view);
+			menth.hover(control,view,opt);
 		},
 		hover:function(control,view,opt){
 			control.delegate('li','mouseover',function(){
