@@ -1,15 +1,23 @@
 @import "mixin";
 
-
+@for $i from 1 through 12{
+  .col-md-#{$i}{
+    *padding:0;
+  }
+}
 
 .main{
-  font-family: "Microsoft YaHei UI", Helvetica, Arial, sans-serif;
+  font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
 
   .youhui{
     margin-bottom: 40px;
     .title{
 
       font-size: 40px;
+    }
+    .touhui{
+      *windth:200px;
+      _display:inline;
     }
     .items{
       //opacity: 0;
@@ -82,39 +90,29 @@
           margin-right: 14px;
           width: 288px;
           height: 252px;
+          *width:248px;
+          *height:252-12-60px;
+
           color: #FFFFFF;
           padding:{
             left: 20px;
-            top: 35px;
+            top: 60px;
             right: 20px;
             bottom: 15px;
           };
           position: relative;
           img{
             width: auto;
-            height: 60px;
-            margin-top: 16px;
+            height: 86px;
+            margin-top: 30px;
             margin-bottom: 16px;
             @include blockCenter;
             display: block;
           }
           .link{
-            display: block;
-            width: 40%;
-            @include lineheight(30px);
-            @include blockCenter;
-            text-align: center;
-            background-color: #ffec5b;
-            color: #000;
-            font-weight:700;
-            @include borderRadius(10px);
-            @include transition(all 0.3s);
-            margin-top: 11px;
+            color: #FFFFFF;
             &:hover{
               text-decoration: none;
-              background-color: #000;
-              color: #ffec5b;
-              letter-spacing: 6px;
             }
           }
           h3{
@@ -178,7 +176,7 @@
         }
         .thumbnail{
           border: none;
-          height: 200px;
+          padding-top: 20px;
           @include borderRadius(0);
           @include transition(all 0.4s);
           &.active{
@@ -221,12 +219,12 @@
 
             .trade－title{
               font-size: 30px;
-              padding-left: 180px;
+              padding-left: 120px;
             }
             p{
               font-size: 20px;
               color: #6d6d6d;
-              padding-left: 180px;
+              padding-left: 120px;
             }
 
         }
@@ -247,26 +245,26 @@
             border:none;
             @include boxShadow(none);
           }
-          &:nth-of-type(1){
-            .ios-icons{
+
+            @at-root .ios-icons1{
               background-position-x: 0;
             }
-          }
-          &:nth-of-type(2){
-            .ios-icons{
+
+
+            @at-root .ios-icons2{
               background-position-x:-222px;
             }
-          }
-          &:nth-of-type(3){
-            .ios-icons{
+
+
+            @at-root .ios-icons3{
               background-position-x:-446px;
             }
-          }
-          &:nth-of-type(4){
-            .ios-icons{
+
+
+            @at-root .ios-icons4{
               background-position-x:-669px;
             }
-          }
+
         }
 
 
@@ -279,6 +277,8 @@
     background-color: #f2f2f2;
     .project-title{
       padding:0 60px;
+      *padding:0;
+      *width: 340px;
     }
     .img-responsive{
       //transition-delay: 1.5s;
@@ -314,7 +314,7 @@
         position: relative;
         cursor: pointer;
         margin: 0 2%;
-        @include animateTransition(bottom,1s);
+       // @include animateTransition(bottom,1s);
 
         @for $i from 1 through 4{
           &:nth-of-type(#{$i}){
@@ -354,10 +354,14 @@
       text-align: center;
       h3{
         font-size: 36px;
-        color: #010101;
+        color: #fff;
         line-height: 40px;
         margin-bottom: 20px;
         font-weight: normal;
+        background-color: #000;
+        padding: 10px 0;
+        width: 80%;
+        @include blockCenter;
         span{
           color: #ed1b24;
           margin-right: 17px;
@@ -660,11 +664,12 @@
     h2{
       text-align: center;
       font-weight: normal;
-      color: #454545;
+      color: #FFFFFF;
       padding-top: 80px;
+      font-size: 30px;
     }
     .secs{
-      font-size: 30px;
+      font-size: 18px;
       text-align: center;
       font-weight: normal;
       color: #454545;

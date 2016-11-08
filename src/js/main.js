@@ -1,4 +1,79 @@
+function browserV(){
+	var browser=window.navigator.userAgent
+	var isOpera=browser.indexOf('Opera')>-1;
+	var isIE = browser.indexOf("compatible") > -1 && browser.indexOf("MSIE") > -1 && !isOpera; //判断是否IE浏览器
+	var isEdge = browser.indexOf("Windows NT 6.1; Trident/7.0;") > -1 && !isIE; //判断是否IE的Edge浏览器
+	var isFF = browser.indexOf("Firefox") > -1; //判断是否Firefox浏览器
+	var isSafari = browser.indexOf("Safari") > -1 && browser.indexOf("Chrome") == -1; //判断是否Safari浏览器
+	var isChrome = browser.indexOf("Chrome") > -1 && browser.indexOf("Safari") > -1; //判断Chrome浏览器
+
+	if (isIE){
+		var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+		reIE.test(browser);
+		var fIEVersion = parseFloat(RegExp["$1"]);
+		if(fIEVersion == 7)
+		{ return "IE7";}
+		else if(fIEVersion == 8)
+		{ return "IE8";}
+		else if(fIEVersion == 9)
+		{ return "IE9";}
+		else if(fIEVersion == 10)
+		{ return "IE10";}
+		else if(fIEVersion == 11)
+		{ return "IE11";}
+		else
+		{ return "0"}//IE版本过低
+	}//isIE end
+	if (isFF) {  return "FF";}
+	if (isOpera) {  return "Opera";}
+	if (isSafari) {  return "Safari";}
+	if (isChrome) { return "Chrome";}
+	if (isEdge) { return "Edge";}
+}
+function isIE(browers){
+	if(/IE/g.test(browers)){
+		console.log(browers.indexOf('IE'))
+		var a=browers.split('IE');
+		var b=parseInt(a[1]);
+		if(b<=9){
+			return true
+		}else {
+			return false;
+		}
+	}else {
+		return false;
+	}
+}
+function removeClass(obj,cls){
+	var a=document.getElementsByTagName('*');
+}
+function IEinit(items){
+	var len=items.length;
+	for(var i=0;i<len;i++){
+		var item=items[i];
+		var clas=dirpanduan(item,'start');
+		if(clas!=='underfine'){
+			$(item).removeClass(clas).css('opacity',1);
+		}
+	}
+}
+function dirpanduan(item,type){
+	if(type=='start'){
+		if($(item).hasClass('items-left')){
+			return 'items-left'
+		}else if($(item).hasClass('items-right')){
+			return 'items-right'
+		}else if($(item).hasClass('items-top')){
+			return 'items-top'
+		}else if($(item).hasClass('items-bottom')){
+			return 'items-bottom'
+		}if($(item).hasClass('items-scale')){
+			return 'items-scale'
+		}
+	}
+}
 $(function(){
+
 	// $('#fullpage').fullpage({
 // 	//section背景颜色
 // 	//sectionsColor:['green','orange','gray','red'],
@@ -42,20 +117,24 @@ $(function(){
 // 	}
 // });
 // $.fn.fullpage.destroy('all');
-	$('.marks').css({
-		width:$(window).width(),
-		height:$(window).height(),
+	$('.carousel').carousel({
+		interval: 2000
 	})
-	$('#fullpage').scrollactive();
-	var a=$('.huashiwenp').html();
-	var str='';
-	for(var i in a){
-		str+='<span class="items items-right text-right" style="display:inline-block;transition-delay: '+(0.02*i).toFixed(1)+'s;">'+a[i]+'</span>'
+	if(isIE(browserV())){
+		IEinit($('.items'));
+	}else {
+
+
+		var a=$('.huashiwenp').html();
+		var str='';
+		for(var i in a){
+			str+='<span class="items items-right text-right" style="display:inline-block;transition-delay: '+(0.02*i).toFixed(1)+'s;">'+a[i]+'</span>'
+		}
+		$('.huashiwenp').html(str);
+		$('#fullpage').scrollactive();
 	}
-	$('.huashiwenp').html(str);
 	$('#fullpage').find('.section').not('.banner').addClass('height')
 	items($('#fullpage'),'*');
-
 	function items(par,tag,animName){
 		var animates=['bounce','pulse','swing','rubberBand','shake','tada','wobble','jello'];
 		var num=Math.floor(Math.random()*animates.length);
