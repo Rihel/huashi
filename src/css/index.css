@@ -672,7 +672,7 @@ html, body {
       font-size: 30px;
       padding-left: 120px; }
     .main .trade .container .page-header .items p {
-      font-size: 20px;
+      font-size: 16px;
       color: #6d6d6d;
       padding-left: 120px; }
     .main .trade .container .row .col-md-3 .thumbnail {
@@ -1003,7 +1003,7 @@ html, body {
               .main .student .container .student-carusel .stu-car-warp .stu-car-list li img {
                 height: 100%;
                 width: 100%; }
-          .main .student .container .student-carusel .stu-car-warp .stu-car-col {
+          .car-control {
             position: absolute;
             bottom: 0;
             height: 10%;
@@ -1012,7 +1012,7 @@ html, body {
             padding: 0;
             background-color: #fff;
             text-align: center; }
-            .main .student .container .student-carusel .stu-car-warp .stu-car-col li {
+            .car-control li {
               display: inline-block;
               height: 18px;
               width: 18px;
@@ -1020,7 +1020,7 @@ html, body {
               text-align: center;
               color: #FFFFFF;
               background-color: #8b8b8b; }
-              .main .student .container .student-carusel .stu-car-warp .stu-car-col li.active {
+              .car-control li.active {
                 background-color: red; }
     .main .student .student-bg {
       width: 200%;

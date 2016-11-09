@@ -222,7 +222,7 @@
               padding-left: 120px;
             }
             p{
-              font-size: 20px;
+              font-size: 16px;
               color: #6d6d6d;
               padding-left: 120px;
             }
@@ -617,7 +617,7 @@
               }
             }
           }
-          .stu-car-col{
+          @at-root .car-control{
             position: absolute;
             bottom: 0;
             height: 10%;
