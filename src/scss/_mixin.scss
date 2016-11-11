@@ -346,6 +346,13 @@ html,body{
     @include transform(rotate(-25deg));
   }
 }
+@mixin delay($num){
+  @for $i from 1 through $num{
+      .items-delay-#{$i}{
+        @include css3(transition-delay,$i*0.1s);
+      }
+  }
+}
 .btnshover{
   @include transition(all 0.4s);
   &:hover{

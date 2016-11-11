@@ -1,95 +1,921 @@
-/*
-Error: Undefined variable: "$index-".
-        on line 20 of _grid.scss, in `grid'
-        from line 2 of test.scss
+@charset "UTF-8";
+.ahover {
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .ahover:hover {
+    text-decoration: none;
+    color: red; }
 
-Backtrace:
-_grid.scss:20:in `grid'
-test.scss:2
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/operation.rb:73:in `_perform'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/operation.rb:73:in `_perform'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:272:in `block (3 levels) in visit_for'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:272:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:272:in `block (2 levels) in visit_for'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:268:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:268:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:268:in `block in visit_for'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:267:in `visit_for'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:366:in `block (4 levels) in visit_mixin'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:366:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:366:in `block (3 levels) in visit_mixin'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:366:in `block (2 levels) in visit_mixin'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:84:in `perform_arguments'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:361:in `block in visit_mixin'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `block in with_mixin'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `with_mixin'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin.rb:82:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/bin/scss:13:in `<top (required)>'
-/usr/local/bin/scss:23:in `load'
-/usr/local/bin/scss:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$index-\".\A         on line 20 of _grid.scss, in `grid'\A         from line 2 of test.scss"; }
+.container {
+  padding: 0; }
+
+.jumbotron {
+  background-color: transparent; }
+  .jumbotron h2 {
+    font-size: 45px; }
+  .jumbotron h4 {
+    font-size: 18px;
+    color: #aaa; }
+  .jumbotron ul li {
+    line-height: 50px;
+    font-size: 18px;
+    color: #000; }
+    .jumbotron ul li:nth-of-type(1) {
+      transition-delay: 0s; }
+    .jumbotron ul li:nth-of-type(2) {
+      transition-delay: 0.4s; }
+    .jumbotron ul li:nth-of-type(3) {
+      transition-delay: 0.8s; }
+    .jumbotron ul li:nth-of-type(4) {
+      transition-delay: 1.2s; }
+
+.section {
+  position: relative; }
+
+.juchi {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+
+body * {
+  font-family: 'Microsoft YaHei','宋体','Microsoft YaHei UI'; }
+
+html, body {
+  overflow-x: hidden; }
+
+.height {
+  height: auto !important; }
+
+.huashi-btn {
+  margin-left: auto;
+  margin-right: auto;
+  width: 228px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: red;
+  color: #FFFFFF;
+  display: block;
+  margin-bottom: 50px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 18px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  position: absolute;
+  right: 30px;
+  top: 54px; }
+  .huashi-btn:hover {
+    letter-spacing: 5px;
+    color: #000;
+    background-color: #ff4850;
+    -webkit-box-shadow: 0 0 10px #841929;
+    -moz-box-shadow: 0 0 10px #841929;
+    box-shadow: 0 0 10px #841929;
+    text-decoration: none; }
+
+.items-left {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translate(-1000px, 0);
+  -moz-transform: translate(-1000px, 0);
+  -ms-transform: translate(-1000px, 0);
+  -o-transform: translate(-1000px, 0);
+  transform: translate(-1000px, 0);
+  opacity: 0; }
+  .items-left.active {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1; }
+
+.items-right {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translate(1000px, 0);
+  -moz-transform: translate(1000px, 0);
+  -ms-transform: translate(1000px, 0);
+  -o-transform: translate(1000px, 0);
+  transform: translate(1000px, 0);
+  opacity: 0; }
+  .items-right.active {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1; }
+
+.items-top {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translate(0, -300px);
+  -moz-transform: translate(0, -300px);
+  -ms-transform: translate(0, -300px);
+  -o-transform: translate(0, -300px);
+  transform: translate(0, -300px);
+  opacity: 0; }
+  .items-top.active {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1; }
+
+.items-scale {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: scale(0.2);
+  -moz-transform: scale(0.2);
+  -ms-transform: scale(0.2);
+  -o-transform: scale(0.2);
+  transform: scale(0.2); }
+  .items-scale.active {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
+
+.items-bottom {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translate(0, 300px);
+  -moz-transform: translate(0, 300px);
+  -ms-transform: translate(0, 300px);
+  -o-transform: translate(0, 300px);
+  transform: translate(0, 300px);
+  opacity: 0; }
+  .items-bottom.active {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1; }
+
+@-moz-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+@-webkit-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+@-ms-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+@-o-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+@keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+@-moz-keyframes yaobao {
+  0% {
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+    transform: rotate(-25deg); }
+  25% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    -o-transform: rotate(25deg);
+    transform: rotate(25deg); }
+  75% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+    transform: rotate(-25deg); } }
+@-webkit-keyframes yaobao {
+  0% {
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+    transform: rotate(-25deg); }
+  25% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    -o-transform: rotate(25deg);
+    transform: rotate(25deg); }
+  75% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+    transform: rotate(-25deg); } }
+@-ms-keyframes yaobao {
+  0% {
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+    transform: rotate(-25deg); }
+  25% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    -o-transform: rotate(25deg);
+    transform: rotate(25deg); }
+  75% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+    transform: rotate(-25deg); } }
+@-o-keyframes yaobao {
+  0% {
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+    transform: rotate(-25deg); }
+  25% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    -o-transform: rotate(25deg);
+    transform: rotate(25deg); }
+  75% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+    transform: rotate(-25deg); } }
+@keyframes yaobao {
+  0% {
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+    transform: rotate(-25deg); }
+  25% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    -o-transform: rotate(25deg);
+    transform: rotate(25deg); }
+  75% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+    transform: rotate(-25deg); } }
+.btnshover {
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .btnshover:hover {
+    text-decoration: none;
+    letter-spacing: 3px;
+    background-color: #ef5452; }
+
+.title-color {
+  color: #ef5452; }
+
+.box-warp {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.box-row {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *zoom: 1; }
+  .box-row:before, .box-row:after {
+    content: "";
+    display: table; }
+  .box-row:after {
+    clear: both;
+    overflow: hidden; }
+
+.box-1 {
+  float: left;
+  min-height: 1px;
+  margin: 0 0.2% 0.2% 0.2%;
+  width: 7.93333%;
+  padding-bottom: 10px;
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 10px #a2a294;
+  -moz-box-shadow: 0 5px 10px #a2a294;
+  box-shadow: 0 5px 10px #a2a294;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .box-1 .box-img {
+    width: 100%;
+    height: 80%;
+    overflow: hidden; }
+    .box-1 .box-img img {
+      width: 100%;
+      height: auto;
+      display: block; }
+  .box-1 .box-content {
+    text-align: center;
+    padding: 14px 14px;
+    color: #a2a294; }
+    .box-1 .box-content h2 {
+      font-size: 20px;
+      font-weight: 700; }
+    .box-1 .box-content p {
+      font-size: 14px; }
+
+.box-offset-1 {
+  margin-left: 8.33333%; }
+
+.box-2 {
+  float: left;
+  min-height: 1px;
+  margin: 0 0.2% 0.2% 0.2%;
+  width: 16.26667%;
+  padding-bottom: 10px;
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 10px #a2a294;
+  -moz-box-shadow: 0 5px 10px #a2a294;
+  box-shadow: 0 5px 10px #a2a294;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .box-2 .box-img {
+    width: 100%;
+    height: 80%;
+    overflow: hidden; }
+    .box-2 .box-img img {
+      width: 100%;
+      height: auto;
+      display: block; }
+  .box-2 .box-content {
+    text-align: center;
+    padding: 14px 14px;
+    color: #a2a294; }
+    .box-2 .box-content h2 {
+      font-size: 20px;
+      font-weight: 700; }
+    .box-2 .box-content p {
+      font-size: 14px; }
+
+.box-offset-2 {
+  margin-left: 16.66667%; }
+
+.box-3 {
+  float: left;
+  min-height: 1px;
+  margin: 0 0.2% 0.2% 0.2%;
+  width: 24.6%;
+  padding-bottom: 10px;
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 10px #a2a294;
+  -moz-box-shadow: 0 5px 10px #a2a294;
+  box-shadow: 0 5px 10px #a2a294;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .box-3 .box-img {
+    width: 100%;
+    height: 80%;
+    overflow: hidden; }
+    .box-3 .box-img img {
+      width: 100%;
+      height: auto;
+      display: block; }
+  .box-3 .box-content {
+    text-align: center;
+    padding: 14px 14px;
+    color: #a2a294; }
+    .box-3 .box-content h2 {
+      font-size: 20px;
+      font-weight: 700; }
+    .box-3 .box-content p {
+      font-size: 14px; }
+
+.box-offset-3 {
+  margin-left: 25%; }
+
+.box-4 {
+  float: left;
+  min-height: 1px;
+  margin: 0 0.2% 0.2% 0.2%;
+  width: 32.93333%;
+  padding-bottom: 10px;
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 10px #a2a294;
+  -moz-box-shadow: 0 5px 10px #a2a294;
+  box-shadow: 0 5px 10px #a2a294;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .box-4 .box-img {
+    width: 100%;
+    height: 80%;
+    overflow: hidden; }
+    .box-4 .box-img img {
+      width: 100%;
+      height: auto;
+      display: block; }
+  .box-4 .box-content {
+    text-align: center;
+    padding: 14px 14px;
+    color: #a2a294; }
+    .box-4 .box-content h2 {
+      font-size: 20px;
+      font-weight: 700; }
+    .box-4 .box-content p {
+      font-size: 14px; }
+
+.box-offset-4 {
+  margin-left: 33.33333%; }
+
+.box-5 {
+  float: left;
+  min-height: 1px;
+  margin: 0 0.2% 0.2% 0.2%;
+  width: 41.26667%;
+  padding-bottom: 10px;
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 10px #a2a294;
+  -moz-box-shadow: 0 5px 10px #a2a294;
+  box-shadow: 0 5px 10px #a2a294;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .box-5 .box-img {
+    width: 100%;
+    height: 80%;
+    overflow: hidden; }
+    .box-5 .box-img img {
+      width: 100%;
+      height: auto;
+      display: block; }
+  .box-5 .box-content {
+    text-align: center;
+    padding: 14px 14px;
+    color: #a2a294; }
+    .box-5 .box-content h2 {
+      font-size: 20px;
+      font-weight: 700; }
+    .box-5 .box-content p {
+      font-size: 14px; }
+
+.box-offset-5 {
+  margin-left: 41.66667%; }
+
+.box-6 {
+  float: left;
+  min-height: 1px;
+  margin: 0 0.2% 0.2% 0.2%;
+  width: 49.6%;
+  padding-bottom: 10px;
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 10px #a2a294;
+  -moz-box-shadow: 0 5px 10px #a2a294;
+  box-shadow: 0 5px 10px #a2a294;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .box-6 .box-img {
+    width: 100%;
+    height: 80%;
+    overflow: hidden; }
+    .box-6 .box-img img {
+      width: 100%;
+      height: auto;
+      display: block; }
+  .box-6 .box-content {
+    text-align: center;
+    padding: 14px 14px;
+    color: #a2a294; }
+    .box-6 .box-content h2 {
+      font-size: 20px;
+      font-weight: 700; }
+    .box-6 .box-content p {
+      font-size: 14px; }
+
+.box-offset-6 {
+  margin-left: 50%; }
+
+.box-7 {
+  float: left;
+  min-height: 1px;
+  margin: 0 0.2% 0.2% 0.2%;
+  width: 57.93333%;
+  padding-bottom: 10px;
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 10px #a2a294;
+  -moz-box-shadow: 0 5px 10px #a2a294;
+  box-shadow: 0 5px 10px #a2a294;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .box-7 .box-img {
+    width: 100%;
+    height: 80%;
+    overflow: hidden; }
+    .box-7 .box-img img {
+      width: 100%;
+      height: auto;
+      display: block; }
+  .box-7 .box-content {
+    text-align: center;
+    padding: 14px 14px;
+    color: #a2a294; }
+    .box-7 .box-content h2 {
+      font-size: 20px;
+      font-weight: 700; }
+    .box-7 .box-content p {
+      font-size: 14px; }
+
+.box-offset-7 {
+  margin-left: 58.33333%; }
+
+.box-8 {
+  float: left;
+  min-height: 1px;
+  margin: 0 0.2% 0.2% 0.2%;
+  width: 66.26667%;
+  padding-bottom: 10px;
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 10px #a2a294;
+  -moz-box-shadow: 0 5px 10px #a2a294;
+  box-shadow: 0 5px 10px #a2a294;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .box-8 .box-img {
+    width: 100%;
+    height: 80%;
+    overflow: hidden; }
+    .box-8 .box-img img {
+      width: 100%;
+      height: auto;
+      display: block; }
+  .box-8 .box-content {
+    text-align: center;
+    padding: 14px 14px;
+    color: #a2a294; }
+    .box-8 .box-content h2 {
+      font-size: 20px;
+      font-weight: 700; }
+    .box-8 .box-content p {
+      font-size: 14px; }
+
+.box-offset-8 {
+  margin-left: 66.66667%; }
+
+.box-9 {
+  float: left;
+  min-height: 1px;
+  margin: 0 0.2% 0.2% 0.2%;
+  width: 74.6%;
+  padding-bottom: 10px;
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 10px #a2a294;
+  -moz-box-shadow: 0 5px 10px #a2a294;
+  box-shadow: 0 5px 10px #a2a294;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .box-9 .box-img {
+    width: 100%;
+    height: 80%;
+    overflow: hidden; }
+    .box-9 .box-img img {
+      width: 100%;
+      height: auto;
+      display: block; }
+  .box-9 .box-content {
+    text-align: center;
+    padding: 14px 14px;
+    color: #a2a294; }
+    .box-9 .box-content h2 {
+      font-size: 20px;
+      font-weight: 700; }
+    .box-9 .box-content p {
+      font-size: 14px; }
+
+.box-offset-9 {
+  margin-left: 75%; }
+
+.box-10 {
+  float: left;
+  min-height: 1px;
+  margin: 0 0.2% 0.2% 0.2%;
+  width: 82.93333%;
+  padding-bottom: 10px;
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 10px #a2a294;
+  -moz-box-shadow: 0 5px 10px #a2a294;
+  box-shadow: 0 5px 10px #a2a294;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .box-10 .box-img {
+    width: 100%;
+    height: 80%;
+    overflow: hidden; }
+    .box-10 .box-img img {
+      width: 100%;
+      height: auto;
+      display: block; }
+  .box-10 .box-content {
+    text-align: center;
+    padding: 14px 14px;
+    color: #a2a294; }
+    .box-10 .box-content h2 {
+      font-size: 20px;
+      font-weight: 700; }
+    .box-10 .box-content p {
+      font-size: 14px; }
+
+.box-offset-10 {
+  margin-left: 83.33333%; }
+
+.box-11 {
+  float: left;
+  min-height: 1px;
+  margin: 0 0.2% 0.2% 0.2%;
+  width: 91.26667%;
+  padding-bottom: 10px;
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 10px #a2a294;
+  -moz-box-shadow: 0 5px 10px #a2a294;
+  box-shadow: 0 5px 10px #a2a294;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .box-11 .box-img {
+    width: 100%;
+    height: 80%;
+    overflow: hidden; }
+    .box-11 .box-img img {
+      width: 100%;
+      height: auto;
+      display: block; }
+  .box-11 .box-content {
+    text-align: center;
+    padding: 14px 14px;
+    color: #a2a294; }
+    .box-11 .box-content h2 {
+      font-size: 20px;
+      font-weight: 700; }
+    .box-11 .box-content p {
+      font-size: 14px; }
+
+.box-offset-11 {
+  margin-left: 91.66667%; }
+
+.box-12 {
+  float: left;
+  min-height: 1px;
+  margin: 0 0.2% 0.2% 0.2%;
+  width: 99.6%;
+  padding-bottom: 10px;
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 10px #a2a294;
+  -moz-box-shadow: 0 5px 10px #a2a294;
+  box-shadow: 0 5px 10px #a2a294;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .box-12 .box-img {
+    width: 100%;
+    height: 80%;
+    overflow: hidden; }
+    .box-12 .box-img img {
+      width: 100%;
+      height: auto;
+      display: block; }
+  .box-12 .box-content {
+    text-align: center;
+    padding: 14px 14px;
+    color: #a2a294; }
+    .box-12 .box-content h2 {
+      font-size: 20px;
+      font-weight: 700; }
+    .box-12 .box-content p {
+      font-size: 14px; }
+
+.box-offset-12 {
+  margin-left: 100%; }
+
+/*# sourceMappingURL=test.css.map */

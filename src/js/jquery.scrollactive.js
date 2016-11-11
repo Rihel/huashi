@@ -8,7 +8,11 @@
 		},
 		init:function(self,opt){
 			var items=self.find('.items');
-
+			$(items).each(function(i,ele){
+				if(meath.isSee($(ele))&&!$(ele).hasClass('active')){
+					$(ele).addClass('active');
+				}
+			})
 				$(win).scroll(function(){
 					$(items).each(function(i,ele){
 						if(meath.isSee($(ele))&&!$(ele).hasClass('active')){

@@ -15,7 +15,8 @@ $(function(){
 		$('.main').after(data)
 	});
 
-
+	items($('.main'),'*');
+	$('.halfyear').scrollactive()
 })
 function items(par,tag,animName){
 	var animates=['bounce','pulse','swing','rubberBand','shake','tada','wobble','jello'];

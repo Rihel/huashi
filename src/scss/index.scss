@@ -18,6 +18,16 @@
     .touhui{
       *windth:200px;
       _display:inline;
+      .fa{
+        @include square(108px);
+        @include borderRadius(100%);
+        text-align: center;
+        line-height: 108px;
+        @include blockCenter;
+        font-size: 50px;
+        border: 2px solid black;
+        color: #222;
+      }
     }
     .items{
       //opacity: 0;
@@ -161,6 +171,8 @@
         padding-top: 52px;
         font-family: "Microsoft YaHei UI", Helvetica, Arial, sans-serif;
 
+          line-height: 30px;
+
       }
     }
     .youhui-item{
@@ -225,6 +237,7 @@
               font-size: 16px;
               color: #6d6d6d;
               padding-left: 120px;
+              line-height: 30px;
             }
 
         }
@@ -619,7 +632,7 @@
           }
           @at-root .car-control{
             position: absolute;
-            bottom: 0;
+            bottom: 0!important;
             height: 10%;
             width: 100%;
             margin: 0;
@@ -664,7 +677,7 @@
     h2{
       text-align: center;
       font-weight: normal;
-      color: #FFFFFF;
+      color: #222;
       padding-top: 80px;
       font-size: 30px;
     }

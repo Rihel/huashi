@@ -1,0 +1,222 @@
+@import "mixin";
+$sectionBg:#f9f9f9;
+@include delay(20);
+.main{
+  .page1{
+    .thumbnail{
+      border: none;
+    }
+    margin-top: 120px;
+    .page1-title{
+      margin-top: 60px;
+      margin-bottom: 60px;
+      p{
+        width: 80%;
+        @include blockCenter;
+        padding-top: 40px;
+      }
+    }
+    .page1-item1{
+      h1{
+        padding-bottom: 88px;
+        font-size: 50px;
+      }
+      p{
+        width: 80%;
+        @include blockCenter;
+        padding-bottom: 64px;
+      }
+
+    }
+    .page1-item2{
+      border-bottom: 1px solid $sectionBg;
+      p{
+        color: #f47606;
+        font-weight: bold;
+        font-size: 20px;
+        span{
+          color: #222;
+          font-weight:normal;
+        }
+      }
+    }
+    .page1-item3{
+      .zdrq{
+        width: 702px;
+        display: block;
+        @include blockCenter;
+      }
+    }
+  }
+  .page2{
+    padding-left: 0;
+    padding-right: 0;
+
+    .page2-item1{
+      background-color: $sectionBg;
+      h4{
+        font-size: 22px;
+        padding-top: 90px;
+        padding-bottom: 62px;
+        span{
+          color: red;
+        }
+      }
+      .nx30w{
+        padding-bottom: 64px;
+      }
+    }
+    .page2-item2{
+      padding-top: 92px;
+
+    }
+    .page2-item3{
+      padding-bottom: 38px;
+      .title{
+        h2{
+          font-size: 50px;
+          color: red;
+          padding-bottom: 44px;
+        }
+        p{
+          padding-bottom: 48px;
+        }
+      }
+      .panel{
+        background-color: #f9f9f9;
+        .thumbnail{
+          @include borderRadius(0);
+          height: 274px;
+          width: 278px;
+          background-color: #f9f9f9;
+          a{
+            &:hover{
+              text-decoration: none;
+            }
+          }
+          .caption{
+            margin-top: 10px;
+            h5{
+              color: red;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+    .page2-item4{
+      background-color: $sectionBg;
+      padding-top: 96px;
+    }
+  }
+  .page3{
+    .page3-item1{
+      h4{
+        padding-top: 46px;
+        padding-bottom: 64px;
+      }
+      padding-bottom: 64px;
+    }
+    .page3-item2{
+      background-color: $sectionBg;
+      padding-top: 110px;
+      padding-bottom: 100px;
+    }
+    .page3-item3{
+      padding-top: 100px;
+      img{
+        width:auto;
+        height: 100%;
+      }
+    }
+  }
+  .page4{
+    padding-top: 70px;
+    .list-group-item{
+      border: none;
+      margin-bottom: 20px;
+      h4{
+        font-weight: bold;
+      }
+      p{
+        color: #666666;
+      }
+    }
+    .class1{
+      .col-md-12{
+        padding-left: 30px;
+      }
+    }
+    .class2{
+      .tu{
+        background-color: #f8f8fa;
+      }
+    }
+  }
+  .page5{
+    .thumbnail{
+      border: none;
+      background-color: none;
+    }
+    .list-group{
+      border: none;
+      .list-group-item{
+        border: none;
+      }
+    }
+  }
+  .page6{
+    background-color: $sectionBg;
+    margin-top: 100px;
+    table.classtable{
+      background-color: #ccc;
+      text-align: center;
+      caption{
+        width: 100%;
+        font-size: 40px;
+        color: #274f8c;
+        font-weight: bold;
+        padding: 32px 0;
+      }
+      &>thead>tr>td,tbody>tr>td,tfoot>tr>td{
+        vertical-align: middle!important;
+      }
+      thead{
+
+        tr{
+          background-color: #ffcb4d;
+          @include lineheight(52px);
+
+        }
+      }
+    }
+  }
+  .page7{
+    .page-footer{
+      .page-icons{
+        float: left;
+        padding: 20px;
+        margin-right: 86px;
+        border: 1px solid black;
+        .icon{
+          @include square(86px);
+          background: {
+            image: url("../img/page-footer-icon.png");
+            repeat: no-repeat;
+            position-y: 0;
+          };
+        }
+      }
+      @for $i from 1 through 7{
+        .page-footer-#{$i}{
+          @if $i==7{
+            margin-right: 0;
+          }
+          .icon{
+            background-position-x: $i*-86+86px;
+          }
+        }
+      }
+    }
+  }
+}

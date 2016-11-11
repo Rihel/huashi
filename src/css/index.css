@@ -457,6 +457,20 @@ html, body {
     .main .youhui .touhui {
       *windth: 200px;
       _display: inline; }
+      .main .youhui .touhui .fa {
+        width: 108px;
+        height: 108px;
+        display: block;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 108px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 50px;
+        border: 2px solid black;
+        color: #222; }
     .main .youhui .items {
       -webkit-transition: all 0.4s;
       -moz-transition: all 0.4s;
@@ -614,7 +628,8 @@ html, body {
         margin-left: auto;
         margin-right: auto;
         padding-top: 52px;
-        font-family: "Microsoft YaHei UI", Helvetica, Arial, sans-serif; }
+        font-family: "Microsoft YaHei UI", Helvetica, Arial, sans-serif;
+        line-height: 30px; }
     .main .trade .youhui-item {
       background-color: #e7e8ea;
       padding-bottom: 120px; }
@@ -674,7 +689,8 @@ html, body {
     .main .trade .container .page-header .items p {
       font-size: 16px;
       color: #6d6d6d;
-      padding-left: 120px; }
+      padding-left: 120px;
+      line-height: 30px; }
     .main .trade .container .row .col-md-3 .thumbnail {
       border: none;
       -webkit-box-shadow: none;
@@ -1005,7 +1021,7 @@ html, body {
                 width: 100%; }
           .car-control {
             position: absolute;
-            bottom: 0;
+            bottom: 0 !important;
             height: 10%;
             width: 100%;
             margin: 0;
@@ -1043,7 +1059,7 @@ html, body {
   .main .box.content h2 {
     text-align: center;
     font-weight: normal;
-    color: #FFFFFF;
+    color: #222;
     padding-top: 80px;
     font-size: 30px; }
   .main .box.content .secs {
