@@ -552,6 +552,12 @@ html, body {
   -o-transition-delay: 2s;
   transition-delay: 2s; }
 
+.main .how h1, .main .how h2, .main .how h3, .main .how h4, .main .how h5, .main .how h6 {
+  padding-bottom: 20px; }
+.main .how p {
+  padding-top: 32px;
+  padding-bottom: 54px;
+  text-indent: 2em; }
 .main .page1 {
   margin-top: 120px; }
   .main .page1 .thumbnail {
@@ -589,16 +595,35 @@ html, body {
 .main .page2 {
   padding-left: 0;
   padding-right: 0; }
-  .main .page2 .page2-item1 {
-    background-color: #f9f9f9; }
-    .main .page2 .page2-item1 h4 {
-      font-size: 22px;
-      padding-top: 90px;
-      padding-bottom: 62px; }
-      .main .page2 .page2-item1 h4 span {
-        color: red; }
-    .main .page2 .page2-item1 .nx30w {
-      padding-bottom: 64px; }
+  .main .page2 .page2-item1 h4 {
+    font-size: 22px;
+    padding-top: 90px;
+    padding-bottom: 62px; }
+    .main .page2 .page2-item1 h4 span {
+      color: red; }
+  .main .page2 .page2-item1 .nx30w {
+    padding-bottom: 64px; }
+  .main .page2 .page2-item1 .jaoxuemoshi .jiaoxue {
+    font-size: 20px;
+    margin-bottom: 30px; }
+    .main .page2 .page2-item1 .jaoxuemoshi .jiaoxue span {
+      font-size: 30px;
+      color: red;
+      font-weight: bold; }
+  .main .page2 .page2-item1 .jaoxuemoshi p {
+    font-size: 20px;
+    padding-left: 20px; }
+  .main .page2 .page2-item1 .jaoxuemoshi .thumbnail {
+    border: none; }
+  .main .page2 .page2-item1 .jaoxuemoshi h3 {
+    width: 154px;
+    margin-left: 20px;
+    margin-top: 43px;
+    text-align: center;
+    height: 38px;
+    line-height: 38px;
+    background-color: #9c9c9c;
+    color: #FFFFFF; }
   .main .page2 .page2-item2 {
     padding-top: 92px; }
   .main .page2 .page2-item3 {
@@ -626,8 +651,10 @@ html, body {
             color: red;
             font-size: 20px; }
   .main .page2 .page2-item4 {
-    background-color: #f9f9f9;
+    background-color: #f3f3f3;
     padding-top: 96px; }
+  .main .page2 .page2-item5 {
+    background-color: #1c2f49; }
 .main .page3 .page3-item1 {
   padding-bottom: 64px; }
   .main .page3 .page3-item1 h4 {
@@ -637,6 +664,12 @@ html, body {
   background-color: #f9f9f9;
   padding-top: 110px;
   padding-bottom: 100px; }
+  .main .page3 .page3-item2 .row img {
+    width: 100%;
+    height: auto;
+    display: block; }
+  .main .page3 .page3-item2 .row3 {
+    margin: 20px 0; }
 .main .page3 .page3-item3 {
   padding-top: 100px; }
   .main .page3 .page3-item3 img {
@@ -644,6 +677,14 @@ html, body {
     height: 100%; }
 .main .page4 {
   padding-top: 70px; }
+  .main .page4 .class-title {
+    background-color: #000;
+    color: #FFFFFF;
+    padding: 20px;
+    margin-bottom: 100px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; }
   .main .page4 .list-group-item {
     border: none;
     margin-bottom: 20px; }
@@ -657,7 +698,7 @@ html, body {
     background-color: #f8f8fa; }
 .main .page5 .thumbnail {
   border: none;
-  background-color: none; }
+  background-color: transparent; }
 .main .page5 .list-group {
   border: none; }
   .main .page5 .list-group .list-group-item {
@@ -668,6 +709,12 @@ html, body {
   .main .page6 table.classtable {
     background-color: #ccc;
     text-align: center; }
+    .main .page6 table.classtable td {
+      overflow: hidden; }
+      .main .page6 table.classtable td img {
+        width: 100%;
+        height: auto;
+        display: block; }
     .main .page6 table.classtable caption {
       width: 100%;
       font-size: 40px;
@@ -683,8 +730,7 @@ html, body {
 .main .page7 .page-footer .page-icons {
   float: left;
   padding: 20px;
-  margin-right: 86px;
-  border: 1px solid black; }
+  margin-right: 50px; }
   .main .page7 .page-footer .page-icons .icon {
     width: 86px;
     height: 86px;

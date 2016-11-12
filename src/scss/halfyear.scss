@@ -2,10 +2,21 @@
 $sectionBg:#f9f9f9;
 @include delay(20);
 .main{
+  .how{
+    h1,h2,h3,h4,h5,h6{
+      padding-bottom: 20px;
+    }
+    p{
+      padding-top: 32px;
+      padding-bottom: 54px;
+      text-indent: 2em;
+    }
+  }
   .page1{
     .thumbnail{
       border: none;
     }
+
     margin-top: 120px;
     .page1-title{
       margin-top: 60px;
@@ -53,7 +64,6 @@ $sectionBg:#f9f9f9;
     padding-right: 0;
 
     .page2-item1{
-      background-color: $sectionBg;
       h4{
         font-size: 22px;
         padding-top: 90px;
@@ -64,6 +74,33 @@ $sectionBg:#f9f9f9;
       }
       .nx30w{
         padding-bottom: 64px;
+      }
+      .jaoxuemoshi{
+        .jiaoxue{
+          font-size: 20px;
+          margin-bottom: 30px;
+          span{
+            font-size: 30px;
+            color: red;
+            font-weight: bold;
+          }
+        }
+        p{
+          font-size: 20px;
+          padding-left: 20px;
+        }
+        .thumbnail{
+          border: none;
+        }
+        h3{
+          width: 154px;
+          margin-left: 20px;
+          margin-top: 43px;
+          text-align: center;
+          @include lineheight(38px);
+          background-color: #9c9c9c;
+          color: #FFFFFF;
+        }
       }
     }
     .page2-item2{
@@ -105,8 +142,11 @@ $sectionBg:#f9f9f9;
       }
     }
     .page2-item4{
-      background-color: $sectionBg;
+      background-color: #f3f3f3;
       padding-top: 96px;
+    }
+    .page2-item5{
+      background-color: #1c2f49;
     }
   }
   .page3{
@@ -121,6 +161,14 @@ $sectionBg:#f9f9f9;
       background-color: $sectionBg;
       padding-top: 110px;
       padding-bottom: 100px;
+      .row{
+        img{
+          @include img;
+        }
+      }
+      .row3{
+        margin: 20px 0;
+      }
     }
     .page3-item3{
       padding-top: 100px;
@@ -132,6 +180,14 @@ $sectionBg:#f9f9f9;
   }
   .page4{
     padding-top: 70px;
+    .class-title{
+      background-color: #000;
+      color: #FFFFFF;
+      padding: 20px;
+      margin-bottom: 100px;
+      width: 80%;
+      @include blockCenter;
+    }
     .list-group-item{
       border: none;
       margin-bottom: 20px;
@@ -156,7 +212,7 @@ $sectionBg:#f9f9f9;
   .page5{
     .thumbnail{
       border: none;
-      background-color: none;
+      background-color: transparent;
     }
     .list-group{
       border: none;
@@ -171,6 +227,14 @@ $sectionBg:#f9f9f9;
     table.classtable{
       background-color: #ccc;
       text-align: center;
+      td{
+        overflow: hidden;
+        img{
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
       caption{
         width: 100%;
         font-size: 40px;
@@ -196,8 +260,8 @@ $sectionBg:#f9f9f9;
       .page-icons{
         float: left;
         padding: 20px;
-        margin-right: 86px;
-        border: 1px solid black;
+        margin-right: 50px;
+
         .icon{
           @include square(86px);
           background: {

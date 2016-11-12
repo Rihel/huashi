@@ -12,8 +12,10 @@ $(function(){
 		})
 	});
 	$.get('/common/footer.html',function(data){
-		$('.main').after(data)
+		$('.main').after(data);
+
 	});
+
 
 	items($('.main'),'*');
 	$('.halfyear').scrollactive()

@@ -77,3 +77,21 @@
         </div>
     </div>
 </div>
+<div class="gotop btn btn-primary">
+    返回顶部
+</div>
+<div class="yulan btn btn-primary">
+    预览动画
+</div>
+<script>
+    $('.gotop').click(function(){
+        $('html,body').animate({
+            scrollTop:0
+        },2000)
+    })
+    $('.yulan').click(function(){
+        $('html,body').animate({
+            scrollTop:$(document).height()
+        },20000)
+    })
+</script>
