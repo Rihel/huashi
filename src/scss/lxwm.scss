@@ -1,0 +1,94 @@
+@import "mixin";
+.lxwm{
+  margin: 100px auto;
+}
+.lxfs{
+  margin-top: 44px;
+  .wxts{
+    color: red;
+
+  }
+  .phone{
+    height: 66px;
+    background:url("../img/phone.png") 0 0 no-repeat;
+    h4{
+      margin-left: 76px;
+      margin-top: 10px;
+      small{
+        color: red;
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 35px;
+      }
+    }
+    p{
+      margin-left: 76px;
+      color: red;
+      font-size: 18px;
+    }
+  }
+  .wx{
+    h2{
+      color: red;
+    }
+    img{
+      width: 80%;
+      height:auto;
+      display: block;
+    }
+  }
+  address{
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 24px;
+  }
+}
+.map{
+  height: 586px;
+  @include boxShadow(0 0 5px #868686);
+  margin: 20px auto;
+  .ccff{
+    padding-left: 40px;
+    margin-top: 40px;
+    .bus{
+      background: {
+        image: url("../img/bus.png");
+        repeat: no-repeat;
+
+      };
+      padding-top: 50px;
+      p{
+        font-size: 16px;
+        span{
+          color: red;
+        }
+      }
+    }
+    .ditie{
+      background: {
+        image: url("../img/ditie.png");
+        repeat: no-repeat;
+      };
+      margin-top: 40px;
+      padding-top: 50px;
+      p{
+        font-size: 16px;
+        span{
+          color: red;
+        }
+      }
+    }
+  }
+  .row{
+    height: 100%;
+    .ditu{
+      height: 100%;
+      padding: 10px;
+      #ditu{
+        width: 100%;
+        height: 100%;
+        margin-left: -20px;
+      }
+    }
+  }
+}

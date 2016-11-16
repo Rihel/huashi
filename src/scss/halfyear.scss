@@ -5,11 +5,15 @@ $sectionBg:#f9f9f9;
   .how{
     h1,h2,h3,h4,h5,h6{
       padding-bottom: 20px;
+      color: #33335c;
+      margin-left: -30px;
     }
     p{
       padding-top: 32px;
       padding-bottom: 54px;
-      text-indent: 2em;
+      text-indent: 4em;
+      line-height: 30px;
+      font-size: 16px;
     }
   }
   .page1{
@@ -29,8 +33,15 @@ $sectionBg:#f9f9f9;
     }
     .page1-item1{
       h1{
+
+        font-size: 46px;
+
+      }
+      .jy{
+        color: red;
         padding-bottom: 88px;
-        font-size: 50px;
+        font-size: 24px;
+        text-indent: 372px;
       }
       p{
         width: 80%;
@@ -119,24 +130,24 @@ $sectionBg:#f9f9f9;
           padding-bottom: 48px;
         }
       }
-      .panel{
+
+    }
+    .panel{
+      .thumbnail{
+        @include borderRadius(0);
+        height: 274px;
+        width: 278px;
         background-color: #f9f9f9;
-        .thumbnail{
-          @include borderRadius(0);
-          height: 274px;
-          width: 278px;
-          background-color: #f9f9f9;
-          a{
-            &:hover{
-              text-decoration: none;
-            }
+        a{
+          &:hover{
+            text-decoration: none;
           }
-          .caption{
-            margin-top: 10px;
-            h5{
-              color: red;
-              font-size: 20px;
-            }
+        }
+        .caption{
+          margin-top: 10px;
+          .panel-title{
+            color: red;
+            font-size: 20px;
           }
         }
       }
@@ -146,7 +157,27 @@ $sectionBg:#f9f9f9;
       padding-top: 96px;
     }
     .page2-item5{
-      background-color: #1c2f49;
+      background: #1c2f49 url("../img/bg.png") center no-repeat;
+      height: 547px;
+      position: relative;
+      .markbg{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(28,47,73,.6);
+      }
+      .img-responsive{
+        width: 1200px;
+        height: 100%;
+        top: 0;
+        position: absolute;
+        left: 50%;
+        margin-left: -600px;
+        z-index: 2;
+        display: block;
+      }
     }
   }
   .page3{
@@ -156,6 +187,21 @@ $sectionBg:#f9f9f9;
         padding-bottom: 64px;
       }
       padding-bottom: 64px;
+      .icons{
+        .thumbnail{
+          border: none;
+          height: 150px;
+          margin-bottom: 30px;
+          img{
+            @include square(91px);
+            @include blockCenter;
+          }
+          .caption{
+            font-size: 20px;
+            padding-top: 30px;
+          }
+        }
+      }
     }
     .page3-item2{
       background-color: $sectionBg;
@@ -180,12 +226,19 @@ $sectionBg:#f9f9f9;
   }
   .page4{
     padding-top: 70px;
+    @for $i from 1 through 8{
+      .class#{$i}{
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+    }
     .class-title{
       background-color: #000;
       color: #FFFFFF;
       padding: 20px;
       margin-bottom: 100px;
       width: 80%;
+      font-size: 60px;
       @include blockCenter;
     }
     .list-group-item{
@@ -193,6 +246,8 @@ $sectionBg:#f9f9f9;
       margin-bottom: 20px;
       h4{
         font-weight: bold;
+        color: #274f8c;
+        font-size: 24px;
       }
       p{
         color: #666666;
@@ -208,11 +263,18 @@ $sectionBg:#f9f9f9;
         background-color: #f8f8fa;
       }
     }
+    .class-bg{
+      background-color: #000;
+    }
   }
   .page5{
     .thumbnail{
       border: none;
       background-color: transparent;
+      .caption{
+        color: #2d66a7;
+        font-size: 20px;
+      }
     }
     .list-group{
       border: none;
@@ -224,9 +286,15 @@ $sectionBg:#f9f9f9;
   .page6{
     background-color: $sectionBg;
     margin-top: 100px;
+    h1{ 
+      padding: 50px 0;
+      color: #274f8c;
+      font-size: 50px;
+    }
     table.classtable{
       background-color: #ccc;
       text-align: center;
+
       td{
         overflow: hidden;
         img{

@@ -318,6 +318,9 @@ html,body{
     @include animateTransition($value,1s);
   }
 }
+@mixin rotate3d($num...){
+  @include transform(rotate3d($num));
+}
 @include keyframs(round){
   0%{
     @include transform(rotate(0deg));

@@ -550,12 +550,27 @@
             }
           }
           .teacher-intr{
-            width: 60%;
+            width: 54%;
             .teacher-name{
-              padding-top: 48px;
+
               font-size: 22px;
               color: red;
             }
+          }
+        }
+        .gomoreteacher{
+          width: 300px;
+          @include lineheight(50px);
+          @include blockCenter;
+          color: #000000;
+          display: block;
+          border: 1px solid black;
+          @include borderRadius(5px);
+          text-align: center;
+          margin-top: 20px;
+          &:hover{
+            text-decoration: none;
+
           }
         }
       }
@@ -713,6 +728,7 @@
     table.classtable{
       background-color: #ccc;
       text-align: center;
+
       caption{
         width: 100%;
         font-size: 40px;
@@ -722,6 +738,11 @@
       }
       &>thead>tr>td,tbody>tr>td,tfoot>tr>td{
         vertical-align: middle!important;
+        img{
+
+            @include img;
+
+        }
       }
       thead{
 
@@ -735,3 +756,4 @@
   }
 
 }
+

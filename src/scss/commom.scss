@@ -194,21 +194,14 @@
       margin: 0;
       padding: 0;
       float: left;
-      position: absolute;
       @include lineheight(44px);
       text-align: center;
-      width: 100px;
-      top: 0;
       height: 43*2px;
+
       overflow: hidden;
-      @for $i from 1 through 8{
-        &.nav#{$i}{
-          left: $i*100-26px;
-        }
-      }
-      &.index{
-        width: 75px;
-        left: 0;
+      @include transition(all 0.4s);
+      &:hover{
+        @include translate(0,-43px);
       }
       a{
         margin: 0;
@@ -222,6 +215,7 @@
     }
   }
 }
+
 $bannerHeight:540px;
 .banner{
   width: 100%;
@@ -238,17 +232,10 @@ $bannerHeight:540px;
         size: cover;
       };
     }
-    .item1{
-      background-image: url("../img/banner1.png");
-    }
-    .item2{
-      background-image: url("../img/banner2.png");
-    }
-    .item3{
-      background-image: url("../img/banner3.png");
-    }
-    .item4{
-      background-image: url('../img/banner4.png');
+    @for $i from 1 through 4{
+     .item#{$i}{
+       background: url("../img/banner#{$i}.png") no-repeat center;
+     }
     }
     .carousel-indicators{
       li{
@@ -368,6 +355,23 @@ $bannerHeight:540px;
 
     }
   }
+}
+
+
+/*animate*/
+@include keyframs(myanimate){
+  0%{
+    @include rotate3d(1,0,0,0deg);
+    @include boxShadow(0px 5px 10px #ddd)
+  }
+  100%{
+    @include rotate3d(1,0,0,360deg);
+    @include boxShadow(0px 5px 10px #ddd)
+  }
+}
+
+.myanimate{
+  animation-name: myanimate;
 }
 .float0831 {
   POSITION: fixed; TOP: 180px; RIGHT: 1px; _position: absolute;
