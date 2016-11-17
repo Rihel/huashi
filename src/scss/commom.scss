@@ -4,6 +4,7 @@
   bottom: 10%;
   right: 10%;
 }
+
 .yulan{
   position: fixed;
   bottom: 5%;
@@ -237,6 +238,9 @@ $bannerHeight:540px;
        background: url("../img/banner#{$i}.png") no-repeat center;
      }
     }
+    .item1{
+      background: url("../img/banner1.jpg");
+    }
     .carousel-indicators{
       li{
         *float: left;
@@ -261,6 +265,7 @@ $bannerHeight:540px;
   width: 100%;
   padding-top: 35px;
   overflow: hidden;
+  padding-bottom: 50px;
   .container{
     .map_wra{
       float: left;
@@ -283,37 +288,18 @@ $bannerHeight:540px;
         .wrapper_bottom{
           float: left;
           text-align: left;
-          width: 500px;
+          width: 560px;
           height: 40px;
           color: #606554;
           margin-bottom: 40px;
         }
         .link_wra{
           float: left;
+          width: 900px;
           .link{
-            float: left;
+            margin-bottom: 10px;
             margin-right: 12px;
-            h3{
-              font-size: 16px;
-              color: #CCC;
-              margin-bottom: 15px;
-              text-align: center;
-              cursor: default;
-            }
-            ul{
-              list-style-type: none;
-              li{
-                text-align: center;
-                a{
-                  font-size: 14px;
-                  line-height: 30px;
-                  text-align: center;
-                  color: #666;
-                  text-decoration: none;
-                  outline: none;
-                }
-              }
-            }
+            color: #606554;
           }
         }
         .contact{

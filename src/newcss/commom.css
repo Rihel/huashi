@@ -642,6 +642,8 @@ html, body {
       background: url("../img/banner3.png") no-repeat center; }
     .banner .slide .item4 {
       background: url("../img/banner4.png") no-repeat center; }
+    .banner .slide .item1 {
+      background: url("../img/banner1.jpg"); }
     .banner .slide .carousel-indicators li {
       *float: left;
       *margin-right: 10px; }
@@ -659,7 +661,8 @@ html, body {
   background: #333;
   width: 100%;
   padding-top: 35px;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 50px; }
   #footer .container .map_wra {
     float: left;
     margin-bottom: 10px; }
@@ -679,32 +682,17 @@ html, body {
       #footer .container .wrapper .wrapper_top .wrapper_bottom {
         float: left;
         text-align: left;
-        width: 500px;
+        width: 560px;
         height: 40px;
         color: #606554;
         margin-bottom: 40px; }
       #footer .container .wrapper .wrapper_top .link_wra {
-        float: left; }
+        float: left;
+        width: 900px; }
         #footer .container .wrapper .wrapper_top .link_wra .link {
-          float: left;
-          margin-right: 12px; }
-          #footer .container .wrapper .wrapper_top .link_wra .link h3 {
-            font-size: 16px;
-            color: #CCC;
-            margin-bottom: 15px;
-            text-align: center;
-            cursor: default; }
-          #footer .container .wrapper .wrapper_top .link_wra .link ul {
-            list-style-type: none; }
-            #footer .container .wrapper .wrapper_top .link_wra .link ul li {
-              text-align: center; }
-              #footer .container .wrapper .wrapper_top .link_wra .link ul li a {
-                font-size: 14px;
-                line-height: 30px;
-                text-align: center;
-                color: #666;
-                text-decoration: none;
-                outline: none; }
+          margin-bottom: 10px;
+          margin-right: 12px;
+          color: #606554; }
       #footer .container .wrapper .wrapper_top .contact {
         float: left;
         width: 220px;

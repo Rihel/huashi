@@ -38,6 +38,7 @@ function items(par,tag,animName){
 		}
 	});
 }
+alert('he2ihsssdfdsafei');
 function browserV(){
 	var browser=window.navigator.userAgent
 	var isOpera=browser.indexOf('Opera')>-1;
