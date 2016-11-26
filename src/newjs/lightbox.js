@@ -18,6 +18,10 @@
 				},200)
 			})
 		},
+		common:{
+			winW:$(win).width(),
+			winH:$(win).height()
+		},
 		animates:function(lightbox){
 			lightbox.find('.lightbox-content').animate({'top':'50%'})
 		},
@@ -37,14 +41,22 @@
 			text.appendTo(content);
 			mark.appendTo(warp);
 			content.appendTo(warp);
+			var imgobj=new Image();
+			imgobj.src=obj.img;
+			console.log(imgobj.width + 200);
+			content.css({
+				width:imgobj.width+200,
+				left:Math.floor((meath.common.winW-imgobj.width+200)/2)
+			})
+
 			return warp;
 		},
 		getDate:function(lightbox){
 			return {
 				img:$(lightbox).find('img').attr('src'),
-				name:$(lightbox).find('h3').eq(0).html(),
-				joy:$(lightbox).find('h3').eq(1).html(),
-				text:$(lightbox).find('p').html()
+				name:$(lightbox).find('h3').eq(0).html()||'',
+				joy:$(lightbox).find('h3').eq(1).html()||'',
+				text:$(lightbox).find('p').html()||''
 			}
 		}
 	}

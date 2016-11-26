@@ -18,7 +18,10 @@ $(function(){
 		$('.main').after(data);
 
 	});
-
+	$.get('/common/phmenu.html',function(data){
+		$('.xyfc-right').html('');
+		$(data).appendTo($('.xyfc-right'));
+	})
 
 	items($('.main'),'*');
 	$('.halfyear').scrollactive()
@@ -38,7 +41,6 @@ function items(par,tag,animName){
 		}
 	});
 }
-alert('he2ihsssdfdsafei');
 function browserV(){
 	var browser=window.navigator.userAgent
 	var isOpera=browser.indexOf('Opera')>-1;

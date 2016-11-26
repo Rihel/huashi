@@ -432,8 +432,6 @@ html, body {
   .lightbox-warp .lightbox-content {
     z-index: 1001;
     position: absolute;
-    width: 500px;
-    left: 50%;
     margin-left: -260px;
     top: -1000px;
     margin-top: -250px;

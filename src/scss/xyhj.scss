@@ -1,0 +1,24 @@
+@import "mixin";
+.xyhj{
+  margin: 50px auto;
+  .col-md-4{
+    margin-top: 30px;
+    .thumbnail{
+      h3{
+        font-size: 18px;
+      }
+      border: none;
+      @include transition(all 0.4s);
+      &:hover{
+        @include boxShadow(0 0 5px #858585);
+      }
+      img{
+        margin-top: 26px;
+        height: auto;
+        width: 550px;
+        display: block;
+        @include borderRadius(15px);
+      }
+    }
+  }
+}

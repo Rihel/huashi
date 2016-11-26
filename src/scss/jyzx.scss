@@ -1,0 +1,50 @@
+@import "mixin";
+.jyzx{
+  margin-top: 116px;
+  .jyzx-title{
+    background: url("../img/jyzx-bg.jpg");
+    height: 398px;
+    @include borderRadius(10px);
+    position: relative;
+    h1{
+      color: #FFFFFF;
+      padding: 100px 0 0 150px;
+      font-size: 58px;
+
+    }
+    .big-bg{
+      padding-left: 20px;
+      margin-top: 52px;
+
+    }
+    .jyzx-right-bg{
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+  .jyzx-main{
+    .jyzx-item{
+      //height: 330px;
+      //.jyzx-jieshao{
+      //  height: 100%;
+      //  overflow-y: scroll;
+      //}
+      h2{
+        text-indent: 1em;
+      }
+      .jyzx-face{
+        img{
+          @include img;
+        }
+      }
+      button{
+        width: 150px;
+        text-align: center;
+      }
+      .more{
+        display: none;
+      }
+    }
+  }
+}

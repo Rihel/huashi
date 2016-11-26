@@ -1,0 +1,106 @@
+@import "mixin";
+.showworks{
+  padding: 0;
+  margin-top: 102px;
+  .sw-title{
+    height: 350px;
+    .sw-h2{
+      font-size: 40px;
+      margin-bottom: 56px;
+      text-indent: 4em;
+      background: {
+        image: url('../img/sw-h2-bg.jpg');
+        repeat: no-repeat;
+        position-x: 100px;
+      };
+    }
+    .sw-p{
+      text-indent: 4em;
+      line-height: 26px;
+      font-size: 16px;
+    }
+  }
+  .container-fluid{
+    background-color: #5f8ea8;
+
+  }
+  .sw-main{
+    padding-bottom: 150px;
+    position: relative;
+    padding-top: 80px;
+
+    .swbg{
+      position: absolute;
+      top: -80px;
+      img{
+        @include img;
+      }
+    }
+    .sw-type{
+      background-color: #fff;
+      @include boxShadow(-1px 0px 10px rgba(0,0,0,.3));
+      @include borderRadius(5px);
+      padding: 20px;
+      margin-top: 0;
+    }
+    .sw-crol-small-view{
+      background-color: #fff;
+      @include boxShadow(-1px 0px 10px rgba(0,0,0,.3));
+      @include borderRadius(5px);
+      width: 100%;
+      padding: 10px;
+      height: 800px;
+      overflow-y: scroll;
+      position: relative;
+      @include clearfix;
+      .sw{
+
+        float: left;
+        width: 50%;
+        overflow: hidden;
+        padding: 5px;
+
+        img{
+          width: 100%;
+          @include transition(all 0.4s);
+          height:auto;
+        }
+
+      }
+    }
+    .sw-main-big-view{
+      background-color: #fff;
+      @include boxShadow(-1px 0px 10px rgba(0,0,0,.3));
+      @include borderRadius(5px);
+      width: 100%;
+      padding: 50px;
+      .sw-tab{
+        margin-top: 50px;
+        width: 100%;
+        @include clearfix;
+        @include boxShadow(-1px 0px 10px rgba(0,0,0,.3));
+        @include borderRadius(5px);
+        padding: 5px;
+        li{
+          float: left;
+          font-family: "Microsoft YaHei UI", Helvetica, Arial, sans-serif;
+          color: #000;
+
+          @include lineheight(40px);
+          padding: 0 15px;
+          &.active{
+            border-bottom:2px solid red;
+            color: red;
+          }
+        }
+      }
+      .sw-view{
+        padding: 50px 0;
+        text-align: center;
+        img{
+          @include img;
+        }
+      }
+    }
+  }
+}

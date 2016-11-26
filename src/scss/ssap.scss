@@ -1,0 +1,46 @@
+@import "mixin";
+.ssap{
+
+  margin: 52px auto;
+  h1{
+    margin-bottom: 52px;
+  }
+  .row{
+
+    .ssap-title{
+      background-color: #000;
+      color: #FFFFFF;
+      @include lineheight(80px);
+      padding: 15px 0;
+      h2{
+        background-color: #000000;
+        margin: 0;
+        padding: 0;
+        height: 48px;
+        line-height: 48px;
+        text-indent: 150px;
+        margin-left: -20px;
+        background: {
+          image: url("../img/ssap/ssaptitlebg.png");
+          repeat: no-repeat;
+          position-y: center;
+          position-x: 90px;
+        };
+      }
+    }
+  }
+  .up,.down{
+    padding: 50px 100px;
+    p{
+      font-size: 16px;
+      text-indent: 2em;
+    }
+    .thumbnail{
+      border: none;
+      img{
+        display: block;
+        @include borderRadius(15px);
+      }
+    }
+  }
+}

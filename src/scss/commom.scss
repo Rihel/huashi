@@ -4,7 +4,12 @@
   bottom: 10%;
   right: 10%;
 }
-
+a{
+  color: #000;
+  &:hover{
+    text-decoration: none!important;
+  }
+}
 .yulan{
   position: fixed;
   bottom: 5%;
@@ -181,9 +186,10 @@
 .nav{
   position: absolute;
   left: 0;
-  height: 43px;
+  height: 40px;
   width: 100%;
   background: url("../img/navbg.jpg") 0 0 repeat-x;
+  overflow: hidden;
   .mainnav{
     height: 43px;
     margin: 0;
@@ -210,19 +216,37 @@
         color: #fff;
         img{
           display: block;
-          height: 43px;
         }
       }
     }
   }
 }
-
+.navb{
+  height: 40px;
+  background: url("../img/daohang/bg.jpg") repeat-x;
+  border-bottom:1px solid red;
+  .navbzj{
+    width: 1200px;
+    height: 40px;
+    margin: 40px auto 0;
+    padding-left: 160px;
+    ul{
+      li{
+        float: left;
+        width: 100px;
+        text-align: center;
+        line-height: 40px;
+        a{
+          color: #F00;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
 $bannerHeight:540px;
 .banner{
   width: 100%;
-  padding:{
-    bottom: 44px;
-  };
   .slide{
     height:$bannerHeight;
     .item{
@@ -322,7 +346,7 @@ $bannerHeight:540px;
 
           }
           .tel{
-            font-size: 22px;
+            font-size: 14px;
             color: #FFF;
             margin-top: 6px;
           }
@@ -417,6 +441,7 @@ $bannerHeight:540px;
   OVERFLOW: hidden;
   WORD-BREAK: normal;
   font-size: 12px;
+  list-style: none;
 }
 .float0831 .titZx {
   BACKGROUND: url(../img/float_s.gif) no-repeat
@@ -467,7 +492,7 @@ $bannerHeight:540px;
   BACKGROUND-POSITION: 2px -213px
 }
 .float0831 .icoTl {
-  PADDING-LEFT: 20px;
+  PADDING-LEFT: 18px;
   DISPLAY: block;
   FONT-FAMILY: "微软雅黑";
   BACKGROUND-POSITION: 2px -266px;

@@ -448,6 +448,81 @@ html, body {
 .col-md-12 {
   *padding: 0; }
 
+.thumbnail {
+  border: none;
+  background-color: transparent; }
+
+.how h1, .how h2, .how h3, .how h4, .how h5, .how h6 {
+  padding-bottom: 20px;
+  color: #33335c;
+  margin-left: -30px; }
+.how p {
+  padding-top: 32px;
+  padding-bottom: 54px;
+  text-indent: 4em;
+  line-height: 30px;
+  font-size: 16px; }
+
+.news .newswarp {
+  width: 48%; }
+.news .newsitem {
+  margin: 25px 0;
+  -webkit-box-shadow: 0 0 5px #ddd;
+  -moz-box-shadow: 0 0 5px #ddd;
+  box-shadow: 0 0 5px #ddd;
+  padding: 20px 0;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .news .newsitem:hover {
+    -webkit-box-shadow: 0 0 5px #575757;
+    -moz-box-shadow: 0 0 5px #575757;
+    box-shadow: 0 0 5px #575757; }
+  .news .newsitem .news-img img {
+    width: 100%;
+    height: auto;
+    display: block; }
+  .news .newsitem .news-content h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: bold; }
+  .news .newsitem .news-content .list-group {
+    border: none; }
+    .news .newsitem .news-content .list-group .list-group-item {
+      padding: 0 5px;
+      margin-bottom: 5px;
+      border: none;
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      -ms-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; }
+      .news .newsitem .news-content .list-group .list-group-item:hover {
+        -webkit-box-shadow: 0 0 5px #757575;
+        -moz-box-shadow: 0 0 5px #757575;
+        box-shadow: 0 0 5px #757575; }
+      .news .newsitem .news-content .list-group .list-group-item a {
+        display: block;
+        color: #747474;
+        width: 100%; }
+        .news .newsitem .news-content .list-group .list-group-item a .time {
+          color: #9d999a; }
+        .news .newsitem .news-content .list-group .list-group-item a:hover {
+          text-decoration: none; }
+
+.xxyl .thumbnail {
+  border: none;
+  background-color: transparent; }
+  .xxyl .thumbnail .caption {
+    font-size: 18px;
+    padding: 20px 0; }
+
+.jiuye {
+  padding: 50px 0; }
+
 .main {
   font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif; }
   .main .youhui {
@@ -456,7 +531,8 @@ html, body {
       font-size: 40px; }
     .main .youhui .touhui {
       *windth: 200px;
-      _display: inline; }
+      _display: inline;
+      margin-top: 50px; }
       .main .youhui .touhui .fa {
         width: 108px;
         height: 108px;
@@ -471,6 +547,8 @@ html, body {
         font-size: 50px;
         border: 2px solid black;
         color: #222; }
+      .main .youhui .touhui h5 {
+        font-size: 20px; }
     .main .youhui .items {
       -webkit-transition: all 0.4s;
       -moz-transition: all 0.4s;
@@ -499,17 +577,16 @@ html, body {
             font-size: 12px;
             color: #acacac; }
     .main .youhui .youhui-icon {
-      border-bottom: 1px solid #e7e8ea;
-      padding-bottom: 66px; }
+      border-bottom: 1px dashed #C2C3C5;
+      padding-bottom: 20px; }
       .main .youhui .youhui-icon .youhuititle h2 {
         font-size: 50px;
         font-weight: 900;
-        padding-top: 99px;
-        padding-bottom: 30px;
+        padding-top: 47px;
         background-image: url("../img/tvicon.png");
         background-repeat: no-repeat;
-        background-position-x: 25%;
-        background-position-y: 90px; }
+        background-position-x: 27%;
+        background-position-y: 38px; }
       .main .youhui .youhui-icon .youhuititle p {
         padding-bottom: 32px;
         font-size: 20px; }
@@ -538,8 +615,6 @@ html, body {
         -o-transition: all 0.4s;
         transition: all 0.4s; }
         .main .youhui .project-item .row .icles img {
-          width: auto;
-          height: 86px;
           margin-top: 30px;
           margin-bottom: 16px;
           margin-left: auto;
@@ -552,7 +627,9 @@ html, body {
         .main .youhui .project-item .row .icles h3 {
           padding: 0;
           text-align: center;
-          font-size: 22px; }
+          font-size: 22px;
+          font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+          -webkit-font-smoothing: antialiased; }
         .main .youhui .project-item .row .icles p {
           font-size: 13px;
           height: 40px; }
@@ -615,24 +692,28 @@ html, body {
     .main .trade:after {
       clear: both;
       overflow: hidden; }
+    .trade-p {
+      text-indent: 52px;
+      width: 84%;
+      line-height: 30px;
+      font-size: 16px; }
     .main .trade .uijiuye {
-      padding: 76px 0 104px 0; }
+      padding: 76px 0 50px 0; }
       .main .trade .uijiuye h2 {
-        font-size: 50px;
+        font-size: 38px;
         padding: 0;
         margin: 0; }
       .main .trade .uijiuye .sec {
-        width: 694px;
-        text-align: center;
-        font-size: 14px;
+        width: 1050px;
+        font-size: 16px;
         margin-left: auto;
         margin-right: auto;
         padding-top: 52px;
         font-family: "Microsoft YaHei UI", Helvetica, Arial, sans-serif;
         line-height: 30px; }
     .main .trade .youhui-item {
-      background-color: #e7e8ea;
-      padding-bottom: 120px; }
+      background-color: #f2f2f2;
+      padding-bottom: 50px; }
       .main .trade .youhui-item .joy {
         width: 19%;
         padding: 0;
@@ -683,14 +764,15 @@ html, body {
         background-position-x: -170px; }
       .main .trade .youhui-item .joy4 .icons {
         background-position-x: -254px; }
-    .main .trade .container .page-header .items .trade－title {
-      font-size: 30px;
-      padding-left: 120px; }
+    .trade－title {
+      font-size: 38px !important;
+      line-height: 50px; }
     .main .trade .container .page-header .items p {
       font-size: 16px;
       color: #6d6d6d;
       padding-left: 120px;
-      line-height: 30px; }
+      line-height: 30px;
+      text-indent: 2em; }
     .main .trade .container .row .col-md-3 .thumbnail {
       border: none;
       -webkit-box-shadow: none;
@@ -717,9 +799,10 @@ html, body {
     padding-top: 105px;
     background-color: #f2f2f2; }
     .main .project .project-title {
-      padding: 0 60px;
       *padding: 0;
       *width: 340px; }
+    .main .project .jumbotron {
+      padding: 15px; }
     .main .project .img-responsive {
       margin-left: auto;
       margin-right: auto; }
