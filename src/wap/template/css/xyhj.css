@@ -1,0 +1,29 @@
+.main {
+  margin-bottom: 5rem; }
+  .main h1 {
+    text-align: center;
+    font-size: 18px;
+    color: #c5050a;
+    font-weight: bold; }
+  .main ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .main ul li {
+      width: 50%; }
+      .main ul li img {
+        display: block;
+        width: 100%;
+        height: auto; }
+      .main ul li .caption {
+        text-align: center;
+        color: #fff;
+        background: #d6171d;
+        height: 4.5rem;
+        line-height: 4.5rem; }
+        .main ul li .caption.zise {
+          background: #5e5193; }

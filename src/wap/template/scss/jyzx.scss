@@ -1,0 +1,45 @@
+@import "./_mixin.scss";
+.main {
+    h1 {
+        @include title;
+        margin-top: rem(70);
+        margin-bottom: rem(44);
+    }
+    .title-bg {
+        padding: 0 rem(65);
+        img {
+            @include img;
+        }
+    }
+    .faces {
+        margin-top: rem(50);
+        margin-bottom: rem(100);
+        .face-item {
+            display: flex;
+            padding: 0 rem(38);
+            margin-bottom: rem(80);
+            dl {
+                flex: 6;
+                font-size: 12px;
+                dt {
+                    margin-bottom: rem(40);
+                }
+                dd {
+                    margin-bottom: rem(10);
+                }
+            }
+            .face {
+                flex: 5;
+                img {
+                    @include img;
+                }
+            }
+            &:nth-of-type(2n) {
+                flex-direction: row-reverse;
+                dl {
+                    padding-left: rem(20);
+                }
+            }
+        }
+    }
+}

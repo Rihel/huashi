@@ -1,0 +1,27 @@
+@import "./_mixin.scss";
+.main {
+    margin-bottom: rem(100);
+    h1 {
+        @include title;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            width: 50%;
+            img {
+                @include img;
+            }
+            .caption {
+                text-align: center;
+                color: #fff;
+                background: #d6171d;
+                height: rem(90);
+                line-height: rem(90);
+                &.zise {
+                    background: #5e5193;
+                }
+            }
+        }
+    }
+}

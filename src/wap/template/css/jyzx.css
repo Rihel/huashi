@@ -1,0 +1,52 @@
+.main h1 {
+  text-align: center;
+  font-size: 18px;
+  color: #c5050a;
+  font-weight: bold;
+  margin-top: 3.5rem;
+  margin-bottom: 2.2rem; }
+
+.main .title-bg {
+  padding: 0 3.25rem; }
+  .main .title-bg img {
+    display: block;
+    width: 100%;
+    height: auto; }
+
+.main .faces {
+  margin-top: 2.5rem;
+  margin-bottom: 5rem; }
+  .main .faces .face-item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 1.9rem;
+    margin-bottom: 4rem; }
+    .main .faces .face-item dl {
+      -webkit-box-flex: 6;
+      -webkit-flex: 6;
+          -ms-flex: 6;
+              flex: 6;
+      font-size: 12px; }
+      .main .faces .face-item dl dt {
+        margin-bottom: 2rem; }
+      .main .faces .face-item dl dd {
+        margin-bottom: 0.5rem; }
+    .main .faces .face-item .face {
+      -webkit-box-flex: 5;
+      -webkit-flex: 5;
+          -ms-flex: 5;
+              flex: 5; }
+      .main .faces .face-item .face img {
+        display: block;
+        width: 100%;
+        height: auto; }
+    .main .faces .face-item:nth-of-type(2n) {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+      -webkit-flex-direction: row-reverse;
+          -ms-flex-direction: row-reverse;
+              flex-direction: row-reverse; }
+      .main .faces .face-item:nth-of-type(2n) dl {
+        padding-left: 1rem; }
