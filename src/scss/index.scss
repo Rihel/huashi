@@ -104,10 +104,10 @@
       *windth:200px;
       _display:inline;
       .fa{
-        @include square(108px);
+        @include square(94px);
         @include borderRadius(100%);
         text-align: center;
-        line-height: 108px;
+        line-height: 94px;
         @include blockCenter;
         font-size: 50px;
         border: 2px solid black;
@@ -116,6 +116,10 @@
       h5{
         font-size: 20px;
         //margin-bottom: 40px;
+      }
+      img{
+        width: 94px;
+        height: 94px;
       }
       margin-top: 50px;
     }

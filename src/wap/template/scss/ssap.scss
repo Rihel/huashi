@@ -1,0 +1,83 @@
+@import "./_mixin.scss";
+h1 {
+    @include title;
+    margin-top: rem(70);
+    margin-bottom: rem(62);
+}
+
+.section1 {
+    h2 {
+        @include title;
+        margin-bottom: rem(30);
+    }
+    p {
+        color: #3e3d3d;
+        font-size: 12px;
+        padding: 0 rem(28);
+        line-height: rem(36);
+        margin-bottom: rem(40);
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 rem(38);
+        li {
+            width: 50%;
+            padding: rem(10) rem(10);
+            @include BoxSizing;
+            img {
+                @include img;
+            }
+        }
+    }
+    h3 {
+        color: #c5050a;
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+.section2 {
+    margin-bottom: rem(100);
+    margin-top: rem(68);
+    padding: 0 rem(34);
+    h2 {
+        @include title;
+        margin-bottom: rem(38);
+    }
+    p {
+        color: #3e3d3d;
+        font-size: 12px;
+        line-height: rem(36);
+        text-indent: 2em;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: rem(42);
+        margin-bottom: rem(46);
+        li {
+            @include BoxSizing;
+            width: 50%;
+            img {
+                @include img;
+            }
+            margin-bottom: rem(46);
+            .caption {
+                text-align: center;
+                color: #c5050a;
+                font-size: 14px;
+                margin-top: rem(20);
+            }
+            &:nth-of-type(1) {
+                padding-right: rem(24);
+            }
+            &:nth-of-type(2) {
+                padding-left: rem(24);
+            }
+            &:nth-of-type(3) {
+                margin: 0 auto;
+            }
+        }
+    }
+}

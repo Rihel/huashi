@@ -1,0 +1,69 @@
+.page-title {
+  margin-top: 3.5rem; }
+  .page-title h1 {
+    text-align: center;
+    font-size: 18px;
+    color: #c5050a;
+    font-weight: bold; }
+  .page-title ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 1.3rem; }
+    .page-title ul li {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+      .page-title ul li img {
+        display: block;
+        width: 100%;
+        height: auto; }
+
+.teacher-wrapper {
+  margin-top: 3.1rem;
+  margin-bottom: 5rem; }
+  .teacher-wrapper .teacher-item {
+    margin-bottom: 2rem; }
+    .teacher-wrapper .teacher-item h2 {
+      color: #fff;
+      background: #c91f23;
+      font-size: 16px;
+      padding: 0.55rem 0 0.7rem 1.8rem;
+      margin-bottom: 0.85rem; }
+    .teacher-wrapper .teacher-item:nth-of-type(2n) h2 {
+      background: #5e5193; }
+    .teacher-wrapper .teacher-item:nth-of-type(2n) .teacher-item-sec {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+      -webkit-flex-direction: row-reverse;
+          -ms-flex-direction: row-reverse;
+              flex-direction: row-reverse; }
+      .teacher-wrapper .teacher-item:nth-of-type(2n) .teacher-item-sec .teacher-text {
+        padding-left: 0;
+        padding-right: 1.9rem; }
+    .teacher-wrapper .teacher-item .teacher-item-sec {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 0 1.8rem; }
+      .teacher-wrapper .teacher-item .teacher-item-sec .teacher-photo {
+        -webkit-box-flex: 3;
+        -webkit-flex: 3;
+            -ms-flex: 3;
+                flex: 3; }
+        .teacher-wrapper .teacher-item .teacher-item-sec .teacher-photo img {
+          display: block;
+          width: 100%;
+          height: auto; }
+      .teacher-wrapper .teacher-item .teacher-item-sec .teacher-text {
+        -webkit-box-flex: 7;
+        -webkit-flex: 7;
+            -ms-flex: 7;
+                flex: 7;
+        font-size: 12px;
+        text-indent: 2em;
+        padding-left: 1.9rem;
+        line-height: 1.8rem; }

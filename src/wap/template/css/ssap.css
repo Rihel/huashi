@@ -1,0 +1,91 @@
+h1 {
+  text-align: center;
+  font-size: 18px;
+  color: #c5050a;
+  font-weight: bold;
+  margin-top: 3.5rem;
+  margin-bottom: 3.1rem; }
+
+.section1 h2 {
+  text-align: center;
+  font-size: 18px;
+  color: #c5050a;
+  font-weight: bold;
+  margin-bottom: 1.5rem; }
+
+.section1 p {
+  color: #3e3d3d;
+  font-size: 12px;
+  padding: 0 1.4rem;
+  line-height: 1.8rem;
+  margin-bottom: 2rem; }
+
+.section1 ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 0 1.9rem; }
+  .section1 ul li {
+    width: 50%;
+    padding: 0.5rem 0.5rem;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box; }
+    .section1 ul li img {
+      display: block;
+      width: 100%;
+      height: auto; }
+
+.section1 h3 {
+  color: #c5050a;
+  text-align: center;
+  font-size: 12px; }
+
+.section2 {
+  margin-bottom: 5rem;
+  margin-top: 3.4rem;
+  padding: 0 1.7rem; }
+  .section2 h2 {
+    text-align: center;
+    font-size: 18px;
+    color: #c5050a;
+    font-weight: bold;
+    margin-bottom: 1.9rem; }
+  .section2 p {
+    color: #3e3d3d;
+    font-size: 12px;
+    line-height: 1.8rem;
+    text-indent: 2em; }
+  .section2 ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin-top: 2.1rem;
+    margin-bottom: 2.3rem; }
+    .section2 ul li {
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 50%;
+      margin-bottom: 2.3rem; }
+      .section2 ul li img {
+        display: block;
+        width: 100%;
+        height: auto; }
+      .section2 ul li .caption {
+        text-align: center;
+        color: #c5050a;
+        font-size: 14px;
+        margin-top: 1rem; }
+      .section2 ul li:nth-of-type(1) {
+        padding-right: 1.2rem; }
+      .section2 ul li:nth-of-type(2) {
+        padding-left: 1.2rem; }
+      .section2 ul li:nth-of-type(3) {
+        margin: 0 auto; }

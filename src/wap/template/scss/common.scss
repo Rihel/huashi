@@ -1,0 +1,201 @@
+@import './_mixin.scss';
+html {
+    font-size: 62.5%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.logo {
+    border-bottom: rem(13) solid red;
+    width: 100%;
+    padding: rem(27) 0 rem(17);
+    img {
+        width: 80%;
+        display: block;
+        height: auto;
+        @include blockCenter;
+    }
+}
+
+.swiper-container {
+    .swiper-wrapper {
+        .swiper-slide {
+            width: 100%;
+            img {
+                @include img;
+            }
+        }
+    }
+}
+
+.nav {
+    height: rem(140);
+    background-image: linear-gradient(-90deg, #2d2d2d, #4f4f4f);
+    display: flex;
+    flex-direction: column;
+    ul {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        li {
+            flex: 1;
+            text-align: center;
+            line-height: rem(70);
+            font-size: rem(25);
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.course {
+    display: flex;
+    margin-top: rem(42);
+    .course-item {
+        flex: 1;
+        padding: rem(10);
+        text-align: center;
+        .course-item-thumb {
+            width: rem(103);
+            height: rem(103);
+            margin: 0 auto rem(25);
+            background: {
+                image: url(../../upload/course.png);
+                repeat: no-repeat;
+                position-y: 0;
+                size: 400%;
+            }
+        }
+        &:nth-of-type(2) {
+            .course-item-thumb {
+                background: {
+                    position-x: 33.4%;
+                }
+            }
+        }
+        &:nth-of-type(3) {
+            .course-item-thumb {
+                background: {
+                    position-x: 33.4%*2;
+                }
+            }
+        }
+        &:nth-of-type(4) {
+            .course-item-thumb {
+                background: {
+                    position-x: 33.4%*3;
+                }
+            }
+        }
+        h3 {
+            font-size: rem(24);
+            margin-bottom: rem(11);
+        }
+    }
+}
+
+.future {
+    margin-top: rem(82);
+    h2 {
+        @include title;
+        margin-bottom: rem(47);
+    }
+    img {
+        @include img;
+        &:nth-of-type(2) {
+            display: block;
+            width: 80%;
+            margin: rem(50) auto;
+        }
+    }
+    figcaption {
+        text-indent: 2em;
+        font-size: 14px;
+        line-height: rem(40);
+        margin-top: rem(46);
+        padding: 0 rem(37);
+    }
+}
+
+.student-work {
+    margin-top: rem(98);
+    h2 {
+        @include title;
+        margin-bottom: rem(30);
+    }
+    .stu-work-figure {
+        @include clearfix;
+        figure {
+            width: 48%;
+            float: left;
+            margin-right: 4%;
+            &:nth-of-type(2n) {
+                margin-right: 0;
+            }
+            img {
+                @include img;
+            }
+            figcaption {
+                font-size: 16px;
+                color: #170562;
+                text-align: center;
+                padding: rem(25) 0 rem(38);
+            }
+        }
+    }
+}
+
+.bottom-nav {
+    background: #e0e0e0;
+    height: rem(130);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    ul {
+        display: flex;
+        li {
+            flex: 1;
+            padding-top: rem(10);
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            &:nth-of-type(2) {
+                i {
+                    background-position-x: 32%;
+                }
+            }
+            &:nth-of-type(3) {
+                i {
+                    background-position-x: 66%;
+                }
+            }
+            &:nth-of-type(4) {
+                i {
+                    background-position-x: 99%;
+                }
+            }
+            i {
+                flex: 2;
+                height: rem(80);
+                width: rem(80);
+                background: {
+                    image: url(../../upload/bottom-nav.png);
+                    repeat: no-repeat;
+                    position-y: center;
+                    size: 400%;
+                }
+            }
+            p {
+                flex: 1;
+                text-align: center;
+                color: #170562;
+                font-size: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+@import "./_mixin.scss";
+.page-title {
+    margin-top: rem(70);
+    h1 {
+        @include title;
+    }
+    ul {
+        display: flex;
+        margin-top: rem(26);
+        li {
+            flex: 1;
+            img {
+                @include img;
+            }
+        }
+    }
+}
+
+.teacher-wrapper {
+    margin-top: rem(62);
+    margin-bottom: rem(100);
+    .teacher-item {
+        margin-bottom: rem(40);
+        h2 {
+            color: #fff;
+            background: #c91f23;
+            font-size: 16px;
+            padding: rem(11) 0 rem(14) rem(36);
+            margin-bottom: rem(17);
+        }
+        &:nth-of-type(2n) {
+            h2 {
+                background: #5e5193;
+            }
+            .teacher-item-sec {
+                flex-direction: row-reverse;
+                .teacher-text {
+                    padding-left: 0;
+                    padding-right: rem(38);
+                }
+            }
+        }
+        .teacher-item-sec {
+            display: flex;
+            padding: 0 rem(36);
+            .teacher-photo {
+                flex: 3;
+                img {
+                    @include img;
+                }
+            }
+            .teacher-text {
+                flex: 7;
+                font-size: 12px;
+                text-indent: 2em;
+                padding-left: rem(38);
+                line-height: rem(36);
+            }
+        }
+    }
+}

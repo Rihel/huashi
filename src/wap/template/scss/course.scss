@@ -1,0 +1,350 @@
+@import './_mixin.scss';
+.tv {
+    margin-top: rem(44);
+    h1,
+    h2 {
+        color: #c5050a;
+        text-align: center;
+    }
+    h1 {
+        margin-bottom: rem(54);
+        @include title;
+    }
+    h2 {
+        font-size: 16px;
+        margin-bottom: rem(30);
+    }
+    p {
+        font-size: 14px;
+        padding: 0 rem(40);
+        text-indent: 2em;
+        line-height: rem(40);
+    }
+    ul {
+        margin-top: rem(34);
+        width: 100%;
+        @include clearfix;
+        li {
+            width: 48%;
+            float: left;
+            &:nth-of-type(1) {
+                margin-right: 4%;
+            }
+            img {
+                @include img;
+            }
+        }
+    }
+}
+
+.course-intr {
+    margin-top: rem(60);
+    h2 {
+        @include title;
+        margin-bottom: rem(54);
+    }
+    img {
+        @include blockCenter;
+        display: block;
+        width: 70%;
+        height: auto;
+    }
+    .course-intr-list {
+        $main: #ea4040;
+        $shen: #bc0207;
+        $hui: #d6d6d6;
+        $shenhui: #919191;
+        display: flex;
+        flex-direction: column;
+        margin-top: rem(40);
+        li {
+            display: flex;
+            height: rem(122);
+            margin-bottom: rem(20);
+            .block {
+                flex: 1;
+                background: $main;
+                transform: skewY(10deg);
+                box-shadow: 0 rem(5) rem(10) rgba(0, 0, 0, .7);
+            }
+            .num {
+                flex: 1;
+                text-align: center;
+                line-height: rem(122);
+                background: $shen;
+                transform: skewY(-10deg);
+                box-shadow: 0 rem(5) rem(10) rgba(0, 0, 0, .7);
+                span {
+                    transform: skewY(10deg);
+                    display: block;
+                    color: #fff;
+                    font-weight: bold;
+                    font-size: 22px;
+                    text-shadow: 2px 2px 1px #000;
+                }
+            }
+            .text {
+                flex: 7;
+                background: $main;
+                transform: translateY(-4px);
+                box-shadow: 0 rem(5) rem(10) rgba(0, 0, 0, .7);
+                color: #fff;
+                @include BoxSizing;
+                padding: rem(20) rem(26) 0;
+                h3 {
+                    font-size: 14px;
+                }
+                p {
+                    font-size: 12px;
+                    margin-top: rem(10);
+                    line-height: rem(30);
+                }
+            }
+            &:nth-of-type(2n) {
+                .block,
+                .text {
+                    background: $hui;
+                    color: $shen;
+                }
+                .num {
+                    span {
+                        color: $shen;
+                    }
+                    background: $shenhui;
+                }
+            }
+            &:nth-of-type(3) {
+                .block,
+                .text {
+                    background: #7466ab;
+                    color: #fff;
+                }
+                .num {
+                    span {
+                        color: #fff;
+                    }
+                    background: #170562;
+                }
+            }
+        }
+    }
+    h4 {
+        color: #c5050a;
+        text-align: center;
+        font-size: 14px;
+        margin-top: rem(30);
+    }
+}
+
+.future {
+    h3 {
+        @include title;
+        color: #424141;
+        font-weight: normal;
+        margin-top: rem(36);
+    }
+    dl {
+        width: 70%;
+        @include blockCenter;
+        @include clearfix;
+        height: rem(56);
+        line-height: rem(56);
+        margin-bottom: rem(16);
+        dt {
+            width: 40%;
+            @include BoxSizing;
+            float: left;
+            text-align: center;
+        }
+        dd {
+            width: 60%;
+            @include BoxSizing;
+            float: left;
+            background: #ea4040;
+            text-indent: rem(86);
+            border-radius: rem(5);
+            color: #ffffff;
+        }
+        &:nth-of-type(1) {
+            margin-top: rem(34);
+            dd {
+                width: 40%;
+                background: #ea4040;
+            }
+        }
+        &:nth-of-type(2) {
+            dd {
+                width: 50%;
+                background: #d6171d;
+            }
+        }
+    }
+}
+
+.course-content {
+    margin-top: rem(104);
+    h2 {
+        @include title;
+    }
+    p.sec {
+        @include BoxSizing;
+        font-size: 14px;
+        padding: rem(48) rem(40);
+        line-height: rem(34);
+        text-indent: 2em;
+    }
+    @at-root.course-list {
+        margin-top: rem(62);
+        padding: 0 rem(40);
+        .course-list-item {
+            margin-bottom: rem(48);
+            .course-title {
+                height: rem(22);
+                background: #5e5193;
+                @include clearfix;
+                h3 {
+                    font-size: 16px;
+                    color: #bc0207;
+                    font-weight: bold;
+                    float: left;
+                    background: #fff;
+                    padding: 0 rem(10);
+                    transform: translate(rem(62), rem(-5));
+                    position: relative;
+                    &:before {
+                        content: '';
+                        display: block;
+                        left: rem(-40);
+                        top: rem(5);
+                        background: #170562;
+                        width: rem(40);
+                        height: rem(21);
+                        position: absolute;
+                    }
+                }
+            }
+            .course-caption {
+                margin-top: rem(56);
+                p {
+                    font-size: 14px;
+                    line-height: rem(40);
+                    margin-bottom: rem(10);
+                }
+            }
+            .course-image {
+                margin-top: rem(30);
+                img {
+                    @include img;
+                }
+            }
+        }
+    }
+}
+
+.course-teacher {
+    margin-top: rem(66);
+    h2 {
+        @include title;
+        margin-bottom: rem(66);
+    }
+    @at-root.teacher {
+        margin-top: rem(50);
+        .teacher-title {
+            border-top: rem(7) solid #5e5193;
+            height: rem(300);
+            @include clearfix;
+            .teacher-name {
+                width: rem(364);
+                background: #7466ab;
+                text-align: center;
+                color: #fff;
+                font-size: 12px;
+                height: rem(44);
+                line-height: rem(44);
+                padding-left: rem(30);
+                transform: skewX(-30deg) translateX(rem(-50));
+                span {
+                    display: block;
+                    transform: skewX(30deg);
+                }
+            }
+            .teacher-joy {
+                font-size: 12px;
+                text-indent: rem(45);
+                margin-top: rem(10);
+            }
+            .teacher-face {
+                float: right;
+                width: rem(250);
+                padding: 0 rem(10);
+                background: #fff;
+                transform: translate(rem(-30), rem(-100));
+                img {
+                    @include img;
+                }
+            }
+            dl {
+                padding-left: rem(43);
+                font-size: 12px;
+                dt {
+                    margin-top: rem(30);
+                    color: #c5050a;
+                }
+                dd {
+                    margin-top: rem(20);
+                }
+            }
+        }
+        .caption {
+            padding: 0 rem(43);
+            font-size: 12px;
+            h3 {
+                color: #c5050a;
+                margin-bottom: rem(20);
+            }
+            p {
+                text-indent: 2em;
+                line-height: rem(40);
+            }
+        }
+    }
+}
+
+.course-table {
+    padding: 0 rem(20);
+    @include BoxSizing;
+    width: 100%;
+    table {
+        margin-bottom: rem(130);
+        margin-top: rem(50);
+        caption {
+            width: 100%;
+            background: #000;
+            color: #fff;
+            padding: rem(20) 0;
+            font-size: 22px;
+        }
+        tr {
+            padding: 0 rem(5);
+            td {
+                border: 1px solid #eee;
+                vertical-align: middle;
+                padding: rem(12);
+                line-height: rem(25);
+                &.w11 {
+                    background: #e4e6fa;
+                    padding: rem(30) 0;
+                }
+            }
+            &:nth-of-type(1) {
+                background: #f33;
+                color: #fff;
+                td {
+                    &:nth-of-type(1) {
+                        width: rem(80);
+                    }
+                }
+            }
+        }
+    }
+}

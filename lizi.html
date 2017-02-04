@@ -2,9 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <style>
+
+        body{background-color: #0c1328;position: absolute;left: 0;top: 0;right: 0;bottom: 0;}
+
+    </style>
 </head>
 <body>
-$END$
+    <canvas id="canvas"></canvas>
+    <script>
+        ;(function(){
+            var canvas=document.getElementById('canvas');
+            canvas.width=window.screen.width;
+            canvas.height=window.screen.height;
+            var ctx=canvas.getContext('2d');
+            var image=new Image();
+            image.onload=function(){
+                var x=parseInt((canvas.width/2)-(image.width/2));
+                console.log(x);
+                ctx.drawImage(image,x,200);
+                var w=image.width,
+                    h=image.height;
+
+                var imageData=ctx.getImageData(x,200,w,h);
+                calculte(imageData);
+                draw();
+            }
+            image.src='lizi.png';
+            var arr=[];
+            function calculte(imageData){
+                var len=imageData.length;
+
+                var rows=100,
+                    cols=100;
+                var s_width=parseInt(image.width/cols),
+                    s_height=parseInt(image.height/rows);
+
+                var pos=0;
+
+                var par_x,par_y;
+
+                var data=imageData.data;
+
+
+                for(var i=1;i<=cols;i++){
+                    for(var j=1;j<=rows;j++){
+                        pos=[(j*s_height)*image.width+(i*s_width-1)*4];
+                        if(data[pos]>250){
+                            var par={
+                                x:100+i*s_width+(Math.random()-0.5)*20,
+                                y:100+j*s_height+(Math.random()-0.5)*20,
+                                fillStyle:color()
+                            }
+                            arr.push(par)
+                        }
+                    }
+                }
+            }
+            function draw(){
+                ctx.clearRect(0,0,canvas.width,canvas.height);
+                var len=arr.length,curr_par=null;
+                for(var i=0;i<len;i++){
+                    curr_par=arr[i];
+                    ctx.fillStyle=curr_par.fillStyle;
+                    ctx.fillRect(curr_par.x,curr_par.y,1,1);
+                }
+            }
+            function color(){
+                var color='#';
+                var num=['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+                for(var i=0;i<6;i++){
+                    color+=num[Math.floor(Math.random()*16)];
+                }
+                return color;
+            }
+        }());
+    </script>
 </body>
 </html>

@@ -1,0 +1,41 @@
+@function rem($num) {
+    @return ($num/2)/10+rem;
+}
+
+@mixin title {
+    text-align: center;
+    font-size: 18px;
+    color: #c5050a;
+    font-weight: bold;
+}
+
+@mixin img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@mixin clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin blockCenter {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+@mixin css3($attrName, $value) {
+    @each $key in (-webkit-, -ms-, ' ') {
+        #{$key}#{$attrName}: $value;
+    }
+}
+
+@mixin BoxSizing {
+    @include css3(box-sizing, border-box);
+}

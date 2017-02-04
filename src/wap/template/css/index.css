@@ -1,0 +1,243 @@
+.slogan {
+  margin-top: 3.6rem;
+  text-align: center;
+  color: red; }
+  .slogan li {
+    font-size: 14px;
+    margin-bottom: 0.9rem; }
+
+.intr {
+  margin-top: 1.5rem; }
+  .intr .intr-item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background: #dedede;
+    margin-bottom: 1.25rem; }
+    .intr .intr-item .intr-item-thumb {
+      -webkit-box-flex: 6;
+      -webkit-flex: 6;
+          -ms-flex: 6;
+              flex: 6; }
+      .intr .intr-item .intr-item-thumb img {
+        display: block;
+        width: 100%;
+        height: auto; }
+    .intr .intr-item .intr-item-caption {
+      -webkit-box-flex: 8;
+      -webkit-flex: 8;
+          -ms-flex: 8;
+              flex: 8; }
+      .intr .intr-item .intr-item-caption h3 {
+        border-bottom: 0.3rem solid #5e5193;
+        color: #5e5193;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        text-indent: 1.85rem;
+        font-size: 1.2rem; }
+      .intr .intr-item .intr-item-caption ul {
+        margin-left: 4rem; }
+        .intr .intr-item .intr-item-caption ul li {
+          margin-top: 1.2rem; }
+    .intr .intr-item:nth-of-type(2n) .intr-item-caption h3 {
+      border-bottom: 0.3rem solid #d6171d;
+      color: #d6171d; }
+  .intr .mtgh {
+    width: 33rem;
+    margin: 0 auto;
+    height: auto;
+    display: block; }
+  .intr .big-picture {
+    display: block;
+    width: 100%;
+    height: auto; }
+
+.payment {
+  margin-top: 0.9rem; }
+  .payment h2 {
+    margin: 3.2rem 0 2.5rem;
+    text-align: center;
+    font-size: 18px;
+    color: #c5050a;
+    font-weight: bold; }
+  .payment p {
+    box-sizing: border-box;
+    padding: 0 2.2rem;
+    line-height: 2.1rem;
+    text-indent: 2em;
+    font-size: 14px; }
+  .payment img {
+    width: 90%;
+    display: block;
+    height: auto;
+    margin: 0 auto; }
+
+.combat {
+  box-sizing: border-box;
+  padding: 0 1.85rem;
+  margin-top: 2.5rem; }
+  .combat h2 {
+    text-align: center;
+    font-size: 18px;
+    color: #c5050a;
+    font-weight: bold;
+    margin-top: 0.9rem; }
+  .combat ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: 2.5rem; }
+    .combat ul li {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      padding-right: 0.7rem; }
+      .combat ul li:nth-of-type(2) {
+        padding-right: 0; }
+      .combat ul li img {
+        display: block;
+        width: 100%;
+        height: auto; }
+  .combat p.caption {
+    font-size: 14px;
+    text-indent: 2em;
+    margin-top: 1.8rem;
+    line-height: 1.5rem; }
+  .combat ol {
+    margin-top: 2.1rem; }
+    .combat ol li {
+      background: #e9e9e9;
+      height: 6.5rem;
+      margin-bottom: 0.5rem;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      background-image: url(../../upload/combat-bg.png);
+      background-repeat: no-repeat;
+      background-size: 50%;
+      background-position-x: 0; }
+      .combat ol li:nth-of-type(2) {
+        background-position-y: 25%; }
+      .combat ol li:nth-of-type(3) {
+        background-position-y: 50%; }
+      .combat ol li:nth-of-type(4) {
+        background-position-y: 74%; }
+      .combat ol li:nth-of-type(5) {
+        background-position-y: 99%; }
+      .combat ol li .text {
+        width: 40%;
+        float: right;
+        text-align: center;
+        margin-right: 1rem; }
+        .combat ol li .text h3 {
+          margin-top: 2rem;
+          margin-bottom: 0.8rem;
+          font-size: 14px; }
+        .combat ol li .text p {
+          font-size: 12px; }
+
+.project-bg {
+  margin-top: 3.25rem; }
+  .project-bg h2 {
+    text-align: center;
+    font-size: 18px;
+    color: #c5050a;
+    font-weight: bold;
+    margin-bottom: 3.2rem; }
+  .project-bg p {
+    font-size: 14px;
+    line-height: 2.1rem;
+    padding: 0 1.85rem; }
+  .project-bg .project-figure-list {
+    margin-top: 2rem; }
+    .project-bg .project-figure-list:after {
+      content: '';
+      display: block;
+      clear: both; }
+    .project-bg .project-figure-list figure {
+      width: 48%;
+      float: left;
+      margin-right: 4%;
+      margin-top: 4%; }
+      .project-bg .project-figure-list figure:nth-of-type(2n) {
+        margin-right: 0; }
+      .project-bg .project-figure-list figure img {
+        display: block;
+        width: 100%;
+        height: auto; }
+      .project-bg .project-figure-list figure figcaption {
+        background: #333333;
+        color: #f5f4f4;
+        padding: 1.25rem 1.5rem;
+        line-height: 2rem;
+        font-size: 12px;
+        height: 13rem;
+        box-sizing: border-box; }
+
+.teachers {
+  margin-bottom: 6.5rem; }
+  .teachers h2 {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 18px;
+    color: #c5050a;
+    font-weight: bold; }
+  .teachers .teacher {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1.5rem; }
+    .teachers .teacher .teacher-figure {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+      .teachers .teacher .teacher-figure img {
+        display: block;
+        width: 100%;
+        height: auto; }
+      .teachers .teacher .teacher-figure figcaption {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center; }
+        .teachers .teacher .teacher-figure figcaption h3 {
+          color: #c5050a;
+          margin-bottom: 0.7rem; }
+        .teachers .teacher .teacher-figure figcaption h4 {
+          color: #170562;
+          margin-bottom: 1.5rem; }
+    .teachers .teacher .teacher-intr {
+      -webkit-box-flex: 2;
+      -webkit-flex: 2;
+          -ms-flex: 2;
+              flex: 2;
+      padding-left: 0.8rem; }
+      .teachers .teacher .teacher-intr p {
+        font-size: 14px;
+        line-height: 1.8rem; }
+
+.works h2 {
+  text-align: center;
+  font-size: 18px;
+  color: #c5050a;
+  font-weight: bold;
+  margin-bottom: 2rem; }
+
+.works ul {
+  margin-bottom: 2rem; }
+  .works ul:after {
+    content: '';
+    display: block;
+    clear: both; }
+  .works ul li {
+    width: 50%;
+    float: left; }
+    .works ul li img {
+      display: block;
+      width: 100%;
+      height: auto; }

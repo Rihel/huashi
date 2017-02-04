@@ -433,7 +433,8 @@ html, body {
       right: 20px;
       bottom: 20px; }
   .jyzx .jyzx-main .jyzx-item h2 {
-    text-indent: 1em; }
+    text-indent: 1em;
+    font-size: 22px; }
   .jyzx .jyzx-main .jyzx-item .jyzx-face img {
     width: 100%;
     height: auto;

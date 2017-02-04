@@ -1,0 +1,679 @@
+/* 全局开始 */
+
+body,
+html {
+    width: 100%;
+    max-width: 650px;
+    font-family: "Arial", "Microsoft YaHei", "Tahoma";
+    margin: 0 auto;
+    -webkit-text-size-adjust: none;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.m5 {
+    margin-top: 5px;
+}
+
+hr {
+    margin: 10px 0;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none
+}
+
+header {
+    height: 50px;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+header .logo {}
+
+.top {
+    height: 30px;
+    background: #f3f3f3;
+    line-height: 30px;
+}
+
+.top li {
+    width: 33%;
+    list-style: none;
+}
+
+.top li a.ico1 {
+    background: url(img/home.png) 7px no-repeat;
+    padding-left: 25px;
+    line-height: 30px;
+    height: 30px;
+    display: block;
+}
+
+.top li a.ico2 {
+    background: url(img/news.png) 7px no-repeat;
+    padding-left: 30px;
+    line-height: 30px;
+    height: 30px;
+    display: block;
+}
+
+.top li a.ico3 {
+    background: url(img/us.png) 7px no-repeat;
+    padding-left: 33px;
+    line-height: 30px;
+    height: 30px;
+    display: block;
+}
+
+.daohang {
+    background: url(img/daohan/3.jpg) repeat-x;
+    height: 40px;
+    display: flex;
+    display: -webkit-flex;
+}
+
+.daohang-item {
+    -webkit-flex: 1;
+    flex: 1;
+    width: 25%;
+    text-align: center;
+}
+
+.daohang a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    color: #fff;
+}
+
+.daohang_bottom {
+    height: 60px;
+    background: #666;
+}
+
+.daohang_bottom li {
+    width: 33%;
+    text-align: center;
+    height: 30px;
+    float: left;
+    line-height: 30px;
+}
+
+.daohang_bottom li a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.more_daohang {
+    height: 90px;
+    background: url(img/daohan/more_daohang.png) repeat-x;
+}
+
+.more_daohang li {
+    width: 25%;
+    text-align: center;
+    height: 30px;
+    float: left;
+    line-height: 30px;
+}
+
+.more_daohang li a {
+    color: #666;
+}
+
+
+/*--------第一列幻灯片------------*/
+
+.index_row1 {
+    display: inline-block;
+}
+
+.index_row1_left img {
+    vertical-align: bottom;
+    border: 1px solid #ccc;
+    padding: 2px;
+    margin: 2px;
+}
+
+.index_row1_left {
+    width: 35%;
+    overflow: hidden;
+}
+
+.index_row1_right {
+    width: 63%;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+.index_row1_right h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.index_row1_bottom {
+    width: 100%;
+    display: inline-block
+}
+
+.index_row1_bottom span {
+    margin-left: 5px;
+    display: block
+}
+
+.index_row1_bottom span a {
+    color: #000;
+}
+
+
+/*--------第二列广告图------------*/
+
+.index_row2 {
+    display: inline-block;
+}
+
+.index_row2 img {
+    max-width: 320px;
+}
+
+
+/*--------第三列网站公告---------*/
+
+.index_row3 {
+    display: inline-block;
+    width: 100%;
+}
+
+.index_row3 .index_row3_titles {
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.index_row3 .index_row3_titles h3 {
+    font-size: 16px;
+    width: 70%;
+    background-color: #000;
+    color: #fff;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.index_row3_content {
+    padding: 5px;
+}
+
+.index_row3_title {
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 1px solid #f00;
+    font-weight: bold;
+    margin-top: 10px;
+    background: url(img/left_arrow.png) #fff no-repeat 8px center;
+    padding-left: 25px;
+}
+
+.index_row3_content li {
+    background: url(img/list.png) no-repeat 8px center;
+    padding-left: 18px;
+}
+
+
+/*--------第四列学校优势---------*/
+
+.index_row4 {}
+
+.index_row4 h3 {
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    font-size: 16px;
+    background: url(img/left_arrow.png) #fff no-repeat 8px center;
+    font-weight: bold;
+    padding-left: 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.index_row4_content span img {
+    border-bottom: 1px solid #ccc;
+}
+
+
+/*------喜讯---------*/
+
+.goodnews_content {
+    padding: 10px;
+}
+
+.goodnews_content a {
+    color: #fff;
+}
+
+
+/*--------第五列专业设置---------*/
+
+.index_row5 {}
+
+.index_row5 h3 {
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    font-size: 16px;
+    background: url(img/left_arrow.png) #fff no-repeat 8px center;
+    font-weight: bold;
+    padding-left: 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.index_row5_content p {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+
+/*--------第六列媒体与关怀---------*/
+
+.index_row6 {}
+
+.index_row6 h3 {
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    font-size: 16px;
+    background: url(img/left_arrow.png) #fff no-repeat 8px center;
+    font-weight: bold;
+    padding-left: 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/*--------第七列媒体与关怀---------*/
+
+.index_row7 {}
+
+.index_row7 h3 {
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    font-size: 16px;
+    background: url(img/left_arrow.png) #fff no-repeat 8px center;
+    font-weight: bold;
+    padding-left: 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/*--------第八列学员户外拓展---------*/
+
+.index_row8 {}
+
+.index_row8 h3 {
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    font-size: 16px;
+    background: url(img/left_arrow.png) #fff no-repeat 8px center;
+    font-weight: bold;
+    padding-left: 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/*--------第九列学校优势---------*/
+
+.index_row9 {}
+
+.index_row9 h3 {
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    font-size: 16px;
+    background: url(img/left_arrow.png) #fff no-repeat 8px center;
+    font-weight: bold;
+    padding-left: 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.go_top {
+    height: 30px;
+}
+
+.go_top_arrow {
+    background: url(img/update_arrow_up.png?a) no-repeat center;
+    padding-top: 40px;
+}
+
+
+/*-----底部---------*/
+
+.bottom {
+    height: 100px;
+    background: #f4f4f4;
+    padding: 5px;
+    margin-bottom: 50px;
+    border-top: 1px solid #ccc;
+}
+
+#slides {
+    position: relative;
+    display: none;
+}
+
+#slides img {
+    width: 100%;
+}
+
+.slidesjs-pagination {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    z-index: 100;
+    margin-top: -20px;
+    -webkit-padding-start: 0;
+}
+
+.slidesjs-pagination li {
+    display: inline-block;
+    margin: 0 1px;
+}
+
+.slidesjs-pagination li a {
+    display: block;
+    width: 10px;
+    height: 0;
+    padding-top: 10px;
+    overflow: hidden;
+    background-color: #CCD1D9;
+    margin-right: 4px;
+    border-radius: 10px;
+}
+
+.slidesjs-pagination li a.active {
+    background-color: #DA4453;
+}
+
+
+/*----内页开始---*/
+
+.main_div {
+    padding: 5px;
+}
+
+.szry li {
+    border: 1px dashed #ccc;
+    padding: 5px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    background: #f4f4f4;
+}
+
+.main_title h3 {
+    border-bottom: 1px solid #ccc;
+    background: url(img/need_forward.png) no-repeat left;
+    padding-left: 29px;
+}
+
+.small_name {
+    font-size: 14px;
+    color: #666;
+}
+
+.szjs_title {
+    text-align: center;
+    font-size: 16px;
+}
+
+.more_szjs {
+    background: #ff0000;
+    color: #fff;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    font-size: 18px;
+}
+
+.w11 {
+    background: #e4e6fa;
+}
+
+.w1 {
+    background: #f33;
+    color: #fff;
+}
+
+.menu {
+    display: flex;
+    display: -webkit-flex;
+    background-color: #5d575b;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.menu div {
+    flex: 1;
+    -webkit-flex: 1;
+    width: 25%;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0 2px;
+}
+
+.menu div a {
+    color: #fff;
+}
+
+.menu div .fa {
+    font-size: 1.5em;
+}
+
+.class-setting {
+    width: 100%;
+    margin-top: 20px;
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.class-setting * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.class-setting li {
+    -webkit-box-flex: 1;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;
+    /* OLD - Firefox 19- */
+    -webkit-flex: 1;
+    /* Chrome */
+    -ms-flex: 1;
+    /* IE 10 */
+    flex: 1;
+    /*For Android 4.3*/
+    width: 25%;
+}
+
+.class-setting-item {
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background-color: #ef5553;
+    text-align: center;
+    font-size: 10px;
+    margin-left: 20%;
+    line-height: 60px;
+    font-size: 2em;
+    color: #fbfbff;
+}
+
+.class-setting li:nth-of-type(2) .class-setting-item {
+    background: #f3983f;
+}
+
+.class-setting li:nth-of-type(3) .class-setting-item {
+    background: #b082d4;
+}
+
+.class-setting li:nth-of-type(4) .class-setting-item {
+    background: #46a76d;
+}
+
+.class-setting li a {
+    color: #000;
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0 0;
+}
+
+.class-setting li p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.img-responsive {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.thumbnail {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.thumbnail .caption {
+    padding: 0;
+    text-align: center;
+}
+
+.em3 {
+    text-indent: 3em;
+}
+
+.sb {
+    padding: 0 10px;
+    margin-bottom: 10px;
+    font-size: 0;
+}
+
+.sb p {
+    margin: 0;
+    padding: 2px 0 0;
+    font-size: 0.5rem;
+}
+
+.sb .col-xs-4,
+.sb .col-xs-2,
+.sb .col-xs-6 {
+    font-size: 0;
+}
+
+.title h4 {
+    background-color: #4a4944;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 15px 0;
+    text-indent: 3em;
+}
+
+.title .sec {
+    background: #e7ac5e url(../../upload/sec.png) no-repeat 308px bottom;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-indent: 80px;
+}
+
+.title .sec p {
+    color: #733c18;
+    font-size: 1.5rem;
+}
+
+.title .sec h5 {
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.title .sec h5 span {
+    color: #573000;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.jxgl p {
+    padding: 0 20px 0 80px;
+    margin: 0 0 15px 0;
+    color: #a5a5a5;
+    background: url("../../upload/bigo.png") no-repeat 56px 0;
+}
+
+.teachers {
+    background-color: #e7e8ea;
+    padding: 0 15px;
+}
+
+.teachers h3 {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.teachers .teach {
+    margin: 20px 0;
+    font-size: 1rem;
+}
+
+.teachers .teachers-text * {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    text-align: center;
+    font-size: 2.5em;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 100%;
+    color: #2caaeb;
+}

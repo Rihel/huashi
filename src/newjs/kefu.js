@@ -661,8 +661,14 @@ function IsPC(){
 }
 
 var a=IsPC();
+
+	
 if (a==false)
 {
 	//手机
-	window.location.href='http://www.hssjpx.com.cn/wap/';
+	var url=window.location.href;
+var urlarr=url.split('/');
+var newurl=urlarr[0]+'//'+urlarr[2];
+console.log(newurl+'/wap/index.htm');
+window.location.href=newurl+'/wap/index.htm'
 }
