@@ -3,6 +3,8 @@
     margin-bottom: rem(100);
     h1 {
         @include title;
+        margin-top: rem(20);
+        margin-bottom: rem(20);
     }
     ul {
         display: flex;

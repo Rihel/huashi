@@ -4,7 +4,9 @@
     text-align: center;
     font-size: 18px;
     color: #c5050a;
-    font-weight: bold; }
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
   .main ul {
     display: -webkit-box;
     display: -webkit-flex;
