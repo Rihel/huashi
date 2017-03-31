@@ -137,4 +137,5 @@ $(document).ready(function() {
         $('html, body').animate({scrollTop: $(document).height()-$(window).height()}, scrollSpeed);
         return false;
     });
+
 });
